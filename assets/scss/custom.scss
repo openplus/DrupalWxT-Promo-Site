@@ -1,0 +1,162 @@
+@import 'bourbon';
+@import 'fonts/amelia';
+
+@mixin headers($a: inherit,$b: normal, $c: inherit) {
+	font-family:'amelia';
+	font-size: $a;
+	font-weight: $b;
+	line-height: $c;
+}
+@keyframes move {
+  0% {left: 0%;}
+  100% {left:100%;}
+}
+
+$dark-g: #333;
+$light-g: #ccc;
+$white: #f6f6f6;
+$light-w: #eee;
+$blue: #428bca; 
+
+/* -------------- loader -------------- */
+
+.loader{
+	position: fixed;
+	width: 12px;
+	height: 12px;
+
+	top: 46%;
+	top: -webkit-calc(50% - 6px);
+	top: calc(50% - 6px);
+	left: 46%;
+	left: -webkit-calc(50% - 6px);
+	left: calc(50% - 6px);
+	
+	border-radius: 12px;
+	background-color: darken($blue, 20);
+	-webkit-transform-origin:  50% 50%;
+			transform-origin:  50% 50% ;
+	-webkit-animation: loader 1s ease-in-out infinite;
+			animation: loader 1s ease-in-out infinite;
+}
+
+.loader:before{
+	content: "";
+	position: absolute;
+	background-color: $blue;
+	top: 0px;
+	left: -25px;
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+}
+
+.loader:after{
+	content: "";
+	position: absolute;
+	background-color: $blue;
+	top: 0px;
+	left: 25px;
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+}
+
+
+@-webkit-keyframes loader{
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    100%{-webkit-transform:rotate(180deg);}
+}
+
+@keyframes loader{
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(180deg);}
+}
+
+// Global
+body { @include headers(16px,300); background:$white;}
+h1 { @include headers(2.5em,bold,1em); }
+h2 { @include headers(2em,300,1em); }
+p { font-size: 1.2em; line-height: 1.4em;}
+a { @include transition(all 0.3s ease-in-out); }
+.blue { color:$blue; }
+.page { opacity:0;}
+.btn { background:$blue; color:$white; text-shadow:none; border-radius: 5px; font-weight: 300; padding:12px 40px;
+	&.btn-lg { font-size: 1.2em;}
+	&:hover { background:darken($blue, 15); color:$white; }
+}
+.btn-inverse { background: transparent; border:2px solid $white; font-size: 1.1em; color:$white; text-shadow:1px 1px 8px #1F1F1F;
+	&:hover { background:rgba(255,255,255,0.2); color:$white; text-shadow:none; }
+}
+section {
+	h2 { margin-bottom: 15px;}
+}
+
+// HEADER
+header { background:transparent;  @include transition(all 0.5s ease-in-out); color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;
+	.logo { padding:20px 0;
+		img { width: 140px; @include transition(all 0.5s ease-in-out);}
+	}
+	.navigation { margin-top: 35px;
+		nav {
+			ul { padding:0; margin:0; float: right;
+				li { float:left;
+					a { color:$white; padding:14px 20px; border-radius: 3px;
+						&:hover { background:rgba(0,0,0,0.5); text-decoration: none;}
+					}
+				}
+			}
+		}
+	}
+	&.bg { background:rgba(0,0,0,0.9); 
+		.logo {
+			img { width: 80px; }
+		}
+		.navigation { margin-top: 30px; 
+			ul {
+				li {
+					a {
+						&:hover { background:$blue; color:$white; }
+					}
+				}
+			}
+		}
+	}
+}
+
+// HOME PAGE
+.homepage {
+	section.intro { padding:200px 0; color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
+		&:before { position: absolute; z-index: 0; content:''; top: 0; left: 0; width: 100%; height: 100%; background:rgba(0,0,0,0.4); }
+		h2 { @include headers(1.5em,300,1em); margin:0; }
+		.summ { margin-top: 50px;}
+		.download { margin-top: 50px; 
+			a { margin:0 5px;
+				&.download {}
+				&.demo {}
+			}
+			p { margin-top: 15px;
+				a { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
+			}
+		}
+		.learnmore { position: absolute; background:rgba(0,0,0,0.5); padding:9px 25px; margin-left: -64px; color:$white; border-radius: 20px; position: absolute; left: 50%; bottom: 20px; @include animation-duration(1.3s); @include animation-delay(2s);@include animation-iteration-count(3);}
+	}
+	section.usedby { padding:30px 0 30px 0; text-align: center;
+		.logos { 
+			a { display: inline-block; margin:10px; opacity: 0.6;
+				&:hover { opacity: 1;}
+			}
+		}
+	}
+	section.learnmore { background:#fff; padding:30px 0 60px 0;
+		h2 { text-align: center; }
+	}
+	section.giveatry { background:$dark-g; padding:30px 0 60px 0; text-align: center; 
+		h2 { color:$white; }
+		.buttons { 
+			a { display: inline-block;}
+		}
+	}
+}
