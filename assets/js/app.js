@@ -8,13 +8,32 @@ $(document).ready(function(){
 		}
 	});	
 	$('.intro').css({minHeight: $(window).height() });
+	$(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('section').each( function(i){
+            var height = $(this).height();
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > (bottom_of_object - (height) ) ){
+                $(this).addClass('animatein'); 
+            }
+            else 
+            {
+            }
+            
+        }); 
+    
+    });
 });
 
 $(window).load(function() {
-	$(".loader").delay(2000).animate({
+	$(".loader").animate({
 		opacity: 0
-	}, 1000);
-	$(".page").delay(2000).animate({
+	}, 500);
+	$(".page").animate({
 		opacity: 1
-	}, 1000);
+	}, 500);
 });
