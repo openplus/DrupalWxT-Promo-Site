@@ -113,14 +113,18 @@ a {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-.h3-2 {
-  margin-top: -6px; }
+h4 {
+  margin-top: -6px;
+  font-size: 1.3em; }
 
 .blue {
   color: #428bca; }
 
 .page {
   opacity: 0; }
+
+.mb35 {
+  margin-bottom: 35px; }
 
 .btn {
   background: #428bca;
@@ -171,6 +175,16 @@ a {
     color: #f6f6f6; }
   .bg-blue .nav-tabs li a {
     color: #f6f6f6; }
+
+.bg-dark {
+  background: #333333;
+  color: #f6f6f6; }
+
+.bg-img1 {
+  color: #f6f6f6;
+  text-align: center;
+  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed;
+  text-shadow: 1px 1px 10px #1F1F1F; }
 
 .bg-white {
   background: #fff;
@@ -247,16 +261,27 @@ section {
       .nav-tabs.nav-stacked li h3 {
         margin: 3px 0 3px 0; }
 
-.tab-pane .pic.left {
+.pic.left {
   text-align: left;
   float: left; }
-  .tab-pane .pic.left img {
+  .pic.left img {
     float: left; }
-.tab-pane .pic.right {
+.pic.right {
   text-align: right;
   float: right; }
-  .tab-pane .pic.right img {
+  .pic.right img {
     float: right; }
+
+.inside header {
+  background: rgba(0, 0, 0, 0.9);
+  position: relative; }
+  .inside header .logo img {
+    width: 80px; }
+  .inside header .navigation {
+    margin-top: 30px; }
+    .inside header .navigation ul li a:hover {
+      background: #428bca;
+      color: #f6f6f6; }
 
 header {
   background: transparent;
@@ -300,6 +325,53 @@ header {
       header.bg .navigation ul li a:hover {
         background: #428bca;
         color: #f6f6f6; }
+
+section.secondnav {
+  padding: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 100%; }
+  section.secondnav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; }
+  section.secondnav nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0; }
+    section.secondnav nav ul li {
+      display: inline-block;
+      margin-left: -4px; }
+      section.secondnav nav ul li a {
+        padding: 20px 30px 16px 30px;
+        display: block;
+        color: #428bca; }
+        section.secondnav nav ul li a .icon [class^="ti-"], section.secondnav nav ul li a .icon [class*=" ti-"] {
+          color: #333333;
+          font-size: 3em; }
+        section.secondnav nav ul li a span {
+          display: block; }
+        section.secondnav nav ul li a .text {
+          font-size: 1.2em;
+          margin: 10px 0 0 0; }
+        section.secondnav nav ul li a:hover {
+          background: #428bca;
+          color: #f6f6f6;
+          text-decoration: none; }
+          section.secondnav nav ul li a:hover .icon [class^="ti-"], section.secondnav nav ul li a:hover .icon [class*=" ti-"] {
+            color: #f6f6f6; }
+  section.secondnav.bluenav {
+    background: #428bca; }
+    section.secondnav.bluenav nav ul li a {
+      color: #f6f6f6; }
+      section.secondnav.bluenav nav ul li a .icon [class^="ti-"], section.secondnav.bluenav nav ul li a .icon [class*=" ti-"] {
+        color: #f6f6f6; }
+      section.secondnav.bluenav nav ul li a:hover {
+        background: #f6f6f6;
+        color: #428bca; }
+        section.secondnav.bluenav nav ul li a:hover .icon [class^="ti-"], section.secondnav.bluenav nav ul li a:hover .icon [class*=" ti-"] {
+          color: #428bca; }
 
 .homepage section.intro {
   padding: 200px 0;
@@ -386,8 +458,6 @@ header {
   height: 400px;
   width: 100%;
   float: right; }
-.homepage section.news h2 {
-  margin-bottom: 35px; }
 .homepage section.news .item {
   background: #333333;
   color: #f6f6f6;
@@ -419,10 +489,24 @@ header {
   .homepage section.news .item .type {
     float: left;
     clear: both; }
-.homepage section.giveatry {
+
+.features .intro h2 {
+  font-family: 'amelia';
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0; }
+.features .more .item {
+  margin-bottom: 30px; }
+  .features .more .item .img {
+    overflow: hidden; }
+    .features .more .item .img img {
+      border-radius: 50%; }
+
+section.giveatry {
   background: #333333;
   text-align: center; }
-  .homepage section.giveatry h2 {
+  section.giveatry h2 {
     color: #f6f6f6; }
-  .homepage section.giveatry .buttons a {
+  section.giveatry .buttons a {
     display: inline-block; }

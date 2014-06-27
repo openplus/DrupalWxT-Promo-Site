@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- @reload -->
-  <!-- @stylesheet normalize bootstrap.min animate.min custom -->
+  <!-- @stylesheet normalize bootstrap.min animate.min themify-icons custom -->
   <link href="<!-- @path favicon.ico -->" rel="shortcut icon">
   <link href="<!-- @path apple-touch-icon.png -->" rel="apple-touch-icon">
-  <title>WxT Splash page</title>
-</head>
+  <!--[if lt IE 8]><!-->
+ <!-- @stylesheet ie7 -->
+  <!--<![endif]-->
+  <title><!-- $title --></title>
 <body>
   <div class="loader">
     <div></div>
@@ -16,12 +18,12 @@
     <div></div>
     <div></div>
   </div>
-  <div class="page">
+  <div class="page inside">
     <header>
       <div class="container">
         <div class="row">
           <div class="col-md-3 logo">
-            <img src="assets/img/logo.svg">
+            <a href="/"><img src="assets/img/logo.svg"></a>
           </div>
           <div class="col-md-9 navigation">
             <!-- @include _nav -->

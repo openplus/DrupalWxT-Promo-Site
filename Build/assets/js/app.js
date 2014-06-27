@@ -7,7 +7,7 @@ $(document).ready(function(){
 			$("header").removeClass("bg");
 		}
 	});	
-	$('.intro').css({minHeight: $(window).height() });
+	$('.home .intro').css({minHeight: $(window).height() });
 	$(window).scroll( function(){
     
         /* Check the location of each desired element */
@@ -27,6 +27,10 @@ $(document).ready(function(){
         }); 
     
     });
+
+   
+
+
 });
 
 $(window).load(function() {
@@ -36,4 +40,22 @@ $(window).load(function() {
 	$(".page").animate({
 		opacity: 1
 	}, 500);
+
+
+	 var $distance = $('.secondnav').offset().top,
+	$window = $(window);
+	var $height = $('.secondnav').height();
+	$window.scroll(function() {
+	    if ( $window.scrollTop() >= $distance-5 ) {
+	        $('.secondnav').addClass('sticky');
+	        $('.intro').css({marginBottom:$height});
+	    }
+	    else{
+	    	$('.secondnav').removeClass('sticky');
+	    	$('.intro').css({marginBottom:0});
+	    }
+	});
+
+
+	
 });

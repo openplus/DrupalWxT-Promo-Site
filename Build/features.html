@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+<link rel='stylesheet' href='assets/css/animate.min.css'>
+<link rel='stylesheet' href='assets/icons/themify-icons.css'>
+<link rel='stylesheet' href='assets/css/custom.css'>
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <!--[if lt IE 8]><!-->
+ <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
+  <!--<![endif]-->
+  <title>WxT | Features</title>
+<body>
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="page inside">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 logo">
+            <a href="/"><img src="assets/img/logo.svg"></a>
+          </div>
+          <div class="col-md-9 navigation">
+            <nav>
+  <ul>
+    <li><a href="#">About</a></li>
+    <li><a href="/features.html">Features</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Download</a></li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+    </header>
+	<div class="features">
+		<section class="intro bg-img1 text-center">
+			<div class="container">
+				<h1>Features that are<BR>Secure, Accessible, Multilingual & Open Source</h1>
+				<h2>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses.With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h2>
+			</div>
+		</section>
+		<section class="secondnav bg-light bluenav">
+			<div class="container">
+				<nav>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-shield"></span></span>
+								<span class="text">Secure</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-fullscreen"></span></span>
+								<span class="text">Scalable</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-wheelchair"></span></span>
+								<span class="text">Accessable</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-mobile"></span></span>
+								<span class="text">Responsive</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-user"></span></span>
+								<span class="text">User Roles</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-comment"></span></span>
+								<span class="text">Multlingual</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-world"></span></span>
+								<span class="text">Open Source</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon"><span class="ti-plus"></span></span>
+								<span class="text">more</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<section class="deployment bg-white">
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Scalable</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-7 left">
+						<h3 class="blue">User Roles & Workflow</h3>
+			        	<h4>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h4>
+			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
+					</div>
+					<div class="col-md-5 pic right"><img src="http://placekitten.com/300/200"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 pic left"><img src="http://placekitten.com/300/200"></div>
+					<div class="col-md-7 right">
+						<h3 class="blue">100% Multilingual</h3>
+			        	<h4>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h4>
+			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="deployment bg-light">
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Deployment</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-8 left">
+						<h3>Deployment</h3>
+			        	<h4 class="blue">Including administrative interface</h4>
+			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Deployment</a></p>
+					</div>
+					<div class="col-md-4 pic right"><img src="http://placekitten.com/300/200"></div>
+				</div>
+			</div>
+		</section>
+		<section class="migration bg-white" id="migration">
+			<div class="container">
+				<h2 class="blue text-center">Migration at its best</h2>
+			    <ul id="myTab" class="nav nav-tabs">
+			      <li class="active"><a href="#what" data-toggle="tab">1. Content Inventory</a></li>
+			      <li class=""><a href="#use" data-toggle="tab">2. The Magic: Inspect & Clean</a></li>
+			      <li class=""><a href="#who" data-toggle="tab">3. Review & Publish</a></li>   
+			    </ul>
+			    <div class="tab-content">
+			      <div class="tab-pane fade active in" id="what">
+			       	<div class="row"><img src="http://placekitten.com/1200/500"></div>
+			       	<div class="row"><h3 class="text-center">Content Inventory</h3></div>
+			      </div>
+			      <div class="tab-pane fade" id="use">
+			        <div class="row"><img src="http://placekitten.com/1200/500"></div>
+			       	<div class="row"><h3 class="text-center">Inspect & Clean</h3></div>
+			      </div>
+			      <div class="tab-pane fade" id="who">
+			        <div class="row"><img src="http://placekitten.com/1200/500"></div>
+			       	<div class="row"><h3 class="text-center">Review & Publish</h3></div>
+			      </div>
+			    </div>
+			</div> 
+		</section>
+		<section class="more bg-blue">
+			<div class="container">
+				<h2 class="text-center mb35">There is more...</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="img col-md-3"><img src="http://placekitten.com/116/116"></div>
+								<div class="content col-md-9">
+									<h3>Featured Title</h3>
+									<p>Including information about the featured piece goes here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="giveatry">
+			<div class="container">
+				<h2>Ready to give Drupal WxT a try?</h2>
+				<span class="buttons">
+					<a href="#" class="btn btn-lg">Download</a>
+					<a href="#" class="btn btn-inverse">Or try the demo</a>
+				</span>
+			</div>
+		</section>
+	</div>
+	</div>
+<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src='assets/js/app.js'></script>
+</body>
+</html>

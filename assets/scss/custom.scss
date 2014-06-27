@@ -81,9 +81,10 @@ h1 { @include headers(2.5em,bold,1em); }
 h2 { @include headers(2em,300,1em); }
 p { font-size: 1.2em; line-height: 1.4em;}
 a { @include transition(all 0.3s ease-in-out); }
-.h3-2 { margin-top:-6px;}
+h4 { margin-top:-6px; font-size: 1.3em; }
 .blue { color:$blue; }
 .page { opacity:0;}
+.mb35 { margin-bottom: 35px; }
 .btn { background:$blue; color:$white; text-shadow:none; border-radius: 5px; font-weight: 300; padding:12px 40px;
 	&.btn-lg { font-size: 1.2em;}
 	&:hover { background:darken($blue, 15); color:$white; }
@@ -105,6 +106,8 @@ a { @include transition(all 0.3s ease-in-out); }
 		}
 	}
 }
+.bg-dark { background:$dark-g; color:$white; }
+.bg-img1 { color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed;  text-shadow:1px 1px 10px #1F1F1F; }
 .bg-white { background:#fff; color:$dark-g; }
 .bg-light { background:$white; color:$dark-g; }
 section { padding:30px 0 60px 0; 
@@ -142,16 +145,35 @@ section { padding:30px 0 60px 0;
 		}
 	}
 }
-.tab-pane {
-	.pic { 
-		&.left { text-align: left; float: left;
-			img { float:left; }
+
+// Pictures in columns
+.pic { 
+	&.left { text-align: left; float: left;
+		img { float:left; }
+	}
+	&.right { text-align: right; float:right;
+		img { float:right; }
+	}
+}
+
+// Inside pages {
+.inside { 
+	header { background:rgba(0,0,0,0.9); position: relative;
+		.logo {
+			img { width: 80px; }
 		}
-		&.right { text-align: right; float:right;
-			img { float:right; }
+		.navigation { margin-top: 30px; 
+			ul {
+				li {
+					a {
+						&:hover { background:$blue; color:$white; }
+					}
+				}
+			}
 		}
 	}
 }
+
 
 // HEADER
 header { background:transparent;  @include transition(all 0.5s ease-in-out); color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;
@@ -178,6 +200,47 @@ header { background:transparent;  @include transition(all 0.5s ease-in-out); col
 				li {
 					a {
 						&:hover { background:$blue; color:$white; }
+					}
+				}
+			}
+		}
+	}
+}
+
+//Second Nav
+section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%;
+	&.sticky { position: fixed; top: 0; left: 0; z-index: 999; }
+	nav { 
+		ul { text-align: center; margin:0; padding:0;
+			li { display: inline-block; margin-left: -4px;
+				a { padding:20px 30px 16px 30px;  display: block; color:$blue;
+					.icon {
+						[class^="ti-"], [class*=" ti-"] { color:$dark-g; font-size: 3em; }
+					}
+					span { display: block;}
+					.text { font-size: 1.2em; margin:10px 0 0 0;}
+					&:hover { background:$blue; color:$white; text-decoration: none;
+						.icon {
+							[class^="ti-"], [class*=" ti-"] { color:$white;  }
+						}
+					}
+				}
+			}
+		}
+	}
+	&.bluenav { background:$blue; 
+		nav { 
+			ul {
+				li { 
+					a { color:$white;
+						.icon {
+							[class^="ti-"], [class*=" ti-"] { color:$white; }
+						}
+						&:hover { background:$white; color:$blue; 
+							.icon {
+								[class^="ti-"], [class*=" ti-"] { color:$blue;  }
+							}
+						}
 					}
 				}
 			}
@@ -222,7 +285,6 @@ header { background:transparent;  @include transition(all 0.5s ease-in-out); col
 		iframe { height: 400px; width: 100%; float: right;}
 	}
 	section.news {
-		h2 { margin-bottom: 35px; }
 		.item { background:$dark-g; color:$white; padding: 0 20px 20px 20px; float: left; width: 100%; margin-bottom: 30px; 
 			a { color:$white;} 
 			.header { color:$white; background:$blue; position: relative; float: left; margin-top: -8px; padding:5px 10px; text-align: center; font-size: 1.2em; 
@@ -233,10 +295,25 @@ header { background:transparent;  @include transition(all 0.5s ease-in-out); col
 			.type { float: left; clear: both;  }
 		}
 	}
-	section.giveatry { background:$dark-g;  text-align: center; 
-		h2 { color:$white; }
-		.buttons { 
-			a { display: inline-block;}
+}
+
+// Features page
+.features {
+	.intro {
+		h2 { @include headers(1.5em,300,1em); margin:0; }
+	}
+	.more {
+		.item { margin-bottom: 30px;
+			.img { overflow: hidden;
+				img { border-radius: 50%; }
+			}
 		}
+	}
+}
+
+section.giveatry { background:$dark-g;  text-align: center; 
+	h2 { color:$white; }
+	.buttons { 
+		a { display: inline-block;}
 	}
 }
