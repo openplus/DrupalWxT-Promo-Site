@@ -17,6 +17,6 @@ This is the new site for Drupal WxT - Take a look at the screenshot below
 3. Someoen to do QA on content
 
 #What I have left to do:
-1. ~~Browser Testing ( IE9, FF, Chrome, Safari )  
-~~	Site seems to work and look as expexted in all above listed browsers.  
+1. ~~Browser Testing ( IE9, FF, Chrome, Safari )~~  
+	Site seems to work and look as expexted in all above listed browsers.  
 2. Mobile Testing ( iPhone, Tablet, safari )
