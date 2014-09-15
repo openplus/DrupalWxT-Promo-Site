@@ -1,17 +1,17 @@
 $(document).ready(function(){
 	$(window).scroll(function () {
 		if($(window).scrollTop() > 150){
-			$("header").addClass("bg");
+			$(".home header").addClass("bg");
 		}
 		else {
-			$("header").removeClass("bg");
+			$(".home header").removeClass("bg");
 		}
 	});	
 	$('.home .intro').css({minHeight: $(window).height() });
 	$(window).scroll( function(){
     
         /* Check the location of each desired element */
-        $('section').each( function(i){
+        $('.home section').each( function(i){
             var height = $(this).height();
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -33,7 +33,23 @@ $(document).ready(function(){
 
 });
 
-$(window).load(function() {
+$(function() {
+  $('a[href*=#]:not([href=#]).slidelink').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+$(window).bind("load resize", function() {
 	$(".loader").animate({
 		opacity: 0
 	}, 500);
@@ -46,16 +62,34 @@ $(window).load(function() {
 	$window = $(window);
 	var $height = $('.secondnav').height();
 	$window.scroll(function() {
-	    if ( $window.scrollTop() >= $distance-5 ) {
+	    if ( $window.scrollTop() >= $distance ) {
+	    	$('body').addClass('hasstickyheader');
 	        $('.secondnav').addClass('sticky');
 	        $('.intro').css({marginBottom:$height});
 	    }
 	    else{
+	    	$('body').removeClass('hasstickyheader');
 	    	$('.secondnav').removeClass('sticky');
 	    	$('.intro').css({marginBottom:0});
 	    }
 	});
-
-
 	
+});
+
+
+$(window).scroll(function() {
+	$('.features section .gotodiv').each(function(){
+				var $distance = $(this).offset().top;
+				$this = $(this);
+		    	$id = $this.attr('id');
+		    	if ( $(window).scrollTop() >= $distance ) {
+				    if($('.secondnav a[href="#' + $id + '"]').length == 0) {
+				    }
+			   		
+			   		else{
+			   			$('.secondnav a').removeClass('active');
+				        $('.secondnav a[href="#' + $id + '"]').addClass('active');
+			   		}
+		   		}
+	});
 });

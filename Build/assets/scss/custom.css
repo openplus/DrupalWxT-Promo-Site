@@ -123,6 +123,18 @@ h4 {
 .page {
   opacity: 0; }
 
+.mb0 {
+  margin-bottom: 0; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt100 {
+  margin-top: 100px; }
+
+.mt35 {
+  margin-top: 35px; }
+
 .mb35 {
   margin-bottom: 35px; }
 
@@ -183,7 +195,8 @@ h4 {
 .bg-img1 {
   color: #f6f6f6;
   text-align: center;
-  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed;
+  padding: 80px 0;
+  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;
   text-shadow: 1px 1px 10px #1F1F1F; }
 
 .bg-white {
@@ -265,66 +278,69 @@ section {
   text-align: left;
   float: left; }
   .pic.left img {
-    float: left; }
+    float: left;
+    width: 100%;
+    height: auto; }
 .pic.right {
   text-align: right;
   float: right; }
   .pic.right img {
-    float: right; }
+    float: right;
+    width: 100%;
+    height: auto; }
 
-.inside header {
+.inside header.navbar {
   background: rgba(0, 0, 0, 0.9);
   position: relative; }
-  .inside header .logo img {
-    width: 80px; }
-  .inside header .navigation {
-    margin-top: 30px; }
-    .inside header .navigation ul li a:hover {
-      background: #428bca;
-      color: #f6f6f6; }
+  .inside header.navbar .logo img {
+    width: 150px; }
+  .inside header.navbar ul.navbar-nav li a:hover, .inside header.navbar ul.navbar-nav li a.current {
+    background: #428bca;
+    color: #f6f6f6; }
 
-header {
+header.navbar {
   background: transparent;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  margin-bottom: 0;
+  border-radius: 0;
   color: #f6f6f6;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10; }
-  header .logo {
+  header.navbar .navbar-header {
     padding: 20px 0; }
-    header .logo img {
-      width: 140px;
+    header.navbar .navbar-header img {
+      width: 200px;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-  header .navigation {
-    margin-top: 35px; }
-    header .navigation nav ul {
-      padding: 0;
-      margin: 0;
-      float: right; }
-      header .navigation nav ul li {
-        float: left; }
-        header .navigation nav ul li a {
-          color: #f6f6f6;
-          padding: 14px 20px;
-          border-radius: 3px; }
-          header .navigation nav ul li a:hover {
-            background: rgba(0, 0, 0, 0.5);
-            text-decoration: none; }
-  header.bg {
+  header.navbar nav ul.navbar-nav {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-top: 20px; }
+    header.navbar nav ul.navbar-nav li a {
+      color: #f6f6f6;
+      padding: 14px 20px;
+      border-radius: 3px; }
+      header.navbar nav ul.navbar-nav li a:hover {
+        background: rgba(0, 0, 0, 0.2);
+        text-decoration: none; }
+  header.navbar.bg {
     background: rgba(0, 0, 0, 0.9); }
-    header.bg .logo img {
-      width: 80px; }
-    header.bg .navigation {
-      margin-top: 30px; }
-      header.bg .navigation ul li a:hover {
-        background: #428bca;
-        color: #f6f6f6; }
+    header.navbar.bg .navbar-header img {
+      width: 120px; }
+    header.navbar.bg nav ul.navbar-nav {
+      margin-top: 14px; }
+      header.navbar.bg nav ul.navbar-nav li a {
+        padding: 10px 20px; }
+        header.navbar.bg nav ul.navbar-nav li a:hover {
+          background: #428bca;
+          color: #f6f6f6; }
 
 section.secondnav {
   padding: 0;
@@ -344,33 +360,36 @@ section.secondnav {
       display: inline-block;
       margin-left: -4px; }
       section.secondnav nav ul li a {
-        padding: 20px 30px 16px 30px;
+        padding: 19px 20px 16px 19px;
         display: block;
         color: #428bca; }
         section.secondnav nav ul li a .icon [class^="ti-"], section.secondnav nav ul li a .icon [class*=" ti-"] {
           color: #333333;
-          font-size: 3em; }
+          font-size: 2em; }
         section.secondnav nav ul li a span {
           display: block; }
         section.secondnav nav ul li a .text {
-          font-size: 1.2em;
+          font-size: 1.0em;
           margin: 10px 0 0 0; }
-        section.secondnav nav ul li a:hover {
+        section.secondnav nav ul li a:hover, section.secondnav nav ul li a.active {
           background: #428bca;
           color: #f6f6f6;
           text-decoration: none; }
-          section.secondnav nav ul li a:hover .icon [class^="ti-"], section.secondnav nav ul li a:hover .icon [class*=" ti-"] {
+          section.secondnav nav ul li a:hover .icon [class^="ti-"], section.secondnav nav ul li a:hover .icon [class*=" ti-"], section.secondnav nav ul li a.active .icon [class^="ti-"], section.secondnav nav ul li a.active .icon [class*=" ti-"] {
             color: #f6f6f6; }
   section.secondnav.bluenav {
     background: #428bca; }
     section.secondnav.bluenav nav ul li a {
-      color: #f6f6f6; }
+      color: #f6f6f6;
+      -webkit-transition: all 0s ease-in-out;
+      -moz-transition: all 0s ease-in-out;
+      transition: all 0s ease-in-out; }
       section.secondnav.bluenav nav ul li a .icon [class^="ti-"], section.secondnav.bluenav nav ul li a .icon [class*=" ti-"] {
         color: #f6f6f6; }
-      section.secondnav.bluenav nav ul li a:hover {
+      section.secondnav.bluenav nav ul li a:hover, section.secondnav.bluenav nav ul li a.active {
         background: #f6f6f6;
         color: #428bca; }
-        section.secondnav.bluenav nav ul li a:hover .icon [class^="ti-"], section.secondnav.bluenav nav ul li a:hover .icon [class*=" ti-"] {
+        section.secondnav.bluenav nav ul li a:hover .icon [class^="ti-"], section.secondnav.bluenav nav ul li a:hover .icon [class*=" ti-"], section.secondnav.bluenav nav ul li a.active .icon [class^="ti-"], section.secondnav.bluenav nav ul li a.active .icon [class*=" ti-"] {
           color: #428bca; }
 
 .homepage section.intro {
@@ -434,20 +453,38 @@ section.secondnav {
     opacity: 0.6; }
     .homepage section.usedby .logos a:hover {
       opacity: 1; }
+.homepage section.learnmore [class^="ti-"], .homepage section.learnmore [class*=" ti-"] {
+  font-size: 200px; }
+  .homepage section.learnmore [class^="ti-"].top, .homepage section.learnmore [class*=" ti-"].top {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 100%;
+    left: 60px; }
+  .homepage section.learnmore [class^="ti-"].bottom, .homepage section.learnmore [class*=" ti-"].bottom {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    left: -60px; }
 .homepage section.learnmore h2 {
+  text-align: center; }
+.homepage section.learnmore .pic {
   text-align: center; }
 .homepage section.learnmore .left {
   opacity: 0;
   left: -50px;
   -webkit-transition: all 1.5s ease-in-out;
   -moz-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out; }
+  transition: all 1.5s ease-in-out;
+  position: relative; }
 .homepage section.learnmore .right {
   opacity: 0;
   right: -50px;
   -webkit-transition: all 1.5s ease-in-out;
   -moz-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out; }
+  transition: all 1.5s ease-in-out;
+  position: relative; }
 .homepage section.learnmore.animatein .left {
   opacity: 1;
   left: 0; }
@@ -459,12 +496,25 @@ section.secondnav {
   width: 100%;
   float: right; }
 .homepage section.news .item {
-  background: #333333;
+  background-color: #333333;
   color: #f6f6f6;
   padding: 0 20px 20px 20px;
+  z-index: 2;
   float: left;
   width: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
+  .homepage section.news .item:after {
+    background: url(../img/1629941.jpg);
+    opacity: 0.05;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ''; }
   .homepage section.news .item a {
     color: #f6f6f6; }
   .homepage section.news .item .header {
@@ -490,6 +540,22 @@ section.secondnav {
     float: left;
     clear: both; }
 
+.gototop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid #ccc;
+  display: none;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px 10px; }
+  .gototop:hover {
+    text-decoration: none;
+    border: 1px solid #428bca; }
+
+.hasstickyheader .gototop {
+  display: block; }
+
 .features .intro h2 {
   font-family: 'amelia';
   font-size: 1.5em;
@@ -502,6 +568,85 @@ section.secondnav {
     overflow: hidden; }
     .features .more .item .img img {
       border-radius: 50%; }
+.features section {
+  position: relative; }
+  .features section .gotodiv {
+    position: absolute;
+    top: -80px;
+    height: 1px;
+    width: 100%; }
+  .features section .icon {
+    text-align: center; }
+    .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
+      font-size: 200px; }
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #f6f6f6;
+  padding: 40px 0; }
+  footer h2 {
+    margin-top: 0; }
+  footer a {
+    color: #f6f6f6;
+    text-decoration: underline; }
+    footer a:hover {
+      color: #428bca; }
+  footer .built {
+    padding: 40px 0 40px 30px; }
+  footer .wxt {
+    padding-top: 15px; }
+    footer .wxt .logo {
+      margin-bottom: 10px;
+      display: block; }
+      footer .wxt .logo img {
+        width: 180px; }
+    footer .wxt ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      footer .wxt ul li {
+        float: left;
+        margin-right: 10px; }
+  footer .community {
+    border-left: 1px solid #f6f6f6;
+    border-right: 1px solid #f6f6f6;
+    padding: 0 30px; }
+    footer .community ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      footer .community ul li {
+        float: left;
+        margin-right: 20px; }
+        footer .community ul li [class^="ti-"], footer .community ul li [class*=" ti-"] {
+          font-size: 38px;
+          float: left;
+          margin-bottom: 5px;
+          text-align: center;
+          width: 100%; }
+        footer .community ul li span.title {
+          clear: both;
+          text-align: center;
+          float: left; }
+
+#about {
+  position: absolute;
+  top: -60px;
+  height: 1px;
+  width: 100%; }
+
+section.about {
+  position: relative; }
+  section.about .facts ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 1.4em; }
+    section.about .facts ul li {
+      margin-bottom: 10px;
+      float: left;
+      width: 100%; }
 
 section.giveatry {
   background: #333333;
@@ -510,3 +655,56 @@ section.giveatry {
     color: #f6f6f6; }
   section.giveatry .buttons a {
     display: inline-block; }
+
+@media (max-width: 991px) {
+  .homepage section.learnmore.animatein .right {
+    display: none; }
+
+  footer .col-md-4 {
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+    border: none;
+    text-align: center; }
+    footer .col-md-4 li {
+      float: none !important;
+      display: inline-block; } }
+@media (max-width: 767px) {
+  .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
+    font-size: 100px; }
+
+  .features section .col-md-5.icon {
+    margin: 30px 0; }
+
+  header.navbar .navbar-header img {
+    width: 200px !important; }
+
+  header.navbar {
+    background: rgba(0, 0, 0, 0.9); }
+
+  .navbar-toggle {
+    margin-right: 0;
+    margin-top: 4px; }
+    .navbar-toggle .ti-menu {
+      font-size: 1.2em; }
+
+  header.navbar .navbar-header {
+    padding: 15px; }
+
+  header.navbar nav ul.navbar-nav {
+    width: 100%;
+    margin-bottom: 20px; }
+    header.navbar nav ul.navbar-nav li {
+      width: 100%; }
+
+  .homepage section.intro {
+    position: relative;
+    background-size: auto;
+    background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; }
+
+  .nav-tabs li {
+    width: 100%; } }
+@media (max-width: 1199px) {
+  section.secondnav nav ul li a .text {
+    display: none; } }

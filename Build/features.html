@@ -44,31 +44,30 @@
     <div></div>
     <div></div>
   </div>
-  <div class="page inside">
-    <header>
+  <div class="page inside" id="top">
+    <header class="navbar bs-docs-nav" id="top" role="banner">
       <div class="container">
-        <div class="row">
-          <div class="col-md-3 logo">
-            <a href="/"><img src="assets/img/logo.svg"></a>
-          </div>
-          <div class="col-md-9 navigation">
-            <nav>
-  <ul>
-    <li><a href="#">About</a></li>
-    <li><a href="/features.html">Features</a></li>
-    <li><a href="#">Documentation</a></li>
-    <li><a href="#">Download</a></li>
+        <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="ti-menu"></span>
+      </button>
+      <a href="index.html"><img src="assets/img/logo.svg"></a>
+    </div>
+<nav class="collapse navbar-collapse bs-navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li class='current'><a class='current' href="features.html">Features</a></li>
+    <li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li>
+    <li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
+    <li><a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank"><span class="ti-github"></span></a></li>
   </ul>
 </nav>
-          </div>
-        </div>
       </div>
     </header>
 	<div class="features">
 		<section class="intro bg-img1 text-center">
 			<div class="container">
-				<h1>Features that are<BR>Secure, Accessible, Multilingual & Open Source</h1>
-				<h2>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses.With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h2>
+				<h1>Some of our many turn-key features</h1>
+				<h2>Drupal WxT installs in about 10 minutes, for free, and gives you all of this...</h2>
 			</div>
 		</section>
 		<section class="secondnav bg-light bluenav">
@@ -76,119 +75,233 @@
 				<nav>
 					<ul>
 						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-shield"></span></span>
-								<span class="text">Secure</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-fullscreen"></span></span>
-								<span class="text">Scalable</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
+							<a href="#accessable" class="slidelink">
 								<span class="icon"><span class="ti-wheelchair"></span></span>
-								<span class="text">Accessable</span>
+								<span class="text">Accessible</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-mobile"></span></span>
-								<span class="text">Responsive</span>
+							<a href="#themes" class="slidelink">
+								<span class="icon"><span class="ti-layers"></span></span>
+								<span class="text">WxT Themes</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-user"></span></span>
-								<span class="text">User Roles</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
+							<a href="#multlingual" class="slidelink">
 								<span class="icon"><span class="ti-comment"></span></span>
-								<span class="text">Multlingual</span>
+								<span class="text">Multilingual</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-world"></span></span>
-								<span class="text">Open Source</span>
+							<a href="#migration" class="slidelink">
+								<span class="icon"><span class="ti-exchange-vertical"></span></span>
+								<span class="text">Migration</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
-								<span class="icon"><span class="ti-plus"></span></span>
-								<span class="text">more</span>
+							<a href="#content" class="slidelink">
+								<span class="icon"><span class="ti-clipboard"></span></span>
+								<span class="text">Content Staging</span>
+							</a>
+						</li>
+						<li>
+							<a href="#workflow" class="slidelink">
+								<span class="icon"><span class="ti-reload"></span></span>
+								<span class="text">Workflow & Moderation</span>
+							</a>
+						</li>
+						<li>
+							<a href="#forms" class="slidelink">
+								<span class="icon"><span class="ti-layout-cta-left"></span></span>
+								<span class="text">Forms</span>
+							</a>
+						</li>
+						<li>
+							<a href="#layouts" class="slidelink">
+								<span class="icon"><span class="ti-layout"></span></span>
+								<span class="text">Layouts & Editors</span>
+							</a>
+						</li>
+						<li>
+							<a href="#search" class="slidelink">
+								<span class="icon"><span class="ti-search"></span></span>
+								<span class="text">Search</span>
 							</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</section>
-		<section class="deployment bg-white">
+		<section class="bg-white">
+			<div id="accessable" class="gotodiv"></div>
 			<div class="container">
 				<div class="row text-center">
-					<h2 class="mb35">Scalable</h2>
+					<h2 class="mb35">Accessible</h2>
 				</div>
 				<div class="row mb35">
 					<div class="col-md-7 left">
-						<h3 class="blue">User Roles & Workflow</h3>
-			        	<h4>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h4>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
+						<h3 class="blue">Accessible</h3>
+			        	<h4>Meets TBS accessibility standards</h4>
+			        	<p>Provides turnkey WCAG 2.0 Level AA compliance, including user content filters and restrictions to prevent accessibility breakage. ( Passes using TBS endorsed CSE validator).</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
 					</div>
-					<div class="col-md-5 pic right"><img src="http://placekitten.com/300/200"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-5 pic left"><img src="http://placekitten.com/300/200"></div>
-					<div class="col-md-7 right">
-						<h3 class="blue">100% Multilingual</h3>
-			        	<h4>With ever growing support for widgetas and plugins, Drupal WxT is great bor both internal and external uses</h4>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
+					<div class="col-md-5 icon right">
+						<span class="ti-wheelchair blue"></span>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="deployment bg-light">
+		<section class="bg-light">
+			<div id="themes" class="gotodiv"></div>
 			<div class="container">
 				<div class="row text-center">
-					<h2 class="mb35">Deployment</h2>
+					<h2 class="mb35">WxT Themes</h2>
 				</div>
-				<div class="row">
-					<div class="col-md-8 left">
-						<h3>Deployment</h3>
-			        	<h4 class="blue">Including administrative interface</h4>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit massa, tempor non dolor at, vehicula varius nisl. Donec tincidunt lorem viverra metus bibendum tincidunt. In non tellus sodales, sagittis purus facilisis, sagittis ipsum. Nunc egestas eleifend metus, eu ultricies tellus lacinia eget. Ut et rhoncus neque. Praesent euismod turpis augue, non tempus nisi fermentum in.</p>
-			        	<p><a href="#" class="btn btn-inverse white">Deployment</a></p>
+				<div class="row mb35">
+					<div class="col-md-5 icon left">
+						<span class="ti-layers"></span>
 					</div>
-					<div class="col-md-4 pic right"><img src="http://placekitten.com/300/200"></div>
+					<div class="col-md-7 right">
+						<h3 class="blue">Themes</h3>
+			        	<h4>Instant TBS WET-BOEW Themes</h4>
+			        	<p>Includes a GoC Public and Intranet WxT 3, 3.1 and the newer Bootstrap WxT 4 branch. As well as a plain (non-goc) WxT theme.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="migration bg-white" id="migration">
+		<section class="bg-white">
+			<div id="multlingual" class="gotodiv"></div>
 			<div class="container">
-				<h2 class="blue text-center">Migration at its best</h2>
-			    <ul id="myTab" class="nav nav-tabs">
-			      <li class="active"><a href="#what" data-toggle="tab">1. Content Inventory</a></li>
-			      <li class=""><a href="#use" data-toggle="tab">2. The Magic: Inspect & Clean</a></li>
-			      <li class=""><a href="#who" data-toggle="tab">3. Review & Publish</a></li>   
-			    </ul>
-			    <div class="tab-content">
-			      <div class="tab-pane fade active in" id="what">
-			       	<div class="row"><img src="http://placekitten.com/1200/500"></div>
-			       	<div class="row"><h3 class="text-center">Content Inventory</h3></div>
-			      </div>
-			      <div class="tab-pane fade" id="use">
-			        <div class="row"><img src="http://placekitten.com/1200/500"></div>
-			       	<div class="row"><h3 class="text-center">Inspect & Clean</h3></div>
-			      </div>
-			      <div class="tab-pane fade" id="who">
-			        <div class="row"><img src="http://placekitten.com/1200/500"></div>
-			       	<div class="row"><h3 class="text-center">Review & Publish</h3></div>
-			      </div>
-			    </div>
-			</div> 
+				<div class="row text-center">
+					<h2 class="mb35">Multilingual</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-7 left">
+						<h3 class="blue">Multilingual</h3>
+			        	<h4>100% Multilingual including administrative interface</h4>
+			        	<p>Has a French Canadian language pack, with many contributions from various government departments for common string elements, and has the ability to extend to over 200+ other languages...more than bilingual. </p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+					<div class="col-md-5 icon right">
+						<span class="ti-comment blue"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-light">
+			<div id="migration" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Migration</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-5 icon left">
+						<span class="ti-exchange-vertical"></span>
+					</div>
+					<div class="col-md-7 right">
+						<h3 class="blue">Migration</h3>
+			        	<h4>Robust scripted bulk-migration templates and cleansing</h4>
+			        	<p>With fully automated bulk harvesting of CLF2, WET3 templates, Drupal WxT can instantly pull content from static sites, TeamSite, OpenText, IBM/Domino, and countless others</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white">
+			<div id="content" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Content Staging</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-7 left">
+						<h3 class="blue">Content Staging</h3>
+			        	<h4>Full Content Staging and Deployment</h4>
+			        	<p>With no code, you can run a full "staging > deploy" to a live production environment VIA an administrative interface with a bulk scheduled rules engine or on-demand page by page.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+					<div class="col-md-5 icon right">
+						<span class="ti-clipboard blue"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-light">
+			<div id="workflow" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Workflow & Moderation</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-5 icon left">
+						<span class="ti-reload"></span>
+					</div>
+					<div class="col-md-7 right">
+						<h3 class="blue">Workflow & Moderation</h3>
+			        	<h4>Workflow, Moderation & Auditing built-in</h4>
+			        	<p>Includes a sophisticated workflow for both simple and complex processes. In-page audit tracking "who did what when" with versioning and ability to compare differences in revisions side by side, based on roles and permissions you have.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white">
+			<div id="forms" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Forms</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-7 left">
+						<h3 class="blue">Forms</h3>
+			        	<h4>Forms Builder Interface</h4>
+			        	<p>From simple user author-able forms for feedback, to comprehensive multifunction apps with integrated into legacy systems, Drupal WxT has a front-end to build it and manage it. (no code needed).</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+					<div class="col-md-5 icon right">
+						<span class="ti-layout-cta-left blue"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-light">
+			<div id="layouts" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Layouts & Editors</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-5 icon left">
+						<span class="ti-layout"></span>
+					</div>
+					<div class="col-md-7 right">
+						<h3 class="blue">Layouts & Editors</h3>
+			        	<h4>Content Layouts & Rich Text editors</h4>
+			        	<p>Offers content teams the option and ability to manage their layouts and page components with intuitive drag and drop panels UI. Includes an extensively featured rich text editor with user profile based restrictions, including media file handling and markup blacklists and whitelists... works with most Rick-Text editors.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white">
+			<div id="search" class="gotodiv"></div>
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Search</h2>
+				</div>
+				<div class="row mb35">
+					<div class="col-md-7 left">
+						<h3 class="blue">Search</h3>
+			        	<h4>Search and Structure</h4>
+			        	<p>Extends easily with SearchAPI and proven to work with Google Search and Solr for rich search application like facets and filters. Allows you to ingest external indexes from other systems and securely present metadata for a unified search results including full-text files.</p>
+			        	<p><a href="#" class="btn btn-inverse white">Learn more...</a></p>
+					</div>
+					<div class="col-md-5 icon right">
+						<span class="ti-search blue"></span>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="more bg-blue">
 			<div class="container">
@@ -259,12 +372,53 @@
 			<div class="container">
 				<h2>Ready to give Drupal WxT a try?</h2>
 				<span class="buttons">
-					<a href="#" class="btn btn-lg">Download</a>
-					<a href="#" class="btn btn-inverse">Or try the demo</a>
+					<a href="https://www.drupal.org/project/wetkit" target="_blank" class="btn btn-lg">DOWNLOAD</a>
+				    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-inverse">Or try the demo</a>
 				</span>
 			</div>
 		</section>
 	</div>
+	<a href="#top" class="gototop slidelink"><span class="ti-angle-up"></span></a>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4 wxt">
+						<a href="/" class="logo"><img src="assets/img/logo.svg"></a>
+						<ul>
+							<li><a href="/features.html">Features</a></li>
+							<li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li>
+							<li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
+						</ul>
+				</div>
+				<div class="col-sm-12 col-md-4 community">
+					<h2>Community</h2>
+					<ul>
+						<li>
+							<a href="https://www.drupal.org/project/wetkit" target="_blank">
+								<span class="ti-drupal"></span>
+								<span class="title">Drupal</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
+								<span class="ti-github"></span>
+								<span class="title">Github</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://wiki.drupalwxt.org/" target="_blank">
+								<span class="ti-write"></span>
+								<span class="title">Documentation</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-md-4 built">
+					<p>Website built & maintained by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	</div>
 <script src='assets/js/jquery-1.8.3.min.js'></script>
 <script src='assets/js/bootstrap.min.js'></script>

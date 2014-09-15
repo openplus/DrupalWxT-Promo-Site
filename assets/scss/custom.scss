@@ -84,6 +84,10 @@ a { @include transition(all 0.3s ease-in-out); }
 h4 { margin-top:-6px; font-size: 1.3em; }
 .blue { color:$blue; }
 .page { opacity:0;}
+.mb0 { margin-bottom: 0;}
+.mt5 { margin-top: 5px; }
+.mt100 { margin-top: 100px; }
+.mt35 { margin-top: 35px; }
 .mb35 { margin-bottom: 35px; }
 .btn { background:$blue; color:$white; text-shadow:none; border-radius: 5px; font-weight: 300; padding:12px 40px;
 	&.btn-lg { font-size: 1.2em;}
@@ -107,7 +111,7 @@ h4 { margin-top:-6px; font-size: 1.3em; }
 	}
 }
 .bg-dark { background:$dark-g; color:$white; }
-.bg-img1 { color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed;  text-shadow:1px 1px 10px #1F1F1F; }
+.bg-img1 { color:$white; text-align: center; padding:80px 0; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;  text-shadow:1px 1px 10px #1F1F1F; }
 .bg-white { background:#fff; color:$dark-g; }
 .bg-light { background:$white; color:$dark-g; }
 section { padding:30px 0 60px 0; 
@@ -149,25 +153,23 @@ section { padding:30px 0 60px 0;
 // Pictures in columns
 .pic { 
 	&.left { text-align: left; float: left;
-		img { float:left; }
+		img { float:left; width: 100%; height: auto; }
 	}
 	&.right { text-align: right; float:right;
-		img { float:right; }
+		img { float:right; width: 100%; height: auto; }
 	}
 }
 
 // Inside pages {
 .inside { 
-	header { background:rgba(0,0,0,0.9); position: relative;
+	header.navbar { background:rgba(0,0,0,0.9); position: relative;
 		.logo {
-			img { width: 80px; }
+			img { width: 150px; }
 		}
-		.navigation { margin-top: 30px; 
-			ul {
-				li {
-					a {
-						&:hover { background:$blue; color:$white; }
-					}
+		ul.navbar-nav {
+			li {
+				a {
+					&:hover, &.current { background:$blue; color:$white; }
 				}
 			}
 		}
@@ -176,33 +178,31 @@ section { padding:30px 0 60px 0;
 
 
 // HEADER
-header { background:transparent;  @include transition(all 0.5s ease-in-out); color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;
-	.logo { padding:20px 0;
-		img { width: 140px; @include transition(all 0.5s ease-in-out);}
+header.navbar { background:transparent;  @include transition(all 0.5s ease-in-out); margin-bottom: 0; border-radius: 0; color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;
+	.navbar-header { padding:20px 0;
+		img { width: 200px; @include transition(all 0.5s ease-in-out);}
 	}
-	.navigation { margin-top: 35px;
-		nav {
-			ul { padding:0; margin:0; float: right;
-				li { float:left;
-					a { color:$white; padding:14px 20px; border-radius: 3px;
-						&:hover { background:rgba(0,0,0,0.5); text-decoration: none;}
-					}
+	nav {
+		ul.navbar-nav { padding:0; margin:0; float: right; margin-top: 20px; 
+			li { 
+				a { color:$white; padding:14px 20px; border-radius: 3px;
+					&:hover{ background:rgba(0,0,0,0.2); text-decoration: none;}
 				}
 			}
 		}
 	}
 	&.bg { background:rgba(0,0,0,0.9); 
-		.logo {
-			img { width: 80px; }
+		.navbar-header {
+			img { width: 120px; }
 		}
-		.navigation { margin-top: 30px; 
-			ul {
+		nav {
+			ul.navbar-nav { margin-top: 14px;
 				li {
-					a {
+					a { padding:10px 20px;
 						&:hover { background:$blue; color:$white; }
 					}
 				}
-			}
+			}	
 		}
 	}
 }
@@ -213,13 +213,13 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 	nav { 
 		ul { text-align: center; margin:0; padding:0;
 			li { display: inline-block; margin-left: -4px;
-				a { padding:20px 30px 16px 30px;  display: block; color:$blue;
+				a { padding:19px 20px 16px 19px;  display: block; color:$blue;
 					.icon {
-						[class^="ti-"], [class*=" ti-"] { color:$dark-g; font-size: 3em; }
+						[class^="ti-"], [class*=" ti-"] { color:$dark-g; font-size: 2em; }
 					}
 					span { display: block;}
-					.text { font-size: 1.2em; margin:10px 0 0 0;}
-					&:hover { background:$blue; color:$white; text-decoration: none;
+					.text { font-size: 1.0em; margin:10px 0 0 0;}
+					&:hover, &.active { background:$blue; color:$white; text-decoration: none;
 						.icon {
 							[class^="ti-"], [class*=" ti-"] { color:$white;  }
 						}
@@ -232,11 +232,11 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 		nav { 
 			ul {
 				li { 
-					a { color:$white;
+					a { color:$white; @include transition(all 0.0s ease-in-out);
 						.icon {
 							[class^="ti-"], [class*=" ti-"] { color:$white; }
 						}
-						&:hover { background:$white; color:$blue; 
+						&:hover, &.active { background:$white; color:$blue; 
 							.icon {
 								[class^="ti-"], [class*=" ti-"] { color:$blue;  }
 							}
@@ -273,9 +273,14 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 		}
 	}
 	section.learnmore { 
+		[class^="ti-"], [class*=" ti-"] { font-size: 200px; 
+			&.top { position: absolute; z-index: 2; right: 0; width: 100%; left: 60px;}
+			&.bottom { position: absolute;  z-index: 1; right: 0; width: 100%; left: -60px;  }
+		}
 		h2 { text-align: center; }
-		.left { opacity: 0; left: -50px; @include transition(all 1.5s ease-in-out); }
-		.right { opacity: 0; right:-50px; @include transition(all 1.5s ease-in-out); }
+		.pic { text-align: center;}
+		.left { opacity: 0; left: -50px; @include transition(all 1.5s ease-in-out); position: relative;}
+		.right { opacity: 0; right:-50px; @include transition(all 1.5s ease-in-out); position: relative;}
 		&.animatein {
 			.left { opacity: 1; left:0; }
 			.right { opacity: 1; right:0; }
@@ -285,7 +290,8 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 		iframe { height: 400px; width: 100%; float: right;}
 	}
 	section.news {
-		.item { background:$dark-g; color:$white; padding: 0 20px 20px 20px; float: left; width: 100%; margin-bottom: 30px; 
+		.item { background-color:$dark-g; color:$white; padding: 0 20px 20px 20px; z-index: 2; float: left; width: 100%; margin-bottom: 30px; position: relative;
+			&:after { background:url(../img/1629941.jpg); opacity: 0.05; z-index: -1; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; content:''; }
 			a { color:$white;} 
 			.header { color:$white; background:$blue; position: relative; float: left; margin-top: -8px; padding:5px 10px; text-align: center; font-size: 1.2em; 
 			}
@@ -298,7 +304,13 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 }
 
 // Features page
-.features {
+.gototop { position: fixed; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 8px 10px;
+	&:hover { text-decoration: none; border:1px solid $blue; } 
+}
+.hasstickyheader {
+	.gototop { display: block; }
+}
+.features { 
 	.intro {
 		h2 { @include headers(1.5em,300,1em); margin:0; }
 	}
@@ -309,6 +321,47 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 			}
 		}
 	}
+	section { position: relative;
+		.gotodiv { position: absolute; top: -80px; height: 1px; width: 100%; }
+		.icon { text-align:center;
+			[class^="ti-"], [class*=" ti-"] { font-size: 200px; }
+			&.right {}
+			&.left {}
+		}
+	}
+}
+
+footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0;
+	h2 { margin-top: 0;}
+	a { color:$white; text-decoration: underline;
+		&:hover { color:$blue; }
+	}
+	.built { padding:40px 0 40px 30px; }
+	.wxt { padding-top: 15px;
+		.logo { margin-bottom: 10px; display: block;
+			img { width: 180px; }
+		}
+		ul { list-style: none; margin:0; padding:0;
+			li { float: left; margin-right: 10px; }
+		}
+	}
+	.community { border-left: 1px solid $white; border-right:1px solid $white; padding:0 30px;
+		ul { list-style: none; margin:0; padding:0;
+			li { float: left; margin-right: 20px;
+				[class^="ti-"], [class*=" ti-"] { font-size: 38px; float: left; margin-bottom: 5px; text-align: center; width: 100%; }
+				span.title { clear: both; text-align: center; float: left; }
+			}
+		}
+	}
+}
+
+#about { position: absolute; top: -60px; height: 1px; width: 100%; }
+section.about { position: relative;
+	.facts { 
+		ul { margin:0; padding:0; list-style: none; font-size: 1.2em; line-height: 1.4em;
+			li { margin-bottom: 10px; float: left; width: 100%; }
+		}
+	}
 }
 
 section.giveatry { background:$dark-g;  text-align: center; 
@@ -316,4 +369,30 @@ section.giveatry { background:$dark-g;  text-align: center;
 	.buttons { 
 		a { display: inline-block;}
 	}
+}
+@media (max-width: 991px) {
+	.homepage section.learnmore.animatein .right { display: none; }
+	footer .col-md-4 { margin-bottom: 40px; width: 100%; padding:0 15px; float: left; border:none; text-align: center; 
+		li { float: none !important; display: inline-block;}
+	}
+}
+
+@media (max-width: 767px) {
+	.features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] { font-size: 100px; }
+	.features section .col-md-5.icon { margin:30px 0;}
+	header.navbar .navbar-header img { width: 200px !important; }
+	header.navbar { background: rgba(0,0,0,0.9); }
+	.navbar-toggle { margin-right: 0; margin-top: 4px;
+		.ti-menu { font-size: 1.2em;}
+	}
+	header.navbar .navbar-header { padding:15px; }
+	header.navbar nav ul.navbar-nav { width: 100%; margin-bottom: 20px;
+		li { width: 100%; }
+	}
+	.homepage section.intro { position: relative; background-size: auto; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; }
+	.nav-tabs li { width: 100%; }
+}
+
+@media (max-width: 1199px){
+	section.secondnav nav ul li a .text { display: none;}
 }
