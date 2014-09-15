@@ -15,3 +15,7 @@ This is the new site for Drupal WxT - Take a look at the screenshot below
 1. Content for the "There is more..." Section on feature page. 
 2. Where to send the "Learn More..." Links for each section / feature. 
 3. Someoen to do QA on content
+
+#What I have left to do:
+1. Browser Testing ( IE9, FF, Chrome, Safari )
+2. Mobile Testing ( iPhone, Tablet, safari )
