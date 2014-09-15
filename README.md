@@ -6,12 +6,12 @@ This is the new site for Drupal WxT - Take a look at the screenshot below
 ![image](https://github.com/openplus/WxT/blob/master/screenshot.png)
 
 #Content I need:
-## Home Page
+### Home Page
 1. 4(four) News / Blog posts about Drupal WxT and their links.
 2. 3(three) videos about Drupal WxT
 3. Someone to do QA on content 
 
-## Feature Page
+### Feature Page
 1. Content for the "There is more..." Section on feature page. 
 2. Where to send the "Learn More..." Links for each section / feature. 
 3. Someoen to do QA on content
