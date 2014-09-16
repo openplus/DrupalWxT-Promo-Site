@@ -558,6 +558,19 @@ section.secondnav {
         section.secondnav.bluenav nav ul li a:hover .icon [class^="ti-"], section.secondnav.bluenav nav ul li a:hover .icon [class*=" ti-"], section.secondnav.bluenav nav ul li a.active .icon [class^="ti-"], section.secondnav.bluenav nav ul li a.active .icon [class*=" ti-"] {
           color: #428bca; }
 
+section.bg-bg {
+  background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0;
+  color: #f6f6f6; }
+  section.bg-bg p {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 0px 0px 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+    margin-bottom: 0; }
+
 .homepage section.intro {
   padding: 200px 0 0;
   color: #f6f6f6;
@@ -756,6 +769,17 @@ section.secondnav {
     text-align: center; }
     .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
       font-size: 200px; }
+
+.about .intro h2 {
+  font-family: 'Roboto';
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0; }
+.about section .icon {
+  text-align: center; }
+  .about section .icon [class^="ti-"], .about section .icon [class*=" ti-"] {
+    font-size: 200px; }
 
 footer {
   background: rgba(0, 0, 0, 0.9);
