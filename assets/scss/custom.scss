@@ -487,7 +487,7 @@ section.bg-bg { background:	url(../img/city-wallpaper-hd-10859-11378-hd-wallpape
 	}
 	section.usedby { padding:30px 0 25px 0; text-align: center;
 		.logos { width: 100%; height: 100px; overflow: hidden;
-			a { display: inline-block; margin:10px; opacity: 0.6;
+			a { display: inline-block; margin:10px; padding-right:40px; opacity: 0.6;
 				&:hover { opacity: 1;}
 			}
 		}
@@ -522,6 +522,33 @@ section.bg-bg { background:	url(../img/city-wallpaper-hd-10859-11378-hd-wallpape
 		}
 	}
 }
+
+// Subsribe
+
+.free {
+    text-transform: uppercase;
+}
+.input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+input.btn.btn-lg {
+    width: 60%;
+    height: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color:#fff;
+}
+button.btn {
+    width: 40%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.promise {
+    color: #999;
+}
+
 
 // Features page
 .gototop { position: fixed; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 8px 10px;
@@ -572,7 +599,7 @@ footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0;
 	a { color:$white; text-decoration: underline;
 		&:hover { color:$blue; }
 	}
-	.built { padding:40px 0 40px 30px; }
+	.built { padding:0 0 40px 30px; }
 	.wxt { padding-top: 15px;
 		.logo { margin-bottom: 10px; display: block;
 			img { width: 180px; }

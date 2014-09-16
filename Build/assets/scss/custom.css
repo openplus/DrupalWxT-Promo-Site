@@ -633,6 +633,7 @@ section.bg-bg {
     .homepage section.usedby .logos a {
       display: inline-block;
       margin: 10px;
+      padding-right: 40px;
       opacity: 0.6; }
       .homepage section.usedby .logos a:hover {
         opacity: 1; }
@@ -723,6 +724,29 @@ section.bg-bg {
     float: left;
     clear: both; }
 
+.free {
+  text-transform: uppercase; }
+
+.input-group {
+  margin: 20px auto;
+  width: 100%; }
+
+input.btn.btn-lg {
+  width: 60%;
+  height: 60px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #fff; }
+
+button.btn {
+  width: 40%;
+  height: 60px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.promise {
+  color: #999; }
+
 .gototop {
   position: fixed;
   right: 15px;
@@ -793,7 +817,7 @@ footer {
     footer a:hover {
       color: #428bca; }
   footer .built {
-    padding: 40px 0 40px 30px; }
+    padding: 0 0 40px 30px; }
   footer .wxt {
     padding-top: 15px; }
     footer .wxt .logo {
