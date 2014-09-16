@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+<link rel='stylesheet' href='assets/css/animate.min.css'>
+<link rel='stylesheet' href='assets/icons/themify-icons.css'>
+<link rel='stylesheet' href='assets/css/custom.css'>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <!--[if lt IE 8]><!-->
+ <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
+  <!--<![endif]-->
+  <title>WxT Home</title>
+<body>
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="page home">
+    <header class="navbar bs-docs-nav" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="ti-menu"></span>
+      </button>
+      <a class='current' href="index.html"><img src="assets/img/logo.svg"></a>
+    </div>
+<nav class="collapse navbar-collapse bs-navbar-collapse">
+  <ul class="nav navbar-nav">
+  	<li><a href="about.html">About</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li>
+    <li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
+    <li><a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank"><span class="ti-github"></span></a></li>
+  </ul>
+</nav>
+      </div>
+    </header>
+	<div class="homepage">
+	    <section class="intro">
+		    <div class="container">
+		    	<div class="row">
+		    		<div class="col-md-10 col-md-push-1">
+				    	<h1>Build your next website, intranet or app with Drupal WxT</h1>
+				    	<h2>It's free. It's open source</h2>
+				    	<div class="download">
+				    		<span class="buttons">
+				    			<a href="https://www.drupal.org/project/wetkit" target="_blank" class="btn btn-lg">DOWNLOAD</a>
+				    			<a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-inverse">Or try the demo</a>
+				    		</span>
+				    		<p>version 2.0 - <a href="https://www.drupal.org/project/wetkit" target="_blank">Drupal Project</a> - <a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">Github Project</a> - <a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></p>
+				    	</div>
+			    	</div>
+		    	</div>
+		    </div>
+		    <a href="#about" class="learnmore animated infinite bounce slidelink">Learn more</a>
+		</section>
+		<section class="usedby bg-light">
+			<div class="text-center">
+				<h2 class="blue mb0 mt0">Organizations using Drupal WxT</h2>
+			</div>
+			<div class="logos">
+				<a href="#" class="first"><img src="assets/img/logo2.png"></a>
+				<a href="#"><img src="assets/img/logo2-1.png"></a>
+				<a href="#"><img src="assets/img/logo2-3.png"></a>
+				<a href="#"><img src="assets/img/logo2-5.png"></a>
+				<a href="#"><img src="assets/img/logo2-6.png"></a>
+			</div>
+		</section>
+		<section class="about bg-white">
+			<div id="about"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="blue mb0">About Drupal WxT</h2>
+						<h3 class="mb35 mt5">A little information about Drupal WxT to get you started.</h3>
+						<p>Drupal WxT(Web Experience Toolkit) is a production proven platform with includes ready-made, re-usable tools and components for building and maintaining innovative enterprise sites that are multilingual, accessible, mobile and interoperable. </p>
+						<p>Drupal WxT is a non-proprietary distribution of Drupal, with best practice modules and methodology all wrapped up in one ready to go solution. It not only uses components that help with Cross-Browser compatibility, but components that are responsive and interchangeable within your layout. </p>
+						<p>While still complying with Web Accessibility and Web Usability standards, WxT makes use of advanced technology such as CSS3, HTML5, and jQuery in order to meet today's web functionality and reliability requirements. </p>
+						<p>With an ever growing community of support building modules, widgets and plug-ins. Drupal WxT is great for both internal collaborative intranets and public websites looking to adopt to the fast pace of the web while maintaining security standards. </p>
+					</div>
+					<div class="col-md-4 facts">
+						<h2 class="blue mb0">Drupal Facts</h2>
+						<h3 class="mb35 mt5">A few fun facts about Drupal</h3>
+						<ul>
+							<li>The <strong class="blue">Largest</strong> Open Source project <strong class="blue">in the World.</strong></li>
+							<li>Just under <strong class="blue">1,000,000</strong> people strong. 2X the size of Linux developer community.</li>
+							<li>Most Widely Deployed Enterprise CMS Market. Presence <strong class="blue">1,500,000+</strong> sites.</li>
+							<li>From <strong class="blue">228</strong>  countries in <strong class="blue">181</strong>  languages.</li>
+							<li>With <strong class="blue">20,000+</strong>  modules.</li>
+							<li>Powers sites like: WhiteHouse.gov, Ottawa.ca... and so many others.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="learnmore" id="learnmore">
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="blue mb0">Benefits, to name a few</h2>
+					<h3 class="mb35 mt5">Just some of the reasons why this is a game changer.</h3>
+				</div>
+			    <ul id="myTab" class="nav nav-tabs">
+			      <li class="active"><a href="#what" data-toggle="tab">Secure & Open</a></li>
+			      <li class=""><a href="#use" data-toggle="tab">Extendable, Engagement & Feature ready</a></li>
+			      <li class=""><a href="#who" data-toggle="tab">Transportable & Tested</a></li>   
+			    </ul>
+			    <div class="tab-content">
+			      <div class="tab-pane fade active in" id="what">
+			      	<div class="row">
+				        <div class="col-md-6 left">
+				        	<h3>Security</h3>
+				        	<h4 class="h4-2 blue">Security enhanced and Shared Services Canada vetted.</h4>
+				        	<p>Modules and guidelines have been added to Drupal WxT to increase security, which has already been reviewed and approved for TRA (Threat Risk Assessment) by Shared Services Canada.</p>
+				        	<h3 class="mt35">Open</h3>
+				        	<h4 class="h4-2 blue">Largest Open Source Community and contributors on the planet.</h4>
+				        	<p>With over a million people behind Drupal.org, critical mass adoption is an understatement. Over 2x the size of the Linux developer community, we are vibrant local and international community with a public road-map and a public issue tracker. Even Drupal WxT has its own Issue Queue (with over 1200 resolved issues, and no active pending) on Github.</p>
+				        </div>
+				        <div class="col-md-5 pic right mt100">
+				        	<span class="ti-shield grey top"></span>
+				        	<span class="ti-world blue bottom"></span>
+				        </div>
+				      </div>
+			      </div>
+			      <div class="tab-pane fade" id="use">
+			        <div class="row">
+				         <div class="col-md-6 left ">
+				        	<h3>Extendable</h3>
+				        	<h4 class="h4-2 blue">Extendable with anything</h4>
+				        	<p>Without "for profit" decision-making... Drupal is organically transparent and has vested interest to work with others, so it does. It supports Web Services integration and even CMIS (Content Management Interoperability Service) to integrate seamlessly with other Repositories.</p>
+				        	<h3 class="mt35">Engagement</h3>
+				        	<h4 class="h4-2 blue">User Engagement Ready</h4>
+				        	<p>Leave static pages in the dust and be ready for the user engagement features that help reduce GoC call center loads. Chat, Commenting/Discussions, Content ratings, Blogs, Follow content, Social Sharing and much more.</p>
+				        	<h3 class="mt35">Feature ready</h3>
+				        	<h4 class="h4-2 blue">Feature Server ready</h4>
+				        	<p>Drupal incorporates a "Features" distribution and App delivery service to help control versioned distributions and enhance sites. (similar to your iPhone Apps). Add a Drupal WxT GoC approved Blog, and other controlled features easily.</p>
+				        </div>
+				        <div class="col-md-5 pic right mt100">
+				        	<span class="ti-comments blue bottom"></span>
+				        	<span class="ti-layers-alt grey top"></span>
+				        	
+				        </div>
+				       
+				      </div>
+			      </div>
+			      <div class="tab-pane fade" id="who">
+			       <div class="row">
+				         <div class="col-md-6 left ">
+				        	<h3>Transportable</h3>
+				        	<h4 class="h4-2 blue">Transportable, Versatile & Innovation</h4>
+				        	<p>There is no licensing gauntlet with Drupal, making it agile and easy to evolve and move. You always share the Intellectual property, allowing you to harness and motivate developers to be collaborative and innovative. Making GoC more agile and keeping up with the pace of the web. </p>
+				        	<h3 class="mt35">Testing</h3>
+				        	<h4 class="h4-2 blue">Extensive GoC testing.</h4>
+				        	<p>There has been extensive GoC testing including automated Continuous Integration. Selenium Unity scripted cross-browser and multi-device testing is an automated process.</p>
+				    
+				        </div>
+				        <div class="col-md-5 pic right mt100">
+				        	<span class="ti-package blue bottom"></span>
+				        	<span class="ti-check-box grey top"></span>
+		
+				        </div>
+				       
+				      </div>
+			      </div>
+			    </div>
+			</div> 
+		</section>
+		<section class="video bg-blue">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-12">
+					<h2>Videos</h2>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-4">
+					<ul id="myTab" class="nav nav-tabs nav-stacked">
+				      <li class="active"><a href="#video1" data-toggle="tab"><h3>What is WxT?</h3><span>Everything you need to know about Drupal WxT in 5 Minutes</span></a></li>
+				      <li class=""><a href="#video2" data-toggle="tab"><h3>What can you do with WxT?</h3><span>Everything you need to know about Drupal WxT in 5 Minutes</span></a></li>
+				      <li class=""><a href="#video3" data-toggle="tab"><h3>Who can use it?</h3><span>Everything you need to know about Drupal WxT in 5 Minutes</span></a></li>   
+				    </ul>
+				</div>
+				<div class="col-md-8">
+					<div class="tab-content">
+			      		<div class="tab-pane fade active in" id="video1">
+			      			<iframe src="//player.vimeo.com/video/94786328" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			      		</div>
+			      		<div class="tab-pane fade" id="video2">
+			      			<iframe src="//player.vimeo.com/video/94786328" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			      		</div>
+			      		<div class="tab-pane fade" id="video3">
+			      			<iframe src="//player.vimeo.com/video/94786328" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			      		</div>
+			      	</div>
+				</div>
+				</div>
+			</div>
+		</section>
+		<section class="news bg-light">
+			<div class="container">
+				<div class="row text-center">
+					<h2 class="mb35">Drupal WxT Latest News</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<div class="item">
+							<div class="header">
+								<div class="content">
+									<div class="day">July 14</div>
+									<div class="year">2014</div>
+								</div>
+							</div>
+							<div class="title"><h3><a href="#">Drupal WxT 2.0 Release with the launch of new a website</a></h3></div>
+							<div class="type">News Release</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="item">
+							<div class="header">
+								<div class="content">
+									<div class="day">July 14</div>
+									<div class="year">2014</div>
+								</div>
+							</div>
+							<div class="title"><h3><a href="#">Drupal WxT 2.0 Release with the launch of new a website</a></h3></div>
+							<div class="type">News Release</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="item">
+							<div class="header">
+								<div class="content">
+									<div class="day">July 14</div>
+									<div class="year">2014</div>
+								</div>
+							</div>
+							<div class="title"><h3><a href="#">Drupal WxT 2.0 Release with the launch of new a website</a></h3></div>
+							<div class="type">News Release</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="item">
+							<div class="header">
+								<div class="content">
+									<div class="day">July 14</div>
+									<div class="year">2014</div>
+								</div>
+							</div>
+							<div class="title"><h3><a href="#">Drupal WxT 2.0 Release with the launch of new a website</a></h3></div>
+							<div class="type">News Release</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<p class="text-center subscribe"><a href="#">Subscribe to get the latest news & security updates.</a></p>
+				</div>
+			</div>
+		</section>
+		<section class="giveatry">
+			<div class="container">
+				<h2 class="mt0">Ready to give Drupal WxT a try?</h2>
+				<span class="buttons">
+					<a href="https://www.drupal.org/project/wetkit" target="_blank" class="btn btn-lg">DOWNLOAD</a>
+				    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-inverse">Or try the demo</a>
+				</span>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4 wxt">
+						<a href="/" class="logo"><img src="assets/img/logo.svg"></a>
+						<ul>
+							<li><a href="/features.html">Features</a></li>
+							<li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li>
+							<li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
+						</ul>
+				</div>
+				<div class="col-sm-12 col-md-4 community">
+					<h2>Community</h2>
+					<ul>
+						<li>
+							<a href="https://www.drupal.org/project/wetkit" target="_blank">
+								<span class="ti-drupal"></span>
+								<span class="title">Drupal</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
+								<span class="ti-github"></span>
+								<span class="title">Github</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://wiki.drupalwxt.org/" target="_blank">
+								<span class="ti-write"></span>
+								<span class="title">Documentation</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-md-4 built">
+					<p>Website built & maintained by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src='assets/js/jquery.marquee.min.js'></script>
+<script src='assets/js/app.js'></script>
+</body>
+</html>

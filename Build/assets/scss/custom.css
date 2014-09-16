@@ -874,10 +874,10 @@ section.giveatry {
     text-align: center;
     margin: 10px 0 10px 0; }
 
-  .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
+  .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"], .about section .icon [class^="ti-"], .about section .icon [class*=" ti-"] {
     font-size: 100px; }
 
-  .features section .col-md-5.icon {
+  .features section .col-md-5.icon, .about section .col-md-5.icon {
     margin: 30px 0; }
 
   header.navbar .navbar-header img {
