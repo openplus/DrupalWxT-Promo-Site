@@ -278,6 +278,15 @@ p.inverse-heading {
 .js-marquee-wrapper {
   margin-left: -100px !important; }
 
+.carousel {
+  overflow: hidden; }
+
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+  left: 50px; }
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+  right: 50px; }
+
 .blue {
   color: #428bca; }
 
@@ -473,7 +482,7 @@ header.navbar {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; }
+  z-index: 100; }
   header.navbar .navbar-header {
     padding: 20px 0; }
     header.navbar .navbar-header img {
@@ -571,11 +580,17 @@ section.bg-bg {
     position: relative;
     margin-bottom: 0; }
 
+section#carousel.bg-bg {
+  padding: 40px 0; }
+  section#carousel.bg-bg p {
+    font-size: 32px;
+    line-height: 42px; }
+
 .homepage section.intro {
   padding: 200px 0 0;
   color: #f6f6f6;
   text-align: center;
-  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed;
+  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;
   background-size: cover;
   text-shadow: 1px 1px 10px #1F1F1F; }
   .homepage section.intro:before {
@@ -605,15 +620,12 @@ section.bg-bg {
         color: #f6f6f6;
         text-shadow: 1px 1px 10px #1F1F1F; }
   .homepage section.intro .learnmore {
-    position: absolute;
     background: rgba(0, 0, 0, 0.5);
     padding: 9px 25px;
-    margin-left: -64px;
+    margin-left: -135px;
     color: #f6f6f6;
     border-radius: 20px;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
+    position: relative;
     -webkit-animation-duration: 1.3s;
     -moz-animation-duration: 1.3s;
     animation-duration: 1.3s;
@@ -623,6 +635,27 @@ section.bg-bg {
     -webkit-animation-iteration-count: 3;
     -moz-animation-iteration-count: 3;
     animation-iteration-count: 3; }
+  .homepage section.intro.intro2 {
+    background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;
+    text-align: left; }
+    .homepage section.intro.intro2 h2 {
+      font-size: 64px;
+      line-height: 73px;
+      font-weight: bold;
+      margin: 20px 0; }
+    .homepage section.intro.intro2 p {
+      font-size: 24px;
+      line-height: 30px; }
+  .homepage section.intro.intro3 {
+    background: url(../img/drupalwxtbg.png) no-repeat center center;
+    text-align: left; }
+    .homepage section.intro.intro3 h2 {
+      font-size: 64px;
+      line-height: 73px;
+      font-weight: bold; }
+    .homepage section.intro.intro3 p {
+      font-size: 24px;
+      line-height: 30px; }
 .homepage section.usedby {
   padding: 30px 0 25px 0;
   text-align: center; }
@@ -755,7 +788,7 @@ button.btn {
   display: none;
   background: #fff;
   border-radius: 50%;
-  padding: 8px 10px; }
+  padding: 5px 10px; }
   .gototop:hover {
     text-decoration: none;
     border: 1px solid #428bca; }
@@ -794,21 +827,29 @@ button.btn {
     .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
       font-size: 200px; }
 
-.about .intro h2 {
-  font-family: 'Roboto';
-  font-size: 1.5em;
-  font-weight: 300;
-  line-height: 1em;
-  margin: 0; }
-.about section .icon {
+.getstarted section .icon {
   text-align: center; }
-  .about section .icon [class^="ti-"], .about section .icon [class*=" ti-"] {
+  .getstarted section .icon [class^="ti-"], .getstarted section .icon [class*=" ti-"] {
     font-size: 200px; }
+.getstarted section.started {
+  text-align: center; }
+  .getstarted section.started p.icon {
+    margin-bottom: 50px;
+    margin-top: 35px; }
+  .getstarted section.started .icon {
+    text-align: center; }
+    .getstarted section.started .icon [class^="ti-"], .getstarted section.started .icon [class*=" ti-"] {
+      font-size: 44px;
+      padding: 20px;
+      box-shadow: 0px 0 0px 1px #fff, 0 0 0 3px #428bca;
+      background: #428bca;
+      color: #f6f6f6;
+      border-radius: 50%; }
 
 footer {
   background: rgba(0, 0, 0, 0.9);
   color: #f6f6f6;
-  padding: 40px 0; }
+  padding: 40px 0 20px; }
   footer h2 {
     margin-top: 0; }
   footer a {
@@ -817,7 +858,7 @@ footer {
     footer a:hover {
       color: #428bca; }
   footer .built {
-    padding: 0 0 40px 30px; }
+    padding: 0 0 0px 30px; }
   footer .wxt {
     padding-top: 15px; }
     footer .wxt .logo {
@@ -879,6 +920,45 @@ section.giveatry {
   section.giveatry .buttons a {
     display: inline-block; }
 
+.quote {
+  color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px; }
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px; }
+
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
+
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1; }
+
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px; }
+
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #428bca;
+  border: none; }
+  #fade-quote-carousel.carousel .carousel-indicators > li.active, #fade-quote-carousel.carousel .carousel-indicators > li:hover {
+    background-color: #f6f6f6; }
+
+#fade-quote-carousel blockquote {
+  text-align: center;
+  border: none; }
+
+#fade-quote-carousel .profile-circle {
+  margin: 0 auto; }
+  #fade-quote-carousel .profile-circle img {
+    height: 50px;
+    width: auto; }
+
 @media (max-width: 991px) {
   .homepage section.learnmore.animatein .right {
     display: none; }
@@ -894,6 +974,24 @@ section.giveatry {
       float: none !important;
       display: inline-block; } }
 @media (max-width: 767px) {
+  .homepage .homepageslider section.intro.intro3 .col-md-5 {
+    margin: 20px 0; }
+
+  .homepage .homepageslider .carousel-indicators {
+    top: 110px;
+    bottom: auto; }
+
+  .homepage .homepageslider section.intro {
+    padding: 120px 0 0; }
+
+  section.bg-bg p {
+    font-size: 32px;
+    line-height: 46px;
+    padding: 0 30px; }
+
+  .getstarted section.started .col-md-4 {
+    margin-bottom: 80px; }
+
   .features .more .item .img {
     text-align: center;
     margin: 10px 0 10px 0; }

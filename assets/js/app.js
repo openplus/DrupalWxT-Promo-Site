@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	$('.carousel').carousel({
+	  interval: 10000
+	});
 	$(window).scroll(function () {
 		if($(window).scrollTop() > 150){
 			$(".home header").addClass("bg");
@@ -26,6 +29,8 @@ $(document).ready(function(){
         }); 
     });
 });
+
+
 
 $(function() {
   $('a[href*=#]:not([href=#]).slidelink').click(function() {

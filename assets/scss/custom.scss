@@ -296,7 +296,9 @@ p.inverse-heading{
 
 
 .js-marquee-wrapper { margin-left: -100px !important; }
-
+.carousel { overflow: hidden;}
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left { left: 50px; }
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right { right: 50px; }
 .blue { color:$blue; }
 .page { opacity:0;}
 .mb0 { margin-bottom: 0;}
@@ -394,7 +396,7 @@ section { padding:30px 0;
 
 
 // HEADER
-header.navbar { background:transparent;  @include transition(all 0.5s ease-in-out); margin-bottom: 0; border-radius: 0; color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;
+header.navbar { background:transparent;  @include transition(all 0.5s ease-in-out); margin-bottom: 0; border-radius: 0; color:$white; position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
 	.navbar-header { padding:20px 0;
 		img { width: 200px; @include transition(all 0.5s ease-in-out);}
 	}
@@ -467,10 +469,13 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 section.bg-bg { background:	url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat fixed; background-size: cover; padding:60px 0; color:$white;
 	p { font-size: 60px; line-height: 68px; font-weight: 200; text-shadow:2px 2px 2px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.8); position: relative; margin-bottom: 0;} 
 }
+section#carousel.bg-bg {padding:40px 0;
+	p { font-size: 32px; line-height: 42px; }
+}
 
 // HOME PAGE
 .homepage {
-	section.intro { padding:200px 0 0; color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center fixed; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
+	section.intro { padding:200px 0 0; color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
 		&:before { position: absolute; z-index: 0; content:''; top: 0; left: 0; width: 100%; height: 100%; background:rgba(0,0,0,0.4); }
 		h2 { @include headers(1.5em,300,1em); margin:0; }
 		.summ { margin-top: 50px;}
@@ -483,8 +488,17 @@ section.bg-bg { background:	url(../img/city-wallpaper-hd-10859-11378-hd-wallpape
 				a { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
 			}
 		}
-		.learnmore { position: absolute; background:rgba(0,0,0,0.5); padding:9px 25px; margin-left: -64px; color:$white; border-radius: 20px; position: absolute; left: 50%; bottom: 20px; @include animation-duration(1.3s); @include animation-delay(2s);@include animation-iteration-count(3);}
+		.learnmore { background:rgba(0,0,0,0.5); padding:9px 25px; margin-left: -135px; color:$white; border-radius: 20px; position: relative; @include animation-duration(1.3s); @include animation-delay(2s);@include animation-iteration-count(3);}
+		&.intro2 { background:url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center; text-align: left;
+			h2 { font-size: 64px; line-height: 73px; font-weight: bold; margin:20px 0; }
+			p { font-size: 24px; line-height: 30px;  }
+		}
+		&.intro3 { background:url(../img/drupalwxtbg.png) no-repeat center center; text-align: left;
+			h2 { font-size: 64px; line-height: 73px; font-weight: bold;  }
+			p { font-size: 24px; line-height: 30px;  }
+		}
 	}
+	
 	section.usedby { padding:30px 0 25px 0; text-align: center;
 		.logos { width: 100%; height: 100px; overflow: hidden;
 			a { display: inline-block; margin:10px; padding-right:40px; opacity: 0.6;
@@ -551,7 +565,7 @@ button.btn {
 
 
 // Features page
-.gototop { position: fixed; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 8px 10px;
+.gototop { position: fixed; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 5px 10px;
 	&:hover { text-decoration: none; border:1px solid $blue; } 
 }
 .hasstickyheader {
@@ -581,10 +595,7 @@ button.btn {
 	}
 }
 
-.about { 
-	.intro {
-		h2 { @include headers(1.5em,300,1em); margin:0; }
-	}
+.getstarted { 
 	section {
 		.icon { text-align:center;
 			[class^="ti-"], [class*=" ti-"] { font-size: 200px; }
@@ -592,14 +603,23 @@ button.btn {
 			&.left {}
 		}
 	}
+	section.started { text-align: center;
+		p.icon { margin-bottom: 50px; margin-top: 35px;  }
+		.icon { text-align:center;
+			[class^="ti-"], [class*=" ti-"] { font-size: 44px; padding:20px; box-shadow: 0px 0 0px 1px #fff, 0 0 0 3px #428bca; background:$blue; color:$white; border-radius: 50%;  }
+			&.right {}
+			&.left {}
+		}
+
+	}
 }
 
-footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0;
+footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0 20px;
 	h2 { margin-top: 0;}
 	a { color:$white; text-decoration: underline;
 		&:hover { color:$blue; }
 	}
-	.built { padding:0 0 40px 30px; }
+	.built { padding:0 0 0px 30px; }
 	.wxt { padding-top: 15px;
 		.logo { margin-bottom: 10px; display: block;
 			img { width: 180px; }
@@ -634,6 +654,46 @@ section.giveatry { background:$dark-g;  text-align: center;
 	}
 }
 
+
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item { opacity: 0;  @include transition(opacity 0.3s ease-in-out);
+  
+}
+#fade-quote-carousel.carousel .carousel-inner .active { opacity: 1;
+  
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li { background-color: $blue; border: none;
+	&.active, &:hover  { background-color:$white; }
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle { margin: 0 auto;
+	img { height: 50px; width: auto; }
+}
+
+
+
+
+
+
 @media (max-width: 991px) {
 	.homepage section.learnmore.animatein .right { display: none; }
 	footer .col-md-4 { margin-bottom: 40px; width: 100%; padding:0 15px; float: left; border:none; text-align: center; 
@@ -642,6 +702,11 @@ section.giveatry { background:$dark-g;  text-align: center;
 }
 
 @media (max-width: 767px) {
+	.homepage .homepageslider section.intro.intro3 .col-md-5 { margin:20px 0; }
+	.homepage .homepageslider .carousel-indicators { top:110px; bottom: auto; }
+	.homepage .homepageslider section.intro{ padding:120px 0 0;}
+	section.bg-bg p { font-size: 32px; line-height: 46px; padding:0 30px; }
+	.getstarted section.started .col-md-4 { margin-bottom: 80px;}
 	.features .more .item .img { text-align: center; margin:10px 0 10px 0;}
 	.features section .icon [class^="ti-"], .features section .icon [class*=" ti-"], .about section .icon [class^="ti-"], .about section .icon [class*=" ti-"] { font-size: 100px; }
 	.features section .col-md-5.icon, .about section .col-md-5.icon { margin:30px 0;}
