@@ -68,13 +68,17 @@ $(function() {
   });
 });
 
-$(window).load(function() {
-    $('.logos').marquee({
-    	duplicated: true,
-    	duration: 20000,
-    	pauseOnHover: true
-    });
-});
+// $(window).load(function() {
+//    $('.logos').marq({
+// 		speed: 5000,
+// 		gap: 50,
+// 		delayBeforeStart: 0,
+// 		direction: 'left',
+// 		duplicated: true,
+// 		pauseOnHover: true
+// 	});
+// });
+
 
 $(window).scroll(function() {
 	$('.features section .gotodiv').each(function(){

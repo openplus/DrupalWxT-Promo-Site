@@ -595,7 +595,7 @@ section.subscribe {
     text-shadow: 1px 1px 10px #1F1F1F; }
   section.subscribe .extrawrapper {
     position: relative;
-    padding: 30px 0; }
+    padding: 60px 0; }
     section.subscribe .extrawrapper:before {
       content: '';
       width: 100%;
@@ -608,6 +608,9 @@ section.subscribe {
     section.subscribe .extrawrapper .container {
       z-index: 1;
       position: relative; }
+  section.subscribe form.well {
+    padding: 40px 20px;
+    box-shadow: 0 0 20px #333, 0 0 80px #999; }
 
 .homepage section.intro {
   padding: 200px 0 0;
@@ -686,15 +689,17 @@ section.subscribe {
   text-align: center; }
   .homepage section.usedby .logos {
     width: 100%;
-    height: 100px;
+    height: auto;
     overflow: hidden; }
     .homepage section.usedby .logos a {
       display: inline-block;
       margin: 10px;
-      padding-right: 40px;
       opacity: 0.6; }
       .homepage section.usedby .logos a:hover {
         opacity: 1; }
+      .homepage section.usedby .logos a img {
+        width: auto;
+        height: 65px; }
 .homepage section.learnmore [class^="ti-"], .homepage section.learnmore [class*=" ti-"] {
   font-size: 200px; }
   .homepage section.learnmore [class^="ti-"].top, .homepage section.learnmore [class*=" ti-"].top {
