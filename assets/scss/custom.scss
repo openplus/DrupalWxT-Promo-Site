@@ -473,8 +473,12 @@ section#carousel.bg-bg {padding:40px 0;
 	p { font-size: 32px; line-height: 42px; }
 }
 
-section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed; background-size: cover;  
+section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed; background-size: cover;  padding:0;
 	h2, h3, p { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
+	.extrawrapper { position: relative; padding: 30px 0;
+		&:before { content:''; width: 100%; background:rgba(0,0,0,0.4); height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
+		.container { z-index: 1; position: relative;}
+	}
 }
 
 // HOME PAGE
@@ -546,26 +550,31 @@ section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fi
 .free {
     text-transform: uppercase;
 }
-.input-group {
-    margin: 20px auto;
-    width: 100%;
-}
-input.btn.btn-lg {
-    width: 60%;
-    height: 60px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    background-color:#fff;
-}
-button.btn {
-    width: 40%;
-    height: 60px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+// .input-group {
+//     margin: 20px auto;
+//     width: 100%;
+// }
+// input.btn.btn-lg {
+//     width: 60%;
+//     height: 60px;
+//     border-top-right-radius: 0;
+//     border-bottom-right-radius: 0;
+//     background-color:#fff;
+// }
+// button.btn {
+//     width: 40%;
+//     height: 60px;
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+// }
 .promise {
     color: #999;
 }
+.form-control { padding: 12px 12px; height: auto; }
+.error_message { margin-bottom: 0; border: none; background: #B65A5A; }
+p#message { margin-bottom:5px; padding-bottom:0; }
+button#submit { font-size: 16px; }
+.success_message { background: #7E9B60; border: none; }
 
 
 // Features page

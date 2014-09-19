@@ -14,10 +14,10 @@ $email    = $_POST['email'];
 
 
 if(trim($name) == '') {
-	echo '<div class="error_message bg-danger">Attention! You must enter your name.</div>';
+	echo '<div class="error_message col-md-4 col-md-push-4 well">Attention! You must enter your name.</div>';
 	exit();
 } else if(trim($email) == '') {
-	echo '<div class="error_message bg-danger">Attention! Please enter a valid email address.</div>';
+	echo '<div class="error_message col-md-4 col-md-push-4 well">Attention! Please enter a valid email address.</div>';
 	exit();
 } 
 
@@ -49,7 +49,7 @@ $e_subject = 'You\'ve been contacted by ' . $name . '.';
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
 $e_body = "You have been contacted by $name to get info about DrupalWxT" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via $email";
+$e_reply = "You can contact $name via email @ $email";
 
 $msg = wordwrap( $e_body . $e_reply, 70 );
 
@@ -65,7 +65,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<div class='bg-success'><h3>Email Sent Successfully.</h3>";
+	echo "<div class='col-md-4 col-md-push-4 well success_message'><h3>Email Sent Successfully.</h3>";
 	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p></div>";
 	echo "</div>";
 	echo "</fieldset>";
