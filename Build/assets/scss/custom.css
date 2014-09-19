@@ -281,6 +281,9 @@ p.inverse-heading {
 .carousel {
   overflow: hidden; }
 
+.carousel-control {
+  width: 10%; }
+
 .carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
   left: 50px; }
 
