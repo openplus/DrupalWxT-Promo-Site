@@ -327,6 +327,10 @@ p.inverse-heading {
   overflow: hidden;
 }
 
+.carousel-control {
+  width: 10%;
+}
+
 .carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
   left: 50px;
 }
@@ -712,6 +716,38 @@ section#carousel.bg-bg p {
   line-height: 42px;
 }
 
+section.subscribe {
+  background: url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed;
+  background-size: cover;
+  padding: 0;
+}
+section.subscribe h2, section.subscribe h3, section.subscribe p {
+  color: #f6f6f6;
+  text-shadow: 1px 1px 10px #1F1F1F;
+}
+section.subscribe .extrawrapper {
+  position: relative;
+  padding: 60px 0;
+}
+section.subscribe .extrawrapper:before {
+  content: '';
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+section.subscribe .extrawrapper .container {
+  z-index: 1;
+  position: relative;
+}
+section.subscribe form.well {
+  padding: 40px 20px;
+  box-shadow: 0 0 20px #333, 0 0 80px #999;
+}
+
 .homepage section.intro {
   padding: 200px 0 0;
   color: #f6f6f6;
@@ -772,6 +808,7 @@ section#carousel.bg-bg p {
 }
 .homepage section.intro.intro2 {
   background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;
+  background-size: cover;
   text-align: left;
 }
 .homepage section.intro.intro2 h2 {
@@ -786,6 +823,7 @@ section#carousel.bg-bg p {
 }
 .homepage section.intro.intro3 {
   background: url(../img/drupalwxtbg.png) no-repeat center center;
+  background-size: cover;
   text-align: left;
 }
 .homepage section.intro.intro3 h2 {
@@ -803,17 +841,20 @@ section#carousel.bg-bg p {
 }
 .homepage section.usedby .logos {
   width: 100%;
-  height: 100px;
+  height: auto;
   overflow: hidden;
 }
 .homepage section.usedby .logos a {
   display: inline-block;
   margin: 10px;
-  padding-right: 40px;
   opacity: 0.6;
 }
 .homepage section.usedby .logos a:hover {
   opacity: 1;
+}
+.homepage section.usedby .logos a img {
+  width: auto;
+  height: 65px;
 }
 .homepage section.learnmore [class^="ti-"], .homepage section.learnmore [class*=" ti-"] {
   font-size: 200px;
@@ -923,28 +964,33 @@ section#carousel.bg-bg p {
   text-transform: uppercase;
 }
 
-.input-group {
-  margin: 20px auto;
-  width: 100%;
-}
-
-input.btn.btn-lg {
-  width: 60%;
-  height: 60px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  background-color: #fff;
-}
-
-button.btn {
-  width: 40%;
-  height: 60px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .promise {
   color: #999;
+}
+
+.form-control {
+  padding: 12px 12px;
+  height: auto;
+}
+
+.error_message {
+  margin-bottom: 0;
+  border: none;
+  background: #B65A5A;
+}
+
+p#message {
+  margin-bottom: 5px;
+  padding-bottom: 0;
+}
+
+button#submit {
+  font-size: 16px;
+}
+
+.success_message {
+  background: #7E9B60;
+  border: none;
 }
 
 .gototop {
