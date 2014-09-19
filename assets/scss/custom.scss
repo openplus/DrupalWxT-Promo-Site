@@ -489,11 +489,11 @@ section#carousel.bg-bg {padding:40px 0;
 			}
 		}
 		.learnmore { background:rgba(0,0,0,0.5); padding:9px 25px; margin-left: -135px; color:$white; border-radius: 20px; position: relative; @include animation-duration(1.3s); @include animation-delay(2s);@include animation-iteration-count(3);}
-		&.intro2 { background:url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center; text-align: left;
+		&.intro2 { background:url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;  background-size:cover; text-align: left;
 			h2 { font-size: 64px; line-height: 73px; font-weight: bold; margin:20px 0; }
 			p { font-size: 24px; line-height: 30px;  }
 		}
-		&.intro3 { background:url(../img/drupalwxtbg.png) no-repeat center center; text-align: left;
+		&.intro3 { background:url(../img/drupalwxtbg.png) no-repeat center center;  background-size:cover; text-align: left;
 			h2 { font-size: 64px; line-height: 73px; font-weight: bold;  }
 			p { font-size: 24px; line-height: 30px;  }
 		}

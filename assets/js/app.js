@@ -10,7 +10,28 @@ $(document).ready(function(){
 			$(".home header").removeClass("bg");
 		}
 	});	
-	$('.home .intro').css({minHeight: $(window).height() });
+	$(window).load(function(){
+		$(window).resize(function(){
+			$('.home .intro').css({minHeight: $(window).height() });
+		}).resize();
+	});
+	
+	// $(window).load(function(){
+	// 	$('.homepageslider .item').each(function(){
+	// 		var $h = $(this).find('.container').height();
+	// 		console.log($h);
+	// 		var $h2 = $(window).height();
+	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)}); 
+	// 	});
+	// });
+	// $('.carousel-control').click(function(){
+	// 	$('.homepageslider .item').each(function(){
+	// 		var $h = $(this).find('.container').height();
+	// 		console.log($h);
+	// 		var $h2 = $(window).height();
+	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)}); 
+	// 	});
+	// })
 	$(window).scroll( function(){
     
         /* Check the location of each desired element */
@@ -81,7 +102,9 @@ $(window).bind("load resize", function() {
 	}, 500);
 
 
-	var $distance = $('.secondnav').offset().top,
+	if($('.secondnav').length){
+		var $distance = $('.secondnav').offset().top;
+	}
 	$window = $(window);
 	var $height = $('.secondnav').height();
 	$window.scroll(function() {

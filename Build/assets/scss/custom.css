@@ -637,6 +637,7 @@ section#carousel.bg-bg {
     animation-iteration-count: 3; }
   .homepage section.intro.intro2 {
     background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;
+    background-size: cover;
     text-align: left; }
     .homepage section.intro.intro2 h2 {
       font-size: 64px;
@@ -648,6 +649,7 @@ section#carousel.bg-bg {
       line-height: 30px; }
   .homepage section.intro.intro3 {
     background: url(../img/drupalwxtbg.png) no-repeat center center;
+    background-size: cover;
     text-align: left; }
     .homepage section.intro.intro3 h2 {
       font-size: 64px;
