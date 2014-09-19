@@ -323,24 +323,23 @@
 		<section id="newsletter-subscribe" class="bg-white subscribe">
 			<div class="container">
 				<div class="row text-center">
-					<h3>Subscribe to get the latest news &amp; security updates.</h3>
+					<h2>Subscribe to get the latest news &amp; security updates.</h2>
 					<p>We will never send spam. Pinky swear.</p>
-			        <form class="form form-signup col-md-4 col-md-push-4 well" role="form">
+			        <form class="form form-signup col-md-4 col-md-push-4 well" id="contactform" role="form" action="/contact.php">
 	                    <div class="form-group">
 	                        <div class="input-group">
 	                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-	                            <input type="text" class="form-control" placeholder="Name" />
+	                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
 	                        <div class="input-group">
 	                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
 	                            </span>
-	                            <input type="text" class="form-control" placeholder="Email Address" />
+	                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
 	                        </div>
 	                    </div>
-	                	<a href="http://www.jquery2dotnet.com" class="btn btn-sm btn-primary btn-block" role="button">
-	                    SUBMIT</a> 
+	                    <button type="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
                 	</form>
 				</div>
 			</div>
