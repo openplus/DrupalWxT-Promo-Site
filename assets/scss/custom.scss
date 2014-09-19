@@ -473,6 +473,10 @@ section#carousel.bg-bg {padding:40px 0;
 	p { font-size: 32px; line-height: 42px; }
 }
 
+section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed; background-size: cover;  
+	h2, h3, p { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
+}
+
 // HOME PAGE
 .homepage {
 	section.intro { padding:200px 0 0; color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
