@@ -2,16 +2,14 @@ $(document).ready(function(){
 	$('.carousel').carousel({
 	  interval: 10000
 	});
-	if($('html').hasClass('no-touch')) {
-		$(window).scroll(function () {
-			if($(window).scrollTop() > 150){
-				$(".home header").addClass("bg");
-			}
-			else {
-				$(".home header").removeClass("bg");
-			}
-		});
-	}
+	$(window).scroll(function () {
+		if($('html').hasClass('no-touch') && $(window).scrollTop() > 150){
+			$(".home header").addClass("bg");
+		}
+		else {
+			$(".home header").removeClass("bg");
+		}
+	});
 	$(window).load(function(){
 		$(window).resize(function(){
 			$('body .home').css({paddingTop: $(window).height() });
