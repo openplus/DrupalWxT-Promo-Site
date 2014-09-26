@@ -1139,8 +1139,19 @@ section.giveatry {
     height: 50px;
     width: auto; }
 
+.touch .homepage section.learnmore .left {
+  opacity: 1;
+  left: 0; }
+.touch .homepage section.learnmore .right {
+  opacity: 1;
+  right: 0; }
+.touch header.navbar {
+  background: rgba(0, 0, 0, 0.9); }
+.touch header.navbar nav ul.navbar-nav li a {
+  padding: 6px 12px !important; }
+
 @media (max-width: 991px) {
-  header.navbar nav ul.navbar-nav {
+  header.navbar {
     background: rgba(0, 0, 0, 0.9); }
 
   header.navbar nav ul.navbar-nav li a {

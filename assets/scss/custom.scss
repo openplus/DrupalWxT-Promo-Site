@@ -735,12 +735,17 @@ section.giveatry { background:$dark-g;  text-align: center;
 }
 
 
-
+.touch { 
+	.homepage section.learnmore .left { opacity:1; left: 0; }
+	.homepage section.learnmore .right { opacity:1; right: 0; }
+	header.navbar { background:rgba(0,0,0,0.9); }
+	header.navbar nav ul.navbar-nav li a { padding:6px 12px !important; }
+}
 
 
 
 @media (max-width: 991px) {
-	header.navbar nav ul.navbar-nav { background:rgba(0,0,0,0.9); }
+	header.navbar { background:rgba(0,0,0,0.9); }
 	header.navbar nav ul.navbar-nav li a { padding:6px 12px !important; }
 	header.navbar .navbar-header img { width: 100px !important; }
 	section.more { text-align: center; }
