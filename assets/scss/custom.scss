@@ -746,6 +746,13 @@ section.giveatry { background:$dark-g;  text-align: center;
 }
 
 @media (max-width: 767px) {
+	.homepage section.intro.intro2 .visit { margin-bottom: 60px; }
+	.page.home { padding-top:0 !important; }
+	.homepage #carousel-example-generic { position: relative; top: auto; left: auto; }
+	.homepage .homepageslider section.intro { min-height: 0 !important; }
+	.homepage section.intro .ipad { position: relative; margin-top: 40px; 
+		img { width: 80%; height: auto; }
+	}
 	.homepage .homepageslider section.intro.intro3 .col-md-5 { margin:20px 0; }
 	.homepage .homepageslider .carousel-indicators { top:110px; bottom: auto; }
 	.homepage .homepageslider section.intro{ padding:120px 0 0;}
@@ -763,10 +770,11 @@ section.giveatry { background:$dark-g;  text-align: center;
 	header.navbar nav ul.navbar-nav { width: 100%; margin-bottom: 20px;
 		li { width: 100%; }
 	}
-	.homepage section.intro { position: relative; background-size: auto; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; }
+	.homepage section.intro { position: relative; background-size: auto; background:url(../img/slide1bg.png) no-repeat center center; }
 	.nav-tabs li { width: 100%; }
 }
 
 @media (max-width: 1199px){
+	.homepage section.intro .ipad img{ width: 70%; height: auto; }
 	section.secondnav nav ul li a .text { display: none;}
 }

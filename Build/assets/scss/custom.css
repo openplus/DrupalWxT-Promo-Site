@@ -1151,6 +1151,27 @@ section.giveatry {
       float: none !important;
       display: inline-block; } }
 @media (max-width: 767px) {
+  .homepage section.intro.intro2 .visit {
+    margin-bottom: 60px; }
+
+  .page.home {
+    padding-top: 0 !important; }
+
+  .homepage #carousel-example-generic {
+    position: relative;
+    top: auto;
+    left: auto; }
+
+  .homepage .homepageslider section.intro {
+    min-height: 0 !important; }
+
+  .homepage section.intro .ipad {
+    position: relative;
+    margin-top: 40px; }
+    .homepage section.intro .ipad img {
+      width: 80%;
+      height: auto; }
+
   .homepage .homepageslider section.intro.intro3 .col-md-5 {
     margin: 20px 0; }
 
@@ -1203,10 +1224,14 @@ section.giveatry {
   .homepage section.intro {
     position: relative;
     background-size: auto;
-    background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; }
+    background: url(../img/slide1bg.png) no-repeat center center; }
 
   .nav-tabs li {
     width: 100%; } }
 @media (max-width: 1199px) {
+  .homepage section.intro .ipad img {
+    width: 70%;
+    height: auto; }
+
   section.secondnav nav ul li a .text {
     display: none; } }
