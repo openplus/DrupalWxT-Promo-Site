@@ -14,6 +14,12 @@ $(document).ready(function(){
 		$(window).resize(function(){
 			$('body .home').css({paddingTop: $(window).height() });
 			$('.home .intro').css({minHeight: $(window).height() });
+			if($(window).height() < 761){
+				$('.homepage section.intro .ipad').hide();
+			}
+			else{
+				$('.homepage section.intro .ipad').show();
+			}
 		}).resize();
 	});
 

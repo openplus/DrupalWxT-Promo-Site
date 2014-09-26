@@ -347,6 +347,7 @@ p.inverse-heading{
 		}
 	}
 }
+.page { overflow: hidden; }
 .bg-dark { background:$dark-g; color:$white; }
 .bg-img1 { color:$white; text-align: center; padding:80px 0; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;  text-shadow:1px 1px 10px #1F1F1F; }
 .bg-white { background:#fff; color:$dark-g; }
@@ -740,6 +741,7 @@ section.giveatry { background:$dark-g;  text-align: center;
 
 @media (max-width: 991px) {
 	header.navbar nav ul.navbar-nav li a { padding:6px 12px !important; }
+	header.navbar.bg nav ul.navbar-nav li a { padding: 12px !important; }
 	header.navbar .navbar-header img { width: 100px !important; }
 	section.more { text-align: center; }
 	.homepage section.learnmore.animatein .right { display: none; }

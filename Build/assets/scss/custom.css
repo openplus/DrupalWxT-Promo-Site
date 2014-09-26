@@ -475,6 +475,9 @@ p.inverse-heading {
   .bg-blue .nav-tabs li a {
     color: #f6f6f6; }
 
+.page {
+  overflow: hidden; }
+
 .bg-dark {
   background: #333333;
   color: #f6f6f6; }
@@ -1139,6 +1142,9 @@ section.giveatry {
 @media (max-width: 991px) {
   header.navbar nav ul.navbar-nav li a {
     padding: 6px 12px !important; }
+
+  header.navbar.bg nav ul.navbar-nav li a {
+    padding: 12px !important; }
 
   header.navbar .navbar-header img {
     width: 100px !important; }
