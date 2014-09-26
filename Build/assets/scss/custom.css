@@ -1137,6 +1137,15 @@ section.giveatry {
     width: auto; }
 
 @media (max-width: 991px) {
+  header.navbar nav ul.navbar-nav li a {
+    padding: 6px 12px; }
+
+  header.navbar .navbar-header img {
+    width: 100%; }
+
+  section.more {
+    text-align: center; }
+
   .homepage section.learnmore.animatein .right {
     display: none; }
 
