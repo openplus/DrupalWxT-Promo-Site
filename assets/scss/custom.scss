@@ -1,7 +1,7 @@
 @import 'bourbon';
 
 @mixin headers($a: inherit,$b: normal, $c: inherit) {
-	font-family:'Roboto';
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: $a;
 	font-weight: $b;
 	line-height: $c;
@@ -11,11 +11,28 @@
   100% {left:100%;}
 }
 
+@include keyframes(slidefrombottom) {
+	0% {opacity: 0; @include transform(translate(0,100px)); }
+	100% {opacity: 1; @include transform(translate(0,0));}
+}
+@include keyframes(slidefromleft) {
+	0% {opacity: 0; @include transform(translate(-200px,0));}
+	100% {opacity: 1; @include transform(translate(0,0));}
+}
+@include keyframes(slidefromright) {
+	0% {opacity: 0;  @include transform(translate(200px,0));}
+	100% {opacity: 1; @include transform(translate(0,0));}
+}
+@include keyframes(slidefromtop) {
+	0% {opacity: 0; @include transform(translate(0,-100px));}
+	100% {opacity: 1; @include transform(translate(0,0));}
+}
+
 $dark-g: #333;
 $light-g: #ccc;
 $white: #f6f6f6;
 $light-w: #eee;
-$blue: #428bca; 
+$blue: #428bca;
 
 /* -------------- loader -------------- */
 
@@ -30,7 +47,7 @@ $blue: #428bca;
 	left: 46%;
 	left: -webkit-calc(50% - 6px);
 	left: calc(50% - 6px);
-	
+
 	border-radius: 12px;
 	background-color: darken($blue, 20);
 	-webkit-transform-origin:  50% 50%;
@@ -76,13 +93,14 @@ $blue: #428bca;
 
 // Global
 body { @include headers(16px,300); background:$white;}
-h2 { @include headers(2em,300,1em); }
+h1 { font-family: Rockwell; }
+h2 { @include headers(2em,100,1em); }
 p { font-size: 1.2em; line-height: 1.4em;}
 a { @include transition(all 0.3s ease-in-out); }
 h4 { margin-top:-6px; font-size: 1.3em; font-weight: 300; }
 
 body{
-	
+
 	 font-family: "Roboto";
 	 font-style: normal;
 	 font-weight: 300;
@@ -312,16 +330,16 @@ p.inverse-heading{
 	&.btn-lg { font-size: 1.2em;}
 	&:hover { background:darken($blue, 15); color:$white; }
 	&.white { background:transparent; border:2px solid $dark-g; color:$dark-g; text-shadow:none;
-		&:hover { background:$blue; border:2px solid $blue; color:$white; } 
+		&:hover { background:$blue; border:2px solid $blue; color:$white; }
 	}
 }
 .btn-inverse { background: transparent; border:2px solid $white; font-size: 1.1em; color:$white; text-shadow:1px 1px 8px #1F1F1F;
 	&:hover { background:rgba(255,255,255,0.2); color:$white; text-shadow:none; }
 	&.white { background:transparent; border:2px solid $dark-g; color:$dark-g; text-shadow:none;
-		&:hover { background:$blue; border:2px solid $blue; color:$white; } 
+		&:hover { background:$blue; border:2px solid $blue; color:$white; }
 	}
 }
-.bg-blue { background:$blue; color:$white; 
+.bg-blue { background:$blue; color:$white;
 	a { color:$white; }
 	.nav-tabs {
 		li {
@@ -333,7 +351,7 @@ p.inverse-heading{
 .bg-img1 { color:$white; text-align: center; padding:80px 0; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;  text-shadow:1px 1px 10px #1F1F1F; }
 .bg-white { background:#fff; color:$dark-g; }
 .bg-light { background:$white; color:$dark-g; }
-section { padding:30px 0; 
+section { padding:30px 0; position: relative;
 	h2 { margin-bottom: 15px;}
 }
 // Navtabs
@@ -343,7 +361,7 @@ section { padding:30px 0;
 			&:hover{ border-bottom:5px solid $blue; background:$light-g;  }
 		}
 		&.active {
-			a { border-bottom:5px solid $blue; background:$light-g; 
+			a { border-bottom:5px solid $blue; background:$light-g;
 				&:hover { border-bottom:5px solid $blue; background:$light-g;  }
 			}
 		}
@@ -356,10 +374,10 @@ section { padding:30px 0;
 	}
 	&.nav-stacked { text-align: left;
 		li { float:left; display: block; margin-bottom: 15px; margin-left:0;
-			a { background:transparent; border:none; padding:10px; 
+			a { background:transparent; border:none; padding:10px;
 				&:hover { background:darken($blue, 10); border:none; border-radius: 0; color:$white; }
 			}
-			&.active { 
+			&.active {
 				a { background:darken($blue, 10); border:none; color:$white; border-radius: 0;
 					&:hover { background:darken($blue, 10); border:none; color:$white; }
 				}
@@ -370,7 +388,7 @@ section { padding:30px 0;
 }
 
 // Pictures in columns
-.pic { 
+.pic {
 	&.left { text-align: left; float: left;
 		img { float:left; width: 100%; height: auto; }
 	}
@@ -380,7 +398,7 @@ section { padding:30px 0;
 }
 
 // Inside pages {
-.inside { 
+.inside {
 	header.navbar { background:rgba(0,0,0,0.9); position: relative;
 		.logo {
 			img { width: 150px; }
@@ -402,15 +420,15 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 		img { width: 200px; @include transition(all 0.5s ease-in-out);}
 	}
 	nav {
-		ul.navbar-nav { padding:0; margin:0; float: right; margin-top: 20px; 
-			li { 
+		ul.navbar-nav { padding:0; margin:0; float: right; margin-top: 20px;
+			li {
 				a { color:$white; padding:14px 20px; border-radius: 3px; font-weight: 200; font-size: 16px;
 					&:hover{ background:rgba(0,0,0,0.2); text-decoration: none;}
 				}
 			}
 		}
 	}
-	&.bg { background:rgba(0,0,0,0.9); 
+	&.bg { background:rgba(0,0,0,0.9);
 		.navbar-header {
 			img { width: 120px; }
 		}
@@ -421,7 +439,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 						&:hover { background:$blue; color:$white; }
 					}
 				}
-			}	
+			}
 		}
 	}
 }
@@ -429,7 +447,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 //Second Nav
 section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%;
 	&.sticky { position: fixed; top: 0; left: 0; z-index: 999; }
-	nav { 
+	nav {
 		ul { text-align: center; margin:0; padding:0;
 			li { display: inline-block; margin-left: -4px;
 				a { padding:19px 15px 16px 15px;  display: block; color:$blue; font-weight: 300;
@@ -447,15 +465,15 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 			}
 		}
 	}
-	&.bluenav { background:$blue; 
-		nav { 
+	&.bluenav { background:$blue;
+		nav {
 			ul {
-				li { 
+				li {
 					a { color:$white; @include transition(all 0.0s ease-in-out);
 						.icon {
 							[class^="ti-"], [class*=" ti-"] { color:$white; }
 						}
-						&:hover, &.active { background:$white; color:$blue; 
+						&:hover, &.active { background:$white; color:$blue;
 							.icon {
 								[class^="ti-"], [class*=" ti-"] { color:$blue;  }
 							}
@@ -467,14 +485,14 @@ section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px soli
 	}
 }
 
-section.bg-bg { background:	url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat fixed; background-size: cover; padding:60px 0; color:$white;
-	p { font-size: 60px; line-height: 68px; font-weight: 200; text-shadow:2px 2px 2px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.8); position: relative; margin-bottom: 0;} 
+section.bg-bg { background:	#fff url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat; background-size: cover; padding:60px 0; color:$white;
+	p { font-size: 60px; line-height: 68px; font-weight: 200; text-shadow:2px 2px 2px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.8); position: relative; margin-bottom: 0;}
 }
 section#carousel.bg-bg {padding:40px 0;
 	p { font-size: 32px; line-height: 42px; }
 }
 
-section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed; background-size: cover;  padding:0;
+section.subscribe { background:	#fff url(../img/drupalwxtbg.png) 50% 50% no-repeat; background-size: cover;  padding:0;
 	h2, h3, p { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
 	.extrawrapper { position: relative; padding: 60px 0;
 		&:before { content:''; width: 100%; background:rgba(0,0,0,0.4); height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
@@ -483,33 +501,41 @@ section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fi
 	form.well { padding: 40px 20px; box-shadow: 0 0 20px #333, 0 0 80px #999;}
 }
 
+
+
 // HOME PAGE
 .homepage {
-	section.intro { padding:200px 0 0; color:$white; text-align: center; background:url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
-		&:before { position: absolute; z-index: 0; content:''; top: 0; left: 0; width: 100%; height: 100%; background:rgba(0,0,0,0.4); }
-		h2 { @include headers(1.5em,300,1em); margin:0; }
+	#carousel-example-generic { position: fixed; top:0; left:0; width: 100%; }
+	section.intro { padding:200px 0 0; color:$white; text-align: center; background:url(../img/slide1bg.png) no-repeat center center; background-size:cover; text-shadow:1px 1px 10px #1F1F1F;
+		h2 { @include headers(2.5em,100,1em); margin:0; }
+		.text { @include animation(slidefromtop 2s forwards); }
+		.ipad { position: absolute; bottom:-100px; left:0; @include animation(slidefrombottom 2s forwards); }
 		.summ { margin-top: 50px;}
-		.download { margin-top: 50px; 
+		.download { margin-top: 50px;
 			a { margin:0 5px;
 				&.download {}
 				&.demo {}
 			}
 			p { margin-top: 15px;
-				a { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
+				a { color:$white; text-shadow:1px 1px 10px #1F1F1F;  }
 			}
 		}
 		.learnmore { background:rgba(0,0,0,0.5); padding:9px 25px; margin-left: -135px; color:$white; border-radius: 20px; position: relative; @include animation-duration(1.3s); @include animation-delay(2s);@include animation-iteration-count(3);}
-		&.intro2 { background:url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;  background-size:cover; text-align: left;
+		&.intro2 { background:url(../img/slider2bg.png) no-repeat center center; background-size:cover;
 			h2 { font-size: 64px; line-height: 73px; font-weight: bold; margin:20px 0; }
 			p { font-size: 24px; line-height: 30px;  }
+			h3 { @include headers(2.5em,100,1em); margin:0; }
+			.text { @include animation(slidefromright 2s forwards); }
+			.visit { @include animation(slidefromleft 2s forwards); }
 		}
 		&.intro3 { background:url(../img/drupalwxtbg.png) no-repeat center center;  background-size:cover; text-align: left;
 			h2 { font-size: 64px; line-height: 73px; font-weight: bold;  }
 			p { font-size: 24px; line-height: 30px;  }
+			h3 { @include headers(2.5em,100,1em); margin:0; }
 		}
 	}
-	
-	section.usedby { padding:30px 0 25px 0; text-align: center;
+
+	section.usedby { padding:30px 0 25px 0; text-align: center; position: relative;
 		.logos { width: 100%; height: auto; overflow: hidden;
 			a { display: inline-block; margin:10px; opacity: 0.6;
 				&:hover { opacity: 1;}
@@ -517,8 +543,8 @@ section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fi
 			}
 		}
 	}
-	section.learnmore { 
-		[class^="ti-"], [class*=" ti-"] { font-size: 200px; 
+	section.learnmore {
+		[class^="ti-"], [class*=" ti-"] { font-size: 200px;
 			&.top { position: absolute; z-index: 2; right: 0; width: 100%; left: 60px;}
 			&.bottom { position: absolute;  z-index: 1; right: 0; width: 100%; left: -60px;  }
 		}
@@ -531,14 +557,14 @@ section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fi
 			.right { opacity: 1; right:0; }
 		}
 	}
-	section.video { 
+	section.video {
 		iframe { height: 400px; width: 100%; float: right;}
 	}
 	section.news {
 		.item { background-color:$dark-g; color:$white; padding: 0 20px 20px 20px; z-index: 2; float: left; width: 100%; margin-bottom: 30px; position: relative;
 			&:after { background:url(../img/1629941.jpg); opacity: 0.05; z-index: -1; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; content:''; }
-			a { color:$white;} 
-			.header { color:$white; background:$blue; position: relative; float: left; margin-top: -8px; padding:5px 10px; text-align: center; font-size: 1.2em; 
+			a { color:$white;}
+			.header { color:$white; background:$blue; position: relative; float: left; margin-top: -8px; padding:5px 10px; text-align: center; font-size: 1.2em;
 			}
 			.title { clear: both; color:$white; margin:15px 0 55px 0; float: left;
 				h3 { @include headers(1.4em, 300);}
@@ -547,6 +573,8 @@ section.subscribe { background:	url(../img/drupalwxtbg.png) 50% 50% no-repeat fi
 		}
 	}
 }
+
+
 
 // Subsribe
 
@@ -582,12 +610,12 @@ button#submit { font-size: 16px; }
 
 // Features page
 .gototop { position: fixed; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 5px 10px;
-	&:hover { text-decoration: none; border:1px solid $blue; } 
+	&:hover { text-decoration: none; border:1px solid $blue; }
 }
 .hasstickyheader {
 	.gototop { display: block; }
 }
-.features { 
+.features {
 	.intro {
 		h2 { @include headers(1.5em,300,1em); margin:0; }
 	}
@@ -611,7 +639,7 @@ button#submit { font-size: 16px; }
 	}
 }
 
-.getstarted { 
+.getstarted {
 	section {
 		.icon { text-align:center;
 			[class^="ti-"], [class*=" ti-"] { font-size: 200px; }
@@ -630,7 +658,7 @@ button#submit { font-size: 16px; }
 	}
 }
 
-footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0 20px;
+footer {  background:#101010; position:relative; color:$white; padding:40px 0 20px;
 	h2 { margin-top: 0;}
 	a { color:$white; text-decoration: underline;
 		&:hover { color:$blue; }
@@ -656,16 +684,16 @@ footer {  background:rgba(0,0,0,0.9); color:$white; padding:40px 0 20px;
 
 #about { position: absolute; top: -60px; height: 1px; width: 100%; }
 section.about { position: relative;
-	.facts { 
-		ul { margin:0; padding:0; list-style: none; 
+	.facts {
+		ul { margin:0; padding:0; list-style: none;
 			li { margin-bottom: 10px; float: left; width: 100%; }
 		}
 	}
 }
 
-section.giveatry { background:$dark-g;  text-align: center; 
+section.giveatry { background:$dark-g;  text-align: center;
 	h2 { color:$white; }
-	.buttons { 
+	.buttons {
 		a { display: inline-block;}
 	}
 }
@@ -686,10 +714,10 @@ section.giveatry { background:$dark-g;  text-align: center;
   padding-bottom: 60px;
 }
 #fade-quote-carousel.carousel .carousel-inner .item { opacity: 0;  @include transition(opacity 0.3s ease-in-out);
-  
+
 }
 #fade-quote-carousel.carousel .carousel-inner .active { opacity: 1;
-  
+
 }
 #fade-quote-carousel.carousel .carousel-indicators {
   bottom: 10px;
@@ -712,7 +740,7 @@ section.giveatry { background:$dark-g;  text-align: center;
 
 @media (max-width: 991px) {
 	.homepage section.learnmore.animatein .right { display: none; }
-	footer .col-md-4 { margin-bottom: 40px; width: 100%; padding:0 15px; float: left; border:none; text-align: center; 
+	footer .col-md-4 { margin-bottom: 40px; width: 100%; padding:0 15px; float: left; border:none; text-align: center;
 		li { float: none !important; display: inline-block;}
 	}
 }

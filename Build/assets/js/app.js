@@ -9,19 +9,20 @@ $(document).ready(function(){
 		else {
 			$(".home header").removeClass("bg");
 		}
-	});	
+	});
 	$(window).load(function(){
 		$(window).resize(function(){
+			$('body .home').css({paddingTop: $(window).height() });
 			$('.home .intro').css({minHeight: $(window).height() });
 		}).resize();
 	});
-	
+
 	// $(window).load(function(){
 	// 	$('.homepageslider .item').each(function(){
 	// 		var $h = $(this).find('.container').height();
 	// 		console.log($h);
 	// 		var $h2 = $(window).height();
-	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)}); 
+	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)});
 	// 	});
 	// });
 	// $('.carousel-control').click(function(){
@@ -29,25 +30,25 @@ $(document).ready(function(){
 	// 		var $h = $(this).find('.container').height();
 	// 		console.log($h);
 	// 		var $h2 = $(window).height();
-	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)}); 
+	// 		$(this).find('.container').css({paddingTop: (($h2 - $h)/2)});
 	// 	});
 	// })
 	$(window).scroll( function(){
-    
+
         /* Check the location of each desired element */
         $('.home section').each( function(i){
             var height = $(this).height();
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
+
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > (bottom_of_object - (height) ) ){
-                $(this).addClass('animatein'); 
+                $(this).addClass('animatein');
             }
-            else 
+            else
             {
-            }  
-        }); 
+            }
+        });
     });
 });
 
@@ -78,7 +79,7 @@ $(window).scroll(function() {
 		    	if ( $(window).scrollTop() >= $distance ) {
 				    if($('.secondnav a[href="#' + $id + '"]').length == 0) {
 				    }
-			   		
+
 			   		else{
 			   			$('.secondnav a').removeClass('active');
 				        $('.secondnav a[href="#' + $id + '"]').addClass('active');
@@ -91,7 +92,7 @@ $(window).bind("load resize", function() {
 	$(".loader").animate({
 		opacity: 0
 	}, 500);
-	$(".page").animate({
+	$(".page").addClass('animatein').animate({
 		opacity: 1
 	}, 500);
 
@@ -113,7 +114,5 @@ $(window).bind("load resize", function() {
 	    	$('.intro').css({marginBottom:0});
 	    }
 	});
-	
+
 });
-
-

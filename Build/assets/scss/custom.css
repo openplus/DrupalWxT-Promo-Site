@@ -5,6 +5,114 @@
   100% {
     left: 100%; } }
 
+@-webkit-keyframes slidefrombottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0); } }
+
+@-moz-keyframes slidefrombottom {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(0, 100px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0, 0); } }
+
+@keyframes slidefrombottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px); }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0); } }
+
+@-moz-keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(-200px, 0); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0, 0); } }
+
+@keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    transform: translate(-200px, 0); }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes slidefromright {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(200px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0); } }
+
+@-moz-keyframes slidefromright {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(200px, 0); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0, 0); } }
+
+@keyframes slidefromright {
+  0% {
+    opacity: 0;
+    transform: translate(200px, 0); }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes slidefromtop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -100px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0); } }
+
+@-moz-keyframes slidefromtop {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(0, -100px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0, 0); } }
+
+@keyframes slidefromtop {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px); }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
 /* -------------- loader -------------- */
 .loader {
   position: fixed;
@@ -64,16 +172,19 @@
     transform: rotate(180deg); } }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: inherit;
   background: #f6f6f6; }
 
+h1 {
+  font-family: Rockwell; }
+
 h2 {
-  font-family: 'Roboto';
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1em; }
 
 p {
@@ -384,7 +495,8 @@ p.inverse-heading {
   color: #333333; }
 
 section {
-  padding: 30px 0; }
+  padding: 30px 0;
+  position: relative; }
   section h2 {
     margin-bottom: 15px; }
 
@@ -571,7 +683,7 @@ section.secondnav {
           color: #428bca; }
 
 section.bg-bg {
-  background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat fixed;
+  background: white url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) 50% 50% no-repeat;
   background-size: cover;
   padding: 60px 0;
   color: #f6f6f6; }
@@ -590,7 +702,7 @@ section#carousel.bg-bg {
     line-height: 42px; }
 
 section.subscribe {
-  background: url(../img/drupalwxtbg.png) 50% 50% no-repeat fixed;
+  background: white url(../img/drupalwxtbg.png) 50% 50% no-repeat;
   background-size: cover;
   padding: 0; }
   section.subscribe h2, section.subscribe h3, section.subscribe p {
@@ -615,28 +727,35 @@ section.subscribe {
     padding: 40px 20px;
     box-shadow: 0 0 20px #333, 0 0 80px #999; }
 
+.homepage #carousel-example-generic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
 .homepage section.intro {
   padding: 200px 0 0;
   color: #f6f6f6;
   text-align: center;
-  background: url(../img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg) no-repeat center center;
+  background: url(../img/slide1bg.png) no-repeat center center;
   background-size: cover;
   text-shadow: 1px 1px 10px #1F1F1F; }
-  .homepage section.intro:before {
-    position: absolute;
-    z-index: 0;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); }
   .homepage section.intro h2 {
-    font-family: 'Roboto';
-    font-size: 1.5em;
-    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
     line-height: 1em;
     margin: 0; }
+  .homepage section.intro .text {
+    -webkit-animation: slidefromtop 2s forwards;
+    -moz-animation: slidefromtop 2s forwards;
+    animation: slidefromtop 2s forwards; }
+  .homepage section.intro .ipad {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    -webkit-animation: slidefrombottom 2s forwards;
+    -moz-animation: slidefrombottom 2s forwards;
+    animation: slidefrombottom 2s forwards; }
   .homepage section.intro .summ {
     margin-top: 50px; }
   .homepage section.intro .download {
@@ -665,9 +784,8 @@ section.subscribe {
     -moz-animation-iteration-count: 3;
     animation-iteration-count: 3; }
   .homepage section.intro.intro2 {
-    background: url(../img/city-wallpaper-hd-10859-11378-hd-wallpapers2.png) no-repeat center center;
-    background-size: cover;
-    text-align: left; }
+    background: url(../img/slider2bg.png) no-repeat center center;
+    background-size: cover; }
     .homepage section.intro.intro2 h2 {
       font-size: 64px;
       line-height: 73px;
@@ -676,6 +794,20 @@ section.subscribe {
     .homepage section.intro.intro2 p {
       font-size: 24px;
       line-height: 30px; }
+    .homepage section.intro.intro2 h3 {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 2.5em;
+      font-weight: 100;
+      line-height: 1em;
+      margin: 0; }
+    .homepage section.intro.intro2 .text {
+      -webkit-animation: slidefromright 2s forwards;
+      -moz-animation: slidefromright 2s forwards;
+      animation: slidefromright 2s forwards; }
+    .homepage section.intro.intro2 .visit {
+      -webkit-animation: slidefromleft 2s forwards;
+      -moz-animation: slidefromleft 2s forwards;
+      animation: slidefromleft 2s forwards; }
   .homepage section.intro.intro3 {
     background: url(../img/drupalwxtbg.png) no-repeat center center;
     background-size: cover;
@@ -687,9 +819,16 @@ section.subscribe {
     .homepage section.intro.intro3 p {
       font-size: 24px;
       line-height: 30px; }
+    .homepage section.intro.intro3 h3 {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 2.5em;
+      font-weight: 100;
+      line-height: 1em;
+      margin: 0; }
 .homepage section.usedby {
   padding: 30px 0 25px 0;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .homepage section.usedby .logos {
     width: 100%;
     height: auto;
@@ -782,7 +921,7 @@ section.subscribe {
     margin: 15px 0 55px 0;
     float: left; }
     .homepage section.news .item .title h3 {
-      font-family: 'Roboto';
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-size: 1.4em;
       font-weight: 300;
       line-height: inherit; }
@@ -833,7 +972,7 @@ button#submit {
   display: block; }
 
 .features .intro h2 {
-  font-family: 'Roboto';
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
   line-height: 1em;
@@ -883,7 +1022,8 @@ button#submit {
       border-radius: 50%; }
 
 footer {
-  background: rgba(0, 0, 0, 0.9);
+  background: #101010;
+  position: relative;
   color: #f6f6f6;
   padding: 40px 0 20px; }
   footer h2 {
