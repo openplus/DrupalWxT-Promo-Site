@@ -743,6 +743,19 @@ section.giveatry { background:$dark-g;  text-align: center;
 }
 
 
+@media (min-width:768px) and (max-width: 1024px) {
+	.touch {
+		.container { width: 100%; }
+		.features { padding-left:60px; }
+		section.secondnav { height: 100% !important; padding-top:90px; z-index: 99; left:0 !important; top:0px !important; width: 60px !important; position: fixed !important;
+			.container { width: 100% !important; margin:0; padding:0; }
+			ul {
+				li { float: left; clear: both; }
+			}
+		}
+	}
+}
+
 
 @media (max-width: 991px) {
 	header.navbar { background:rgba(0,0,0,0.9); }
@@ -780,7 +793,7 @@ section.giveatry { background:$dark-g;  text-align: center;
 	header.navbar nav ul.navbar-nav { width: 100%; margin-bottom: 20px;
 		li { width: 100%; }
 	}
-	.homepage section.intro { position: relative; background-size: auto; background:url(../img/slide1bg.png) no-repeat center center; }
+	.homepage section.intro { position: relative; background-size: auto; background:url(../img/slide1bg.png) no-repeat center center relative; }
 	.nav-tabs li { width: 100%; }
 }
 

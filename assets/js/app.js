@@ -3,7 +3,7 @@ $(document).ready(function(){
 	  interval: 10000
 	});
 	$(window).scroll(function () {
-		if($('html').hasClass('no-touch') && $(window).scrollTop() > 150){
+		if($('html').hasClass('no-touch') && $('body').scrollTop() > 150){
 			$(".home header").addClass("bg");
 		}
 		else {
@@ -45,7 +45,7 @@ $(document).ready(function(){
         $('.home section').each( function(i){
             var height = $(this).height();
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_window = $('body').scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > (bottom_of_object - (height) ) ){
@@ -82,7 +82,7 @@ $(window).scroll(function() {
 				var $distance = $(this).offset().top;
 				$this = $(this);
 		    	$id = $this.attr('id');
-		    	if ( $(window).scrollTop() >= $distance ) {
+		    	if ( $('body').scrollTop() >= $distance ) {
 				    if($('.secondnav a[href="#' + $id + '"]').length == 0) {
 				    }
 
@@ -109,7 +109,7 @@ $(window).bind("load resize", function() {
 	$window = $(window);
 	var $height = $('.secondnav').height();
 	$window.scroll(function() {
-	    if ( $window.scrollTop() >= $distance ) {
+	    if ( $('html').hasClass('no-touch') && $('body').scrollTop() >= $distance ) {
 	    	$('body').addClass('hasstickyheader');
 	        $('.secondnav').addClass('sticky');
 	        $('.intro').css({marginBottom:$height});
