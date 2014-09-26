@@ -1140,11 +1140,11 @@ section.giveatry {
     width: auto; }
 
 @media (max-width: 991px) {
+  header.navbar nav ul.navbar-nav {
+    background: rgba(0, 0, 0, 0.9); }
+
   header.navbar nav ul.navbar-nav li a {
     padding: 6px 12px !important; }
-
-  header.navbar.bg nav ul.navbar-nav li a {
-    padding: 12px !important; }
 
   header.navbar .navbar-header img {
     width: 100px !important; }
