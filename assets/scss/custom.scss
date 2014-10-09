@@ -93,7 +93,7 @@ $blue: #428bca;
 
 // Global
 body { @include headers(16px,300); background:$white;}
-h1 { font-family: 'Kreon', serif; font-weight: 300; }
+h1 { font-weight: 300; }
 h2 { @include headers(2em,100,1em); }
 p { font-size: 1.2em; line-height: 1.4em;}
 a { @include transition(all 0.3s ease-in-out); }
