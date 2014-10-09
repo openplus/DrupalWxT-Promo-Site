@@ -179,7 +179,8 @@ body {
   background: #f6f6f6; }
 
 h1 {
-  font-family: Rockwell; }
+  font-family: 'Kreon', serif;
+  font-weight: 300; }
 
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -978,7 +979,7 @@ button#submit {
 .features .intro h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.5em;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1em;
   margin: 0; }
 .features .more [class^="ti-"], .features .more [class*=" ti-"] {
