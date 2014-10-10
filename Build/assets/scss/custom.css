@@ -171,6 +171,10 @@
   100% {
     transform: rotate(180deg); } }
 
+.learnmore h4.h4-2 {
+  display: none; }
+
+/* till we get content */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -209,6 +213,9 @@ h4 {
   margin-top: -6px;
   font-size: 1.3em;
   font-weight: 300; }
+
+h4.h4-2 {
+  color: #999999; }
 
 body {
   font-family: "Roboto";
@@ -1105,12 +1112,13 @@ section.about {
       width: 100%; }
 
 section.giveatry {
-  background: #333333;
+  background: #428bca;
   text-align: center; }
   section.giveatry h2 {
     color: #f6f6f6; }
   section.giveatry .buttons a {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 20px; }
 
 .quote {
   color: rgba(0, 0, 0, 0.1);

@@ -29,6 +29,7 @@
 }
 
 $dark-g: #333;
+$regular-g: #999;
 $light-g: #ccc;
 $white: #f6f6f6;
 $light-w: #eee;
@@ -91,6 +92,8 @@ $blue: #428bca;
     100%{transform:rotate(180deg);}
 }
 
+// Hacks
+.learnmore  h4.h4-2 {display: none;} /* till we get content */
 // Global
 body { @include headers(16px,300); background:$white;}
 h1 { font-weight: 300; }
@@ -100,7 +103,7 @@ h3.mb35.mt5 {color:#666;font-weight: 200;}
 p { font-size: 1.2em; line-height: 1.4em;}
 a { @include transition(all 0.3s ease-in-out); }
 h4 { margin-top:-6px; font-size: 1.3em; font-weight: 300; }
-
+h4.h4-2 {color: $regular-g;}
 body{
 
 	 font-family: "Roboto";
@@ -694,10 +697,10 @@ section.about { position: relative;
 	}
 }
 
-section.giveatry { background:$dark-g;  text-align: center;
+section.giveatry { background: $blue;  text-align: center;
 	h2 { color:$white; }
 	.buttons {
-		a { display: inline-block;}
+		a { display: inline-block; margin-right:20px;}
 	}
 }
 
