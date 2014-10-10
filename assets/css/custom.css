@@ -1101,17 +1101,12 @@ section.subscribe form.well {
   height: auto;
   overflow: hidden;
 }
-.homepage section.usedby .logos a {
+.homepage section.usedby .logos img {
   display: inline-block;
-  margin: 10px;
-  opacity: 0.6;
-}
-.homepage section.usedby .logos a:hover {
-  opacity: 1;
-}
-.homepage section.usedby .logos a img {
   width: auto;
   height: 65px;
+  margin: 10px;
+  opacity: 0.6;
 }
 .homepage section.learnmore [class^="ti-"], .homepage section.learnmore [class*=" ti-"] {
   font-size: 200px;
@@ -1387,7 +1382,7 @@ footer .community ul {
 }
 footer .community ul li {
   float: left;
-  margin-right: 20px;
+  margin-right: 16px;
 }
 footer .community ul li [class^="ti-"], footer .community ul li [class*=" ti-"] {
   font-size: 38px;
@@ -1402,7 +1397,7 @@ footer .community ul li span.title {
   float: left;
 }
 
-#about {
+#about, #usedby {
   position: absolute;
   top: -60px;
   height: 1px;
@@ -1560,6 +1555,19 @@ section.giveatry .buttons a {
   }
 }
 @media (max-width: 767px) {
+  .features .intro h2 {
+    font-weight: 300;
+  }
+
+  .bg-img1 {
+    padding: 40px 0;
+  }
+
+  h1, .homepage section.intro.intro2 h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
   .homepage section.intro.intro2 .visit {
     margin-bottom: 60px;
   }

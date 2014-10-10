@@ -543,10 +543,7 @@ section.subscribe { background:	#fff url(../img/drupalwxtbg.png) 50% 50% no-repe
 
 	section.usedby { padding:30px 0 25px 0; text-align: center; position: relative;
 		.logos { width: 100%; height: auto; overflow: hidden;
-			a { display: inline-block; margin:10px; opacity: 0.6;
-				&:hover { opacity: 1;}
-				img { width: auto; height: 65px; }
-			}
+			img { display: inline-block;width: auto; height: 65px;  margin:10px; opacity: 0.6;  }
 		}
 	}
 	section.learnmore {
@@ -680,7 +677,7 @@ footer {  background:#101010; position:relative; color:$white; padding:40px 0 20
 	}
 	.community { border-left: 1px solid $white; border-right:1px solid $white; padding:0 30px;
 		ul { list-style: none; margin:0; padding:0;
-			li { float: left; margin-right: 20px;
+			li { float: left; margin-right: 16px;
 				[class^="ti-"], [class*=" ti-"] { font-size: 38px; float: left; margin-bottom: 5px; text-align: center; width: 100%; }
 				span.title { clear: both; text-align: center; float: left; }
 			}
@@ -688,7 +685,7 @@ footer {  background:#101010; position:relative; color:$white; padding:40px 0 20
 	}
 }
 
-#about { position: absolute; top: -60px; height: 1px; width: 100%; }
+#about, #usedby { position: absolute; top: -60px; height: 1px; width: 100%; }
 section.about { position: relative;
 	.facts {
 		ul { margin:0; padding:0; list-style: none;
@@ -774,6 +771,9 @@ section.giveatry { background: $blue;  text-align: center;
 }
 
 @media (max-width: 767px) {
+	.features .intro h2 { font-weight: 300; }
+	.bg-img1 { padding:40px 0;}
+	h1, .homepage section.intro.intro2 h2 { font-size: 40px; line-height: 50px; }
 	.homepage section.intro.intro2 .visit { margin-bottom: 60px; }
 	.page.home { padding-top:0 !important; }
 	.homepage #carousel-example-generic { position: relative; top: auto; left: auto; }
