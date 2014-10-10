@@ -94,7 +94,9 @@ $blue: #428bca;
 // Global
 body { @include headers(16px,300); background:$white;}
 h1 { font-weight: 300; }
-h2 { @include headers(2em,100,1em); }
+h2 { @include headers(2em,200,1em); }
+h2 {font-size: 2.2em;font-weight: 200;line-height: 1em;}
+h3.mb35.mt5 {color:#666;font-weight: 200;}
 p { font-size: 1.2em; line-height: 1.4em;}
 a { @include transition(all 0.3s ease-in-out); }
 h4 { margin-top:-6px; font-size: 1.3em; font-weight: 300; }
@@ -326,17 +328,17 @@ p.inverse-heading{
 .mt100 { margin-top: 100px; }
 .mt35 { margin-top: 35px; }
 .mb35 { margin-bottom: 35px; }
-.btn { background:$blue; color:$white; text-shadow:none; border-radius: 5px; font-weight: 300; padding:12px 40px;
+.btn { background:#fff; color:$blue; text-shadow:none; border-radius: 5px; border-color: $light-g; font-weight: 300; padding:12px 40px;
 	&.btn-lg { font-size: 1.2em;}
-	&:hover { background:darken($blue, 15); color:$white; }
+	&:hover { background:$blue; color:$white; }
 	&.white { background:transparent; border:2px solid $dark-g; color:$dark-g; text-shadow:none;
 		&:hover { background:$blue; border:2px solid $blue; color:$white; }
 	}
 }
-.btn-inverse { background: transparent; border:2px solid $white; font-size: 1.1em; color:$white; text-shadow:1px 1px 8px #1F1F1F;
+.btn-inverse { background: transparent; border:1px solid $white; font-size: 1.1em; color:$white; text-shadow:1px 1px 8px #1F1F1F;
 	&:hover { background:rgba(255,255,255,0.2); color:$white; text-shadow:none; }
-	&.white { background:transparent; border:2px solid $dark-g; color:$dark-g; text-shadow:none;
-		&:hover { background:$blue; border:2px solid $blue; color:$white; }
+	&.white { background:transparent; border:1px solid $dark-g; color:$dark-g; text-shadow:none;
+		&:hover { background:$blue; border:1px solid $blue; color:$white; }
 	}
 }
 .bg-blue { background:$blue; color:$white;
@@ -357,13 +359,13 @@ section { padding:30px 0; position: relative;
 }
 // Navtabs
 .nav-tabs { border:none; text-align: center; margin-bottom: 40px;
-	li { margin:0; padding:0; border-radius: 0; margin-left:-4px; display: inline-block; float:none;
-		a { background:lighten($light-g, 10); margin:0; border-radius: 0; color:$dark-g; border-bottom:5px solid darken($light-g, 10); padding:14px 56px;
-			&:hover{ border-bottom:5px solid $blue; background:$light-g;  }
+	li { margin:0; padding:0; border-radius: 0; margin-left:-4px; display: inline-block; float:none; background-color: $white;
+		a { margin:0; border-radius: 0; border:1px solid #ccc; padding:14px 56px;
+			&:hover{ border-bottom:5px solid $blue; color: $white; background:$blue;  }
 		}
 		&.active {
-			a { border-bottom:5px solid $blue; background:$light-g;
-				&:hover { border-bottom:5px solid $blue; background:$light-g;  }
+			a { border-bottom:5px solid $blue; background:$blue; color: $white;
+				&:hover { border-bottom:5px solid $blue; background:darken($blue, 10); color:$white;  }
 			}
 		}
 		&:first-child {

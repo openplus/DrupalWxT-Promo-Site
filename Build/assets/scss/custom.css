@@ -184,8 +184,17 @@ h1 {
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 2em;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1em; }
+
+h2 {
+  font-size: 2.2em;
+  font-weight: 200;
+  line-height: 1em; }
+
+h3.mb35.mt5 {
+  color: #666;
+  font-weight: 200; }
 
 p {
   font-size: 1.2em;
@@ -426,16 +435,17 @@ p.inverse-heading {
   margin-bottom: 35px; }
 
 .btn {
-  background: #428bca;
-  color: #f6f6f6;
+  background: #fff;
+  color: #428bca;
   text-shadow: none;
   border-radius: 5px;
+  border-color: #cccccc;
   font-weight: 300;
   padding: 12px 40px; }
   .btn.btn-lg {
     font-size: 1.2em; }
   .btn:hover {
-    background: #2a6496;
+    background: #428bca;
     color: #f6f6f6; }
   .btn.white {
     background: transparent;
@@ -449,7 +459,7 @@ p.inverse-heading {
 
 .btn-inverse {
   background: transparent;
-  border: 2px solid #f6f6f6;
+  border: 1px solid #f6f6f6;
   font-size: 1.1em;
   color: #f6f6f6;
   text-shadow: 1px 1px 8px #1F1F1F; }
@@ -459,12 +469,12 @@ p.inverse-heading {
     text-shadow: none; }
   .btn-inverse.white {
     background: transparent;
-    border: 2px solid #333333;
+    border: 1px solid #333333;
     color: #333333;
     text-shadow: none; }
     .btn-inverse.white:hover {
       background: #428bca;
-      border: 2px solid #428bca;
+      border: 1px solid #428bca;
       color: #f6f6f6; }
 
 .bg-blue {
@@ -513,23 +523,25 @@ section {
     border-radius: 0;
     margin-left: -4px;
     display: inline-block;
-    float: none; }
+    float: none;
+    background-color: #f6f6f6; }
     .nav-tabs li a {
-      background: #e6e6e6;
       margin: 0;
       border-radius: 0;
-      color: #333333;
-      border-bottom: 5px solid #b3b3b3;
+      border: 1px solid #ccc;
       padding: 14px 56px; }
       .nav-tabs li a:hover {
         border-bottom: 5px solid #428bca;
-        background: #cccccc; }
+        color: #f6f6f6;
+        background: #428bca; }
     .nav-tabs li.active a {
       border-bottom: 5px solid #428bca;
-      background: #cccccc; }
+      background: #428bca;
+      color: #f6f6f6; }
       .nav-tabs li.active a:hover {
         border-bottom: 5px solid #428bca;
-        background: #cccccc; }
+        background: #3071a9;
+        color: #f6f6f6; }
     .nav-tabs li:first-child a {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px; }
