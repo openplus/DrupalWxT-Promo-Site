@@ -308,11 +308,36 @@
 		</section>
 		<section class="giveatry">
 			<div class="container">
-				<h2 class="mt0">Ready to give Drupal WxT a try?</h2>
-				<span class="buttons">
-					<a href="<!-- @path getstarted.html -->" class="btn btn-lg">Get started</a>
-				    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-inverse">Try the demo</a>
-				</span>
+				<div class="row">
+					<h2 class="mt0 mb35">Ready to give Drupal WxT a try?</h2>
+					<div class="col-md-4 col-md-push-2">
+						<span class="buttons">
+							<a href="<!-- @path getstarted.html -->" class="btn btn-lg">Get started</a>
+						    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-lg">Try the demo</a>
+						</span>
+					</div>
+					<div class="col-md-4 col-md-push-2 subscribe" id="newsletter-subscribe">
+						<p id="message"></p>
+				        <form class="form form-signup well" id="contactform" role="form" action="contact.php">
+				        	<h3 class="mt0">Find out more</h3>
+		                    <div class="form-group">
+		                        <div class="input-group">
+		                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+		                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+		                        </div>
+		                    </div>
+		                    <div class="form-group">
+		                        <div class="input-group">
+		                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+		                            </span>
+		                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
+		                        </div>
+		                    </div>
+		                    <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
+	                	</form>
+					</div>
+					
+				</div>
 			</div>
 		</section>
 	</div>

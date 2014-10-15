@@ -727,6 +727,8 @@ section#carousel.bg-bg {
     font-size: 32px;
     line-height: 42px; }
 
+.subscribe h3 {
+  font-weight: 300; }
 .subscribe .extrawrapper {
   position: relative;
   padding: 60px 0; }
@@ -938,10 +940,6 @@ section#carousel.bg-bg {
   .homepage section.news .item .type {
     float: left;
     clear: both; }
-.homepage section.giveatry .buttons a {
-  display: block;
-  margin-bottom: 5px;
-  margin-right: 0; }
 
 .free {
   text-transform: uppercase; }
@@ -1114,8 +1112,11 @@ section.giveatry {
   section.giveatry h2 {
     color: #f6f6f6; }
   section.giveatry .buttons a {
-    display: inline-block;
-    margin-right: 20px; }
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 0; }
+    section.giveatry .buttons a:hover {
+      background: rgba(255, 255, 255, 0.2); }
 
 .quote {
   color: rgba(0, 0, 0, 0.1);
@@ -1214,6 +1215,9 @@ section.giveatry {
       float: none !important;
       display: inline-block; } }
 @media (max-width: 767px) {
+  .homepage section.news .col-md-3 {
+    display: block; }
+
   .features .intro h2 {
     font-weight: 300; }
 

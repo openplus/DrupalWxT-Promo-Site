@@ -501,6 +501,7 @@ section#carousel.bg-bg {padding:40px 0;
 }
 
 .subscribe {
+	h3 { font-weight: 300; }
 	.extrawrapper { position: relative; padding: 60px 0;
 		.container { z-index: 1; position: relative;}
 	}
@@ -574,11 +575,6 @@ section#carousel.bg-bg {padding:40px 0;
 				h3 { @include headers(1.4em, 300);}
 			}
 			.type { float: left; clear: both;  }
-		}
-	}
-	section.giveatry { 
-		.buttons {
-			a { display: block; margin-bottom: 5px; margin-right: 0; }
 		}
 	}
 
@@ -704,9 +700,13 @@ section.about { position: relative;
 section.giveatry { background: $blue;  text-align: center;
 	h2 { color:$white; }
 	.buttons {
-		a { display: inline-block; margin-right:20px;}
+		a { display: block; margin-bottom: 5px; margin-right: 0; 
+			&:hover { background:rgba(255,255,255,0.2);  }
+		}
 	}
 }
+
+
 
 
 
@@ -778,6 +778,7 @@ section.giveatry { background: $blue;  text-align: center;
 }
 
 @media (max-width: 767px) {
+	.homepage section.news .col-md-3 { display: block;}
 	.features .intro h2 { font-weight: 300; }
 	.bg-img1 { padding:40px 0;}
 	h1, .homepage section.intro.intro2 h2 { font-size: 40px; line-height: 50px; }
