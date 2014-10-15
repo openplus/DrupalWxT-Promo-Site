@@ -122,3 +122,8 @@ $(window).bind("load resize", function() {
 	});
 
 });
+
+// $(window).scroll(function() {
+// 	$var1 = $('body').scrollTop()/5 * -1; 
+// 	$('.features .intro.bg-img1').css("background-position", "center "+$var1+"px");
+//   });

@@ -1166,6 +1166,10 @@ section.subscribe form.well {
   width: 100%;
   float: right;
 }
+.homepage section.news .col-md-3 {
+  display: inline-block;
+  float: none;
+}
 .homepage section.news .item {
   background-color: #333333;
   color: #f6f6f6;
@@ -1206,6 +1210,7 @@ section.subscribe form.well {
   color: #f6f6f6;
   margin: 15px 0 55px 0;
   float: left;
+  text-align: left;
 }
 .homepage section.news .item .title h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -1271,7 +1276,13 @@ button#submit {
   display: block;
 }
 
-.features .intro h2 {
+.features .intro.bg-img1 {
+  background: url(../img/featuresbg.jpg) no-repeat center center;
+  background-size: cover;
+  text-shadow: 1px 1px 0 #000, 0 0 5px #000, 0 0 20px #000;
+  padding: 160px 0;
+}
+.features .intro.bg-img1 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.5em;
   font-weight: 100;

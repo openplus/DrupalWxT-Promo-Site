@@ -566,12 +566,13 @@ section.subscribe { background:	#fff url(../img/drupalwxtbg.png) 50% 50% no-repe
 		iframe { height: 400px; width: 100%; float: right;}
 	}
 	section.news {
+		.col-md-3 { display: inline-block; float: none; }
 		.item { background-color:$dark-g; color:$white; padding: 0 20px 20px 20px; z-index: 2; float: left; width: 100%; margin-bottom: 30px; position: relative;
 			&:after { background:url(../img/1629941.jpg); opacity: 0.05; z-index: -1; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; content:''; }
 			a { color:$white;}
 			.header { color:$white; background:$blue; position: relative; float: left; margin-top: -8px; padding:5px 10px; text-align: center; font-size: 1.2em;
 			}
-			.title { clear: both; color:$white; margin:15px 0 55px 0; float: left;
+			.title { clear: both; color:$white; margin:15px 0 55px 0; float: left; text-align: left;
 				h3 { @include headers(1.4em, 300);}
 			}
 			.type { float: left; clear: both;  }
@@ -621,7 +622,7 @@ button#submit { font-size: 16px; }
 	.gototop { display: block; }
 }
 .features {
-	.intro {
+	.intro.bg-img1 { background:url(../img/featuresbg.jpg) no-repeat center center; background-size: cover; text-shadow: 1px 1px 0 #000, 0 0 5px #000, 0 0 20px #000; padding:160px 0;
 		h2 { @include headers(1.5em,100,1em); margin:0; }
 	}
 	.more {
