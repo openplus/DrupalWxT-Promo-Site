@@ -1306,6 +1306,9 @@ button#submit {
 .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
   font-size: 200px;
 }
+.features .giveatry {
+  border-top: 1px solid #ccc;
+}
 
 .getstarted section .icon {
   text-align: center;

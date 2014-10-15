@@ -33,7 +33,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "aaron@openplus.ca";
+$address = "info@openplus.ca";
 
 
 // Configuration option.
@@ -65,7 +65,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<div class='col-md-4 col-md-push-4 well success_message'><h3>Email Sent Successfully.</h3>";
+	echo "<div class='well success_message'><h3>Email Sent Successfully.</h3>";
 	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p></div>";
 	echo "</div>";
 	echo "</fieldset>";
