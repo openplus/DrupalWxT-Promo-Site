@@ -946,36 +946,16 @@ section#carousel.bg-bg p {
   line-height: 42px;
 }
 
-section.subscribe {
-  background: white url(../img/drupalwxtbg.png) 50% 50% no-repeat;
-  background-size: cover;
-  padding: 0;
-}
-section.subscribe h2, section.subscribe h3, section.subscribe p {
-  color: #f6f6f6;
-  text-shadow: 1px 1px 10px #1F1F1F;
-}
-section.subscribe .extrawrapper {
+.subscribe .extrawrapper {
   position: relative;
   padding: 60px 0;
 }
-section.subscribe .extrawrapper:before {
-  content: '';
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-section.subscribe .extrawrapper .container {
+.subscribe .extrawrapper .container {
   z-index: 1;
   position: relative;
 }
-section.subscribe form.well {
-  padding: 40px 20px;
-  box-shadow: 0 0 20px #333, 0 0 80px #999;
+.subscribe form.well {
+  padding: 20px;
 }
 
 .homepage #carousel-example-generic {
@@ -1221,6 +1201,11 @@ section.subscribe form.well {
 .homepage section.news .item .type {
   float: left;
   clear: both;
+}
+.homepage section.giveatry .buttons a {
+  display: block;
+  margin-bottom: 5px;
+  margin-right: 0;
 }
 
 .free {

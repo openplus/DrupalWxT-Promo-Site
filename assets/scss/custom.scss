@@ -500,13 +500,11 @@ section#carousel.bg-bg {padding:40px 0;
 	p { font-size: 32px; line-height: 42px; }
 }
 
-section.subscribe { background:	#fff url(../img/drupalwxtbg.png) 50% 50% no-repeat; background-size: cover;  padding:0;
-	h2, h3, p { color:$white; text-shadow:1px 1px 10px #1F1F1F; }
+.subscribe {
 	.extrawrapper { position: relative; padding: 60px 0;
-		&:before { content:''; width: 100%; background:rgba(0,0,0,0.4); height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
 		.container { z-index: 1; position: relative;}
 	}
-	form.well { padding: 40px 20px; box-shadow: 0 0 20px #333, 0 0 80px #999;}
+	form.well { padding: 20px; }
 }
 
 
@@ -578,6 +576,12 @@ section.subscribe { background:	#fff url(../img/drupalwxtbg.png) 50% 50% no-repe
 			.type { float: left; clear: both;  }
 		}
 	}
+	section.giveatry { 
+		.buttons {
+			a { display: block; margin-bottom: 5px; margin-right: 0; }
+		}
+	}
+
 }
 
 
