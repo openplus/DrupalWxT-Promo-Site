@@ -701,7 +701,7 @@ section.about { position: relative;
 section.giveatry { background: $blue;  text-align: center;
 	h2 { color:$white; }
 	.buttons {
-		a { display: block; margin-bottom: 5px; margin-right: 0; 
+		a { display: inline-block;
 			&:hover { background:rgba(255,255,255,0.2);  }
 		}
 	}
@@ -779,6 +779,7 @@ section.giveatry { background: $blue;  text-align: center;
 }
 
 @media (max-width: 767px) {
+	section.giveatry .buttons a { display: block; margin-bottom: 5px; }
 	.homepage section.news .col-md-3 { display: block;}
 	.features .intro h2 { font-weight: 300; }
 	.bg-img1 { padding:40px 0;}
