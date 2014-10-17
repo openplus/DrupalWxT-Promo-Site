@@ -380,8 +380,8 @@ section { padding:30px 0; position: relative;
 		}
 	}
 	&.nav-stacked { text-align: left;
-		li { float:left; display: block; margin-bottom: 15px; margin-left:0; width: 100%;
-			a { background:darken($blue, 10);  border:none; padding:10px; color: $white;
+		li { float:left; display: block; margin-bottom: 15px; margin-left:0; width: 100%; background:transparent;
+			a { background:darken($blue, 10); border-radius: 0;  border:none; padding:10px; color: $white;
 				&:hover { background:darken($blue, 15); border:none; border-radius: 0; color:$white; }
 			}
 			&.active {

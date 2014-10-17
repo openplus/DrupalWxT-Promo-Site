@@ -736,9 +736,11 @@ section h2 {
   margin-bottom: 15px;
   margin-left: 0;
   width: 100%;
+  background: transparent;
 }
 .nav-tabs.nav-stacked li a {
   background: #3071a9;
+  border-radius: 0;
   border: none;
   padding: 10px;
   color: #f6f6f6;
