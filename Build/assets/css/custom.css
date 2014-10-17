@@ -738,25 +738,25 @@ section h2 {
   width: 100%;
 }
 .nav-tabs.nav-stacked li a {
-  background: transparent;
+  background: #3071a9;
   border: none;
   padding: 10px;
-  color: #333;
+  color: #f6f6f6;
 }
 .nav-tabs.nav-stacked li a:hover {
-  background: #3071a9;
+  background: #2a6496;
   border: none;
   border-radius: 0;
   color: #f6f6f6;
 }
 .nav-tabs.nav-stacked li.active a {
-  background: #3071a9;
+  background: #245682;
   border: none;
   color: #f6f6f6;
   border-radius: 0;
 }
 .nav-tabs.nav-stacked li.active a:hover {
-  background: #3071a9;
+  background: #245682;
   border: none;
   color: #f6f6f6;
 }
@@ -855,7 +855,7 @@ header.navbar.bg nav ul.navbar-nav li a {
   padding: 10px 20px;
 }
 header.navbar.bg nav ul.navbar-nav li a:hover {
-  background: #428bca;
+  background: #54a5be;
   color: #f6f6f6;
 }
 

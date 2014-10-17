@@ -381,12 +381,12 @@ section { padding:30px 0; position: relative;
 	}
 	&.nav-stacked { text-align: left;
 		li { float:left; display: block; margin-bottom: 15px; margin-left:0; width: 100%;
-			a { background:transparent; border:none; padding:10px; color:#333;
-				&:hover { background:darken($blue, 10); border:none; border-radius: 0; color:$white; }
+			a { background:darken($blue, 10);  border:none; padding:10px; color: $white;
+				&:hover { background:darken($blue, 15); border:none; border-radius: 0; color:$white; }
 			}
 			&.active {
-				a { background:darken($blue, 10); border:none; color:$white; border-radius: 0;
-					&:hover { background:darken($blue, 10); border:none; color:$white; }
+				a { background:darken($blue, 20); border:none; color:$white; border-radius: 0;
+					&:hover { background:darken($blue, 20); border:none; color:$white; }
 				}
 			}
 			h3 { margin:3px 0 3px 0;}
@@ -444,7 +444,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 			ul.navbar-nav { margin-top: 14px;
 				li {
 					a { padding:10px 20px;
-						&:hover { background:$blue; color:$white; }
+						&:hover { background:$teal; color:$white; }
 					}
 				}
 			}
