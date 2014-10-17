@@ -820,6 +820,7 @@ header.navbar .navbar-header {
 }
 header.navbar .navbar-header img {
   width: 200px;
+  height: 45px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -849,12 +850,17 @@ header.navbar.bg {
 }
 header.navbar.bg .navbar-header img {
   width: 120px;
+  height: 27px;
 }
 header.navbar.bg nav ul.navbar-nav {
   margin-top: 14px;
 }
 header.navbar.bg nav ul.navbar-nav li a {
   padding: 10px 20px;
+  background: transparent;
+}
+header.navbar.bg nav ul.navbar-nav li a:active {
+  background: transparent;
 }
 header.navbar.bg nav ul.navbar-nav li a:hover {
   background: #54a5be;
@@ -887,6 +893,7 @@ section.secondnav nav ul li a {
   display: block;
   color: #428bca;
   font-weight: 300;
+  background: transparent;
 }
 section.secondnav nav ul li a .icon [class^="ti-"], section.secondnav nav ul li a .icon [class*=" ti-"] {
   color: #333333;
@@ -898,6 +905,9 @@ section.secondnav nav ul li a span {
 section.secondnav nav ul li a .text {
   font-size: 15px;
   margin: 10px 0 0 0;
+}
+section.secondnav nav ul li a:active {
+  background: transparent;
 }
 section.secondnav nav ul li a:hover, section.secondnav nav ul li a.active {
   background: #428bca;

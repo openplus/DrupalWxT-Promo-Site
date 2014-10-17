@@ -82,7 +82,7 @@ $(window).scroll(function() {
 				var $distance = $(this).offset().top;
 				$this = $(this);
 		    	$id = $this.attr('id');
-		    	if ( $('body').scrollTop() >= $distance ) {
+		    	if ( $(window).scrollTop() >= $distance ) {
 				    if($('.secondnav a[href="#' + $id + '"]').length == 0) {
 				    }
 
@@ -109,7 +109,7 @@ $(window).bind("load resize", function() {
 	$window = $(window);
 	var $height = $('.secondnav').height();
 	$window.scroll(function() {
-	    if ( $('html').hasClass('no-touch') && $('body').scrollTop() >= $distance ) {
+	    if ( $('html').hasClass('no-touch') && $(window).scrollTop() >= $distance ) {
 	    	$('body').addClass('hasstickyheader');
 	        $('.secondnav').addClass('sticky');
 	        $('.intro').css({marginBottom:$height});

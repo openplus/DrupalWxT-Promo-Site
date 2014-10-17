@@ -630,6 +630,7 @@ header.navbar {
     padding: 20px 0; }
     header.navbar .navbar-header img {
       width: 200px;
+      height: 45px;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
@@ -652,11 +653,15 @@ header.navbar {
   header.navbar.bg {
     background: rgba(0, 0, 0, 0.9); }
     header.navbar.bg .navbar-header img {
-      width: 120px; }
+      width: 120px;
+      height: 27px; }
     header.navbar.bg nav ul.navbar-nav {
       margin-top: 14px; }
       header.navbar.bg nav ul.navbar-nav li a {
-        padding: 10px 20px; }
+        padding: 10px 20px;
+        background: transparent; }
+        header.navbar.bg nav ul.navbar-nav li a:active {
+          background: transparent; }
         header.navbar.bg nav ul.navbar-nav li a:hover {
           background: #54a5be;
           color: #f6f6f6; }
@@ -682,7 +687,8 @@ section.secondnav {
         padding: 19px 15px 16px 15px;
         display: block;
         color: #428bca;
-        font-weight: 300; }
+        font-weight: 300;
+        background: transparent; }
         section.secondnav nav ul li a .icon [class^="ti-"], section.secondnav nav ul li a .icon [class*=" ti-"] {
           color: #333333;
           font-size: 2em; }
@@ -691,6 +697,8 @@ section.secondnav {
         section.secondnav nav ul li a .text {
           font-size: 15px;
           margin: 10px 0 0 0; }
+        section.secondnav nav ul li a:active {
+          background: transparent; }
         section.secondnav nav ul li a:hover, section.secondnav nav ul li a.active {
           background: #428bca;
           color: #f6f6f6;
