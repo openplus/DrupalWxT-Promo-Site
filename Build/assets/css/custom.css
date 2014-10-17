@@ -735,11 +735,13 @@ section h2 {
   display: block;
   margin-bottom: 15px;
   margin-left: 0;
+  width: 100%;
 }
 .nav-tabs.nav-stacked li a {
   background: transparent;
   border: none;
   padding: 10px;
+  color: #333;
 }
 .nav-tabs.nav-stacked li a:hover {
   background: #3071a9;
@@ -1145,7 +1147,7 @@ section#carousel.bg-bg p {
   right: 0;
 }
 .homepage section.video iframe {
-  height: 400px;
+  height: 500px;
   width: 100%;
   float: right;
 }
@@ -1223,6 +1225,7 @@ section#carousel.bg-bg p {
   margin-bottom: 0;
   border: none;
   background: #B65A5A;
+  color: #f6f6f6;
 }
 
 p#message {
@@ -1237,6 +1240,7 @@ button#submit {
 .success_message {
   background: #7E9B60;
   border: none;
+  color: #f6f6f6;
 }
 
 .gototop {

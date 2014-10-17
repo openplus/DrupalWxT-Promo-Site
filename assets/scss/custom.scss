@@ -380,8 +380,8 @@ section { padding:30px 0; position: relative;
 		}
 	}
 	&.nav-stacked { text-align: left;
-		li { float:left; display: block; margin-bottom: 15px; margin-left:0;
-			a { background:transparent; border:none; padding:10px;
+		li { float:left; display: block; margin-bottom: 15px; margin-left:0; width: 100%;
+			a { background:transparent; border:none; padding:10px; color:#333;
 				&:hover { background:darken($blue, 10); border:none; border-radius: 0; color:$white; }
 			}
 			&.active {
@@ -562,7 +562,7 @@ section#carousel.bg-bg {padding:40px 0;
 		}
 	}
 	section.video {
-		iframe { height: 400px; width: 100%; float: right;}
+		iframe { height: 500px; width: 100%; float: right;}
 	}
 	section.news {
 		.col-md-3 { display: inline-block; float: none; }
@@ -608,10 +608,10 @@ section#carousel.bg-bg {padding:40px 0;
     color: #999;
 }
 .form-control { padding: 12px 12px; height: auto; }
-.error_message { margin-bottom: 0; border: none; background: #B65A5A; }
+.error_message { margin-bottom: 0; border: none; background: #B65A5A; color:$white; }
 p#message { margin-bottom:5px; padding-bottom:0; }
 button#submit { font-size: 16px; }
-.success_message { background: #7E9B60; border: none; }
+.success_message { background: #7E9B60; border: none; color:$white; }
 
 
 // Features page
