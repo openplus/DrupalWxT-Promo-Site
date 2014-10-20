@@ -1229,6 +1229,13 @@ section.giveatry {
       float: none !important;
       display: inline-block; } }
 @media (max-width: 767px) {
+  footer {
+    text-align: center; }
+    footer .wxt, footer .community, footer .built {
+      margin-bottom: 20px;
+      overflow: hidden;
+      border: none; }
+
   section.giveatry .buttons a {
     display: block;
     margin-bottom: 5px; }
