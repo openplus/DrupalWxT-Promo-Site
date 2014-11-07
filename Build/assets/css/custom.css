@@ -685,6 +685,10 @@ section h2 {
   margin-bottom: 15px;
 }
 
+section.padding {
+  padding: 60px 0;
+}
+
 .nav-tabs {
   border: none;
   text-align: center;
@@ -796,7 +800,7 @@ section h2 {
   background: #54a5be;
   color: #f6f6f6;
 }
-.inside header.navbar ul.navbar-nav li a.current {
+.inside header.navbar ul.navbar-nav li a.current, .inside header.navbar ul.navbar-nav li a:focus {
   background: #428bca;
   color: #f6f6f6;
 }
@@ -841,7 +845,7 @@ header.navbar nav ul.navbar-nav li a {
   font-weight: 200;
   font-size: 16px;
 }
-header.navbar nav ul.navbar-nav li a:hover {
+header.navbar nav ul.navbar-nav li a:hover, header.navbar nav ul.navbar-nav li a:focus {
   background: rgba(0, 0, 0, 0.35);
   text-decoration: none;
 }
@@ -864,6 +868,10 @@ header.navbar.bg nav ul.navbar-nav li a:active {
 }
 header.navbar.bg nav ul.navbar-nav li a:hover {
   background: #54a5be;
+  color: #f6f6f6;
+}
+header.navbar.bg nav ul.navbar-nav li a:focus {
+  background: #428bca;
   color: #f6f6f6;
 }
 

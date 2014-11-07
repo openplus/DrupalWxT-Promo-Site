@@ -361,6 +361,7 @@ p.inverse-heading{
 section { padding:30px 0; position: relative;
 	h2 { margin-bottom: 15px;}
 }
+section.padding { padding:60px 0; }
 // Navtabs
 .nav-tabs { border:none; text-align: center; margin-bottom: 40px;
 	li { margin:0; padding:0; border-radius: 0; margin-left:-4px; display: inline-block; float:none; background-color: $white;
@@ -414,7 +415,7 @@ section { padding:30px 0; position: relative;
 			li {
 				a {
 					&:hover { background:$teal; color:$white; }
-					&.current { background:$blue; color:$white; }
+					&.current, &:focus { background:$blue; color:$white; }
 				}
 			}
 		}
@@ -431,7 +432,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 		ul.navbar-nav { padding:0; margin:0; float: right; margin-top: 20px;
 			li { margin-left: 2px;
 				a { color:$white; padding:14px 20px; border-radius: 3px; font-weight: 200; font-size: 16px;
-					&:hover{ background:rgba(0,0,0,0.35); text-decoration: none;}
+					&:hover, &:focus{ background:rgba(0,0,0,0.35); text-decoration: none;}
 				}
 			}
 		}
@@ -446,6 +447,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 					a { padding:10px 20px; background: transparent;
 						&:active { background: transparent; }
 						&:hover { background:$teal; color:$white; }
+						&:focus { background:$blue; color:$white; }
 					}
 				}
 			}
