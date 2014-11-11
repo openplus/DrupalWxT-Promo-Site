@@ -175,6 +175,9 @@
   display: none; }
 
 /* till we get content */
+.carousel-control:focus {
+  outline: 5px auto -webkit-focus-ring-color; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -755,6 +758,12 @@ section#carousel.bg-bg {
     position: relative; }
 .subscribe form.well {
   padding: 20px; }
+  .subscribe form.well label .text {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    float: left; }
 
 .homepage #carousel-example-generic {
   position: fixed;

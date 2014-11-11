@@ -95,6 +95,7 @@ $teal: #54A5BE;
 
 // Hacks
 .learnmore  h4.h4-2 {display: none;} /* till we get content */
+.carousel-control:focus { outline: 5px auto -webkit-focus-ring-color; }
 // Global
 body { @include headers(16px,300); background:$white;}
 h1 { font-weight: 300; }
@@ -509,7 +510,9 @@ section#carousel.bg-bg {padding:40px 0;
 	.extrawrapper { position: relative; padding: 60px 0;
 		.container { z-index: 1; position: relative;}
 	}
-	form.well { padding: 20px; }
+	form.well { padding: 20px; 
+		label .text { opacity: 0; height: 0; width: 0; overflow: hidden; float: left; }
+	}
 }
 
 
