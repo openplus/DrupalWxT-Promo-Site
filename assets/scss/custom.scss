@@ -96,6 +96,7 @@ $teal: #54A5BE;
 // Hacks
 .learnmore  h4.h4-2 {display: none;} /* till we get content */
 .carousel-control:focus { outline: 5px auto -webkit-focus-ring-color; }
+.prevnexttext { opacity: 0; float: left; width: 0; height: 0; overflow: hidden; }
 // Global
 body { @include headers(16px,300); background:$white;}
 h1 { font-weight: 300; }
