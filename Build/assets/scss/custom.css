@@ -772,6 +772,10 @@ section#carousel.bg-bg {
     overflow: hidden;
     float: left; }
 
+.casestudy .secondnav .icon img {
+  height: 50px;
+  width: auto; }
+
 .homepage #carousel-example-generic {
   position: fixed;
   top: 0;
@@ -1017,6 +1021,12 @@ button#submit {
     text-decoration: none;
     border: 1px solid #428bca; }
 
+.gotodiv {
+  position: absolute;
+  top: -80px;
+  height: 1px;
+  width: 100%; }
+
 .hasstickyheader .gototop {
   display: block; }
 
@@ -1046,11 +1056,6 @@ button#submit {
     margin-bottom: 0; }
 .features section {
   position: relative; }
-  .features section .gotodiv {
-    position: absolute;
-    top: -80px;
-    height: 1px;
-    width: 100%; }
   .features section .icon {
     text-align: center; }
     .features section .icon [class^="ti-"], .features section .icon [class*=" ti-"] {
