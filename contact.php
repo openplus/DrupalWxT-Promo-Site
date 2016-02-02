@@ -19,7 +19,7 @@ if(trim($name) == '') {
 } else if(trim($email) == '') {
 	echo '<div class="error_message col-md-4 col-md-push-4 well">Attention! Please enter a valid email address.</div>';
 	exit();
-} 
+}
 
 
 
@@ -41,7 +41,7 @@ $address = "info@openplus.ca";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'You\'ve been contacted by ' . $name . '.';
+$e_subject = '[DrupalWxT] Request from ' . $name . '.';
 
 
 // Configuration option.
