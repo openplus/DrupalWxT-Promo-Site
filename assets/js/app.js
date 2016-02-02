@@ -78,7 +78,7 @@ $(function() {
 
 
 $(window).scroll(function() {
-	$('.features section .gotodiv').each(function(){
+	$('.hassecondnav section .gotodiv').each(function(){
 				var $distance = $(this).offset().top;
 				$this = $(this);
 		    	$id = $this.attr('id');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,20 +40,15 @@
   <title>DrupalWxT | Open Government</title>
 </head>
 <body>
-  <div class="loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div class="loader"></div>
   <div class="page inside" id="top">
-    <header class="navbar bs-docs-nav" id="top" role="banner">
+    <header class="navbar bs-docs-nav" id="top2" role="banner">
       <div class="container">
         <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="ti-menu"></span>
       </button>
-      <a href="index.html"><img src="assets/img/logo.svg"></a>
+      <a href="index.html"><img src="assets/img/logo.svg" alt="DrupalWxT logo"></a>
     </div>
 <nav class="collapse navbar-collapse bs-navbar-collapse">
   <ul class="nav navbar-nav">
@@ -61,10 +56,10 @@
   	<li><a href="index.html#about" class="slidelink">About</a></li>
     <li><a href="getstarted.html">Get Started</a></li>
     <li><a href="features.html">Features</a></li>
-    <li class='current'><a class='current' href="opengovernment.html">Case study</a></li>
-    <li><a href="http://wiki.drupalwxt.org/" >Documentation</a></li>
-    <!-- <li><a href="https://www.drupal.org/project/wetkit">Download</a></li>
-    <li><a href="https://github.com/wet-boew/wet-boew-drupal" ><span class="ti-github"></span></a></li> -->
+    <li><a href="casestudy.html">Case Studies</a></li>
+    <!-- <li><a href="http://wiki.drupalwxt.org/" >Documentation</a></li> -->
+    <li><a href="https://www.drupal.org/project/wetkit">Download</a></li>
+    <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" ><span class="ti-github"></span></a></li> -->
   </ul>
 </nav>
       </div>
@@ -105,21 +100,6 @@
 			</div>
 		</section>
 
-		<section class="bg-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 icon left">
-						<span class="ti-write"></span>
-					</div>
-					<div class="col-md-7 right">
-					<h2 class="blue mb0">Documention</h2>
-					<h3 class="mb35 mt5">Technical documention to help you get started</h3>
-			        	<p>The WxT Wiki is continuously updated with the latest information on the distribution.  From Architecture to Features to Road Map, find everything you might need to get started here. </p>
-			        	<p><a href="http://wiki.drupalwxt.org/" target="_blank" class="btn btn-blue btn-lg">Read Documentation</a></p>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="giveatry">
 			<div class="container">
 				<div class="row">
@@ -140,39 +120,12 @@
 	</div>
 	<a href="#top" class="gototop slidelink"><span class="ti-angle-up"></span></a>
 
-<div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="Find out more" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      	<div class="subscribe" id="newsletter-subscribe">
-						<p id="message"></p>
-				        <form class="form form-signup well" id="contactform" role="form" action="contact.php">
-				        	<h3 class="mt0">Find out more</h3>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-		                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
-		                        </div>
-		                    </div>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-		                            </span>
-		                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
-		                        </div>
-		                    </div>
-		                    <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
-	                	</form>
-					</div>
-      </div>
-    </div>
-  </div>
-</div>
+	
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-3 wxt">
-						<a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png"></a>
+						<a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
 						
 				</div>
 				<div class="col-sm-12 col-md-5 community">
@@ -212,6 +165,34 @@
 		</div>
 	</footer>
 	</div>
+
+	<div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="findoutmore" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      	<div class="subscribe" id="newsletter-subscribe">
+						<p id="message"></p>
+				        <form class="form form-signup well" id="contactform" role="form" action="contact.php">
+				        	<h3 class="mt0">Find out more</h3>
+		                    <div class="form-group">
+		                        <div class="input-group">
+		                            <label class="input-group-addon" for="name"><span class="glyphicon glyphicon-user"></span> <span class="text">Name</span></label>
+		                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+		                        </div>
+		                    </div>
+		                    <div class="form-group">
+		                        <div class="input-group">
+		                            <label class="input-group-addon" for="email"><span class="glyphicon glyphicon-envelope"></span> <span class="text">Email</span></label>
+		                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
+		                        </div>
+		                    </div>
+		                    <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
+	                	</form>
+					</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src='assets/js/jquery-1.8.3.min.js'></script>
 <script src='assets/js/modernizr.js'></script>

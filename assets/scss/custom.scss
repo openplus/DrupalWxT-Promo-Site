@@ -95,6 +95,8 @@ $teal: #54A5BE;
 
 // Hacks
 .learnmore  h4.h4-2 {display: none;} /* till we get content */
+.carousel-control:focus { outline: 5px auto -webkit-focus-ring-color; }
+.prevnexttext { opacity: 0; float: left; width: 0; height: 0; overflow: hidden; }
 // Global
 body { @include headers(16px,300); background:$white;}
 h1 { font-weight: 300; }
@@ -455,6 +457,7 @@ header.navbar { background:transparent;  @include transition(all 0.5s ease-in-ou
 	}
 }
 
+
 //Second Nav
 section.secondnav { padding:0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%;
 	&.sticky { position: fixed; top: 0; left: 0; z-index: 999; }
@@ -509,10 +512,18 @@ section#carousel.bg-bg {padding:40px 0;
 	.extrawrapper { position: relative; padding: 60px 0;
 		.container { z-index: 1; position: relative;}
 	}
-	form.well { padding: 20px; }
+	form.well { padding: 20px; 
+		label .text { opacity: 0; height: 0; width: 0; overflow: hidden; float: left; }
+	}
 }
 
-
+.casestudy {
+	.secondnav {
+		.icon {
+			img { height: 50px; width: auto; }
+		}
+	}
+}
 
 // HOME PAGE
 .homepage {
@@ -622,6 +633,7 @@ button#submit { font-size: 16px; }
 .gototop { position: fixed; z-index: 9; right: 15px; bottom: 15px; border:1px solid #ccc; display: none; background: #fff; border-radius: 50%; padding: 5px 10px;
 	&:hover { text-decoration: none; border:1px solid $blue; }
 }
+.gotodiv { position: absolute; top: -80px; height: 1px; width: 100%; }
 .hasstickyheader {
 	.gototop { display: block; }
 }
@@ -640,7 +652,6 @@ button#submit { font-size: 16px; }
 		}
 	}
 	section { position: relative;
-		.gotodiv { position: absolute; top: -80px; height: 1px; width: 100%; }
 		.icon { text-align:center;
 			[class^="ti-"], [class*=" ti-"] { font-size: 200px; }
 			&.right {}

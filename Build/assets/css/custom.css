@@ -274,6 +274,18 @@
 }
 
 /* till we get content */
+.carousel-control:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.prevnexttext {
+  opacity: 0;
+  float: left;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -982,6 +994,18 @@ section#carousel.bg-bg p {
 .subscribe form.well {
   padding: 20px;
 }
+.subscribe form.well label .text {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  float: left;
+}
+
+.casestudy .secondnav .icon img {
+  height: 50px;
+  width: auto;
+}
 
 .homepage #carousel-example-generic {
   position: fixed;
@@ -1279,6 +1303,13 @@ button#submit {
   border: 1px solid #428bca;
 }
 
+.gotodiv {
+  position: absolute;
+  top: -80px;
+  height: 1px;
+  width: 100%;
+}
+
 .hasstickyheader .gototop {
   display: block;
 }
@@ -1317,12 +1348,6 @@ button#submit {
 }
 .features section {
   position: relative;
-}
-.features section .gotodiv {
-  position: absolute;
-  top: -80px;
-  height: 1px;
-  width: 100%;
 }
 .features section .icon {
   text-align: center;
