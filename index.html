@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -12,11 +12,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -25,7 +25,7 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-      
+
   <link rel='stylesheet' href='assets/css/normalize.css'>
 <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
 <link rel='stylesheet' href='assets/css/animate.min.css'>
@@ -54,7 +54,6 @@
   	<li><a href="#about" class="slidelink">About</a></li>
     <li><a href="getstarted.html">Get Started</a></li>
     <li><a href="features.html">Features</a></li>
-    <li><a href="casestudy.html">Case Studies</a></li>
    <!--  <li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li> -->
     <li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
     <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank"><span class="ti-github"></span></a></li> -->
@@ -110,7 +109,7 @@
 					    </div>
 					</section>
 			    </div>
-		
+
 			</div>
 			<!-- Controls -->
 			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -170,7 +169,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<section class="learnmore bg-light" id="learnmore">
 			<div class="container">
 				<div class="row text-center">
@@ -314,7 +313,7 @@
 							<!-- <div class="type">News Release</div> -->
 						</div>
 					</div>
-					
+
 					<div class="col-sm-6 col-md-3">
 						<div class="item">
 							<div class="header">
@@ -327,7 +326,7 @@
 							<!-- <div class="type">News Release</div> -->
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
@@ -341,25 +340,25 @@
 							<a href="getstarted.html" class="btn btn-lg">Get started</a>
 						    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-lg">Try the demo</a>
 						    <a href="#" target="_blank" class="btn btn-lg" data-toggle="modal" data-target="#findoutmore">Find out more</a>
-						    
+
 						</span>
 
 					</div>
-					
-					
+
+
 				</div>
 			</div>
 		</section>
 	</div>
 
 
-	
+
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-3 wxt">
 						<a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
-						
+
 				</div>
 				<div class="col-sm-12 col-md-5 community">
 					<h2>Community</h2>
