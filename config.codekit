@@ -338,6 +338,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/logo-pipsc.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7659,
+		"inputAbbreviatedPath": "\/assets\/img\/logo-pipsc.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo-pipsc.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/logo-rcmp.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -378,6 +389,17 @@
 		"initialSize": 7160,
 		"inputAbbreviatedPath": "\/assets\/img\/logo-wxtfooter.png",
 		"outputAbbreviatedPath": "\/assets\/img\/logo-wxtfooter.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/logo-yukon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4856,
+		"inputAbbreviatedPath": "\/assets\/img\/logo-yukon.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo-yukon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

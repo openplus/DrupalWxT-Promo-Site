@@ -930,9 +930,6 @@ section#carousel.bg-bg {
   height: 500px;
   width: 100%;
   float: right; }
-.homepage section.news .col-md-3 {
-  display: inline-block;
-  float: none; }
 .homepage section.news .item {
   background-color: #333;
   color: #f6f6f6;
