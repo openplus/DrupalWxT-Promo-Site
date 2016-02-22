@@ -261,6 +261,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/logo-hamilton.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5435,
+		"inputAbbreviatedPath": "\/assets\/img\/logo-hamilton.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo-hamilton.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/logo-health.png": {
 		"fileType": 32768,
 		"ignore": 0,
