@@ -3982,6 +3982,12 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/logo-environment.pxm": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/img\/logo-environment.pxm",
+		"oF": 0
+		},
 	"\/assets\/img\/logo-hamilton.png": {
 		"ft": 32768,
 		"iS": 5435,
@@ -4014,6 +4020,12 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/assets\/img\/logo-ic.pxm": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/img\/logo-ic.pxm",
+		"oF": 0
 		},
 	"\/assets\/img\/logo-nrc.png": {
 		"ft": 32768,
