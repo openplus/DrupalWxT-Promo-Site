@@ -1,438 +1,465 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
+  <!-- Hammer reload -->
+  <script>
+    setInterval(function() {
+      try {
+        if (typeof ws != 'undefined' && ws.readyState == 1) {
+          return true;
+        }
+        ws = new WebSocket('ws://' + (location.host || 'localhost').split(':')[0] + ':35353')
+        ws.onopen = function() {
+          ws.onclose = function() {
+            document.location.reload()
+          }
+        }
+        ws.onmessage = function() {
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+              href = link.href.replace(/((&|\?)hammer=)[^&]+/, '');
+              link.href = href + (href.indexOf('?') >= 0 ? '&' : '?') + 'hammer=' + (new Date().valueOf());
+            }
+          }
+        }
+      } catch (e) {}
+    }, 1000)
+  </script>
+  <!-- /Hammer reload -->
 
   <link rel='stylesheet' href='assets/css/normalize.css'>
-<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
-<link rel='stylesheet' href='assets/css/animate.min.css'>
-<link rel='stylesheet' href='assets/icons/themify-icons.css'>
-<link rel='stylesheet' href='assets/css/custom.css'>
+  <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='assets/css/animate.min.css'>
+  <link rel='stylesheet' href='assets/icons/themify-icons.css'>
+  <link rel='stylesheet' href='assets/css/custom.css'>
   <link href="http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <!--[if lt IE 8]><!-->
- <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
+  <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
   <!--<![endif]-->
   <title>DrupalWxT</title>
-<body>
-  <div class="loader"></div>
-  <div class="page home">
-    <header class="navbar bs-docs-nav" id="top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+  <body>
+    <div class="loader"></div>
+    <div class="page home">
+      <header class="navbar bs-docs-nav" id="top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="ti-menu"></span>
       </button>
-      <a class='current' href="index.html"><img src="assets/img/logo.svg" alt="DrupalWxT logo"></a>
-    </div>
-<nav class="collapse navbar-collapse bs-navbar-collapse">
-  <ul class="nav navbar-nav">
-    <li><a href="#usedby" class="slidelink">Who uses it</a></li>
-  	<li><a href="#about" class="slidelink">About</a></li>
-    <li><a href="getstarted.html">Get Started</a></li>
-    <li><a href="features.html">Features</a></li>
-   <!--  <li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li> -->
-    <li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
-    <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank"><span class="ti-github"></span></a></li> -->
-  </ul>
-</nav>
-      </div>
-    </header>
-	<div class="homepage">
-		<div id="carousel-example-generic" class="carousel slide homepageslider" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-		    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			</ol>
+            <a class='current' href="index.html"><img src="assets/img/logo.svg" alt="DrupalWxT logo"></a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#usedby" class="slidelink">Who uses it</a></li>
+              <li><a href="#about" class="slidelink">About</a></li>
+              <li><a href="getstarted.html">Get Started</a></li>
+              <li><a href="features.html">Features</a></li>
+              <!--  <li><a href="http://wiki.drupalwxt.org/" target="_blank">Documentation</a></li> -->
+              <li><a href="https://www.drupal.org/project/wetkit" target="_blank">Download</a></li>
+              <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank"><span class="ti-github"></span></a></li> -->
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="homepage">
+        <div id="carousel-example-generic" class="carousel slide homepageslider" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          </ol>
 
-			<div class="carousel-inner">
-			   	<div class="item active">
-			    	<section class="intro">
-						<div class="container">
-					    	<div class="row">
-					    		<div class="col-md-10 col-md-push-1 text">
-							    	<h1 class="blue">DrupalWxT 4.16 released</h1>
-							    	<h2>Better. Faster. Open. Free.</h2>
-							    	<div class="download">
-							    		<span class="buttons">
+          <div class="carousel-inner">
+            <div class="item active">
+              <section class="intro">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1 text">
+                      <h1 class="blue">DrupalWxT 4.17 released</h1>
+                      <h2>Better. Faster. Open. Free.</h2>
+                      <div class="download">
+                        <span class="buttons">
 							    			<a href="features.html" class="btn btn-lg">See new features.</a>
 							    		</span>
-							    	</div>
-						    	</div>
-									<div class="col-md-12 ipad">
-										<img src="assets/img/slide1-ipad.png" alt="DrupalWxT Slide 1 Background" />
-									</div>
-					    	</div>
-				    	</div>
-				  	</section>
-			    </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 ipad">
+                      <img src="assets/img/slide1-ipad.png" alt="DrupalWxT Slide 1 Background" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
 
-			</div>
-			<!-- Controls -->
-			<!-- a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          </div>
+          <!-- Controls -->
+          <!-- a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span><span class="prevnexttext">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span><span class="prevnexttext">Next</span>
 			</a -->
-		</div>
-		<section class="usedby bg-light">
-			<div id="usedby"></div>
-			<div class="text-center">
-				<h2 class="blue mb0 mt0">Organizations using DrupalWxT</h2>
-			</div>
-			<div class="logos marquee" data-speed="2000" data-direction="right">
-        <img src="assets/img/logo-po.png" alt="Office of the Prime Minister's">
-        <img src="assets/img/logo-ic.png" alt="Industry Canada">
-        <img src="assets/img/logo-environment.png" alt="Environment Canada">
-        <img src="assets/img/logo-yukon.png" alt="Government of Yukon">
-        <img src="assets/img/logo-pipsc.png" alt="Professional Institute of the Public Service of Canada (PIPSC)">
-        <img src="assets/img/logo-hamilton.png" alt="City of Hamilton">
-				<img src="assets/img/logo-opendata.png" alt="Open Data">
-				<img src="assets/img/logo-cityottawa.png" alt="City of Ottawa">
-				<img src="assets/img/logo-health.png" alt="Health Canada">
-				<img src="assets/img/logo-nrc.png" alt="National Research Council of Canada (NRC)">
-				<img src="assets/img/logo-ocol.png" alt="Office of the Commissioner of Official Languages (OCOL)">
-				<img src="assets/img/logo-opseu.png" alt="Ontario Public Service Employees Union (OPSEU)">
-				<img src="assets/img/logo-stats.png" alt="Statistics Canada">
-				<img src="assets/img/logo-scc.png" alt="Standards Council of Canada (SCC)">
-				<img src="assets/img/logo-cpac.png" alt="Cable Public Affairs Channel (CPAC)">
-				<img src="assets/img/logo-cmhr.png" alt="Canadian Musem for Human Rights (CMHR)">
-				<img src="assets/img/logo-parks.png" alt="Parks Canada">
-				<img src="assets/img/logo-cta.png" alt="Canadian Transportation Agency (CTA)">
-				<img src="assets/img/logo-pei.png" alt="Prince Edward Island (PEI)">
-				<img src="assets/img/logo-rcmp.png" alt="RCMP">
-			</div>
-		</section>
-		<section class="about bg-white">
-			<div id="about"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-						<h2 class="blue mb0">DrupalWxT (The Drupal Web Experience Toolkit Distribution)</h2>
-						<h3 class="mb35 mt5">A little information about DrupalWxT to get you started.</h3>
-						<p>DrupalWxT, is designed and built by the Drupal community in collaboration with the Government of Canada in order to meet government-grade web property requirements.  The distribution is production proven that includes re-usable tools and components for building and maintaining innovative enterprise websites that are multilingual, accessible, and interoperable while providing a fully responsive interface that tailors for any device from your desktop, to your tablet, to your smartphone.</p>
-						<p>DrupalWxT brings together best practice methodology paired with leading modules in one ready to deploy solution. It uses components that help with cross-browser compatibility and provides responsive and interchangeable within your layout ensuring developers and designs have the freedom needed to deliver amazing experiences.</p>
-						<p>The distribution meets Web Accessibility and Web Usability standards by using the most proven best practices with CSS3, HTML5, and jQuery in order to meet today's web functionality and reliability requirements.</p>
-						<p>Wether you are looking to build internal collaborative intranets, online services, MyAccount applications, or public web properties, DrupalWxT is the distribution that is providing amazing experiences and meet government-grade standards.</p>
-						<!-- <p><a href="#" class="btn btn-lg">Download Brochure</a></p> -->
-					</div>
-					<div class="col-md-4 facts">
-						<h2 class="blue mb0">Drupal Facts</h2>
-						<h3 class="mb35 mt5">A few notable facts about Drupal</h3>
-						<ul>
-							<li>The <strong class="blue">Largest</strong> Open Source project <strong class="blue">in the World.</strong></li>
-							<li>Just under <strong class="blue">1,000,000</strong> people strong. 2X the size of Linux developer community.</li>
-              <li>Estimated <strong class="blue">20,000,000</strong>  sites running Drupal.</li>
-							<li>From <strong class="blue">228</strong>  nations in <strong class="blue">181</strong>  languages.</li>
-							<li>With <strong class="blue">36,000+</strong>  modules.</li>
-              <li>Has over <strong class="blue">300,000</strong>  developers.</li>
-							<li>Powers sites like: WhiteHouse.gov, Ottawa.ca... and so many others.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+        </div>
+        <section class="usedby bg-light">
+          <div id="usedby"></div>
+          <div class="text-center">
+            <h2 class="blue mb0 mt0">Organizations using DrupalWxT</h2>
+          </div>
+          <div class="logos marquee" data-speed="2000" data-direction="right">
+            <img src="assets/img/logo-blood.png" alt="Canadian Blood Services">
+            <img src="assets/img/logo-po.png" alt="Office of the Prime Minister's">
+            <img src="assets/img/logo-ic.png" alt="Industry Canada">
+            <img src="assets/img/logo-environment.png" alt="Environment Canada">
+            <img src="assets/img/logo-yukon.png" alt="Government of Yukon">
+            <img src="assets/img/logo-pipsc.png" alt="Professional Institute of the Public Service of Canada (PIPSC)">
+            <img src="assets/img/logo-hamilton.png" alt="City of Hamilton">
+            <img src="assets/img/logo-opendata.png" alt="Open Data">
+            <img src="assets/img/logo-cityottawa.png" alt="City of Ottawa">
+            <img src="assets/img/logo-health.png" alt="Health Canada">
+            <img src="assets/img/logo-nrc.png" alt="National Research Council of Canada (NRC)">
+            <img src="assets/img/logo-ocol.png" alt="Office of the Commissioner of Official Languages (OCOL)">
+            <img src="assets/img/logo-opseu.png" alt="Ontario Public Service Employees Union (OPSEU)">
+            <img src="assets/img/logo-stats.png" alt="Statistics Canada">
+            <img src="assets/img/logo-scc.png" alt="Standards Council of Canada (SCC)">
+            <img src="assets/img/logo-cpac.png" alt="Cable Public Affairs Channel (CPAC)">
+            <img src="assets/img/logo-cmhr.png" alt="Canadian Musem for Human Rights (CMHR)">
+            <img src="assets/img/logo-parks.png" alt="Parks Canada">
+            <img src="assets/img/logo-cta.png" alt="Canadian Transportation Agency (CTA)">
+            <img src="assets/img/logo-pei.png" alt="Prince Edward Island (PEI)">
+            <img src="assets/img/logo-rcmp.png" alt="RCMP">
+          </div>
+        </section>
+        <section class="about bg-white">
+          <div id="about"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="blue mb0">DrupalWxT (The Drupal Web Experience Toolkit Distribution)</h2>
+                <h3 class="mb35 mt5">A little information about DrupalWxT to get you started.</h3>
+                <p>DrupalWxT, is designed and built by the Drupal community in collaboration with the Government of Canada in order to meet government-grade web property requirements.  The distribution is production proven that includes re-usable tools and
+                  components for building and maintaining innovative enterprise websites that are multilingual, accessible, and interoperable while providing a fully responsive interface that tailors for any device from your desktop, to your tablet, to
+                  your smartphone.</p>
+                <p>DrupalWxT brings together best practice methodology paired with leading modules in one ready to deploy solution. It uses components that help with cross-browser compatibility and provides responsive and interchangeable within your layout
+                  ensuring developers and designs have the freedom needed to deliver amazing experiences.</p>
+                <p>The distribution meets Web Accessibility and Web Usability standards by using the most proven best practices with CSS3, HTML5, and jQuery in order to meet today's web functionality and reliability requirements.</p>
+                <p>Wether you are looking to build internal collaborative intranets, online services, MyAccount applications, or public web properties, DrupalWxT is the distribution that is providing amazing experiences and meet government-grade standards.</p>
+                <!-- <p><a href="#" class="btn btn-lg">Download Brochure</a></p> -->
+              </div>
+              <div class="col-md-4 facts">
+                <h2 class="blue mb0">Drupal Facts</h2>
+                <h3 class="mb35 mt5">A few notable facts about Drupal</h3>
+                <ul>
+                  <li>The <strong class="blue">Largest</strong> Open Source project <strong class="blue">in the World.</strong></li>
+                  <li>Just under <strong class="blue">1,000,000</strong> people strong. 2X the size of Linux developer community.</li>
+                  <li>Estimated <strong class="blue">20,000,000</strong> sites running Drupal.</li>
+                  <li>From <strong class="blue">228</strong> nations in <strong class="blue">181</strong> languages.</li>
+                  <li>With <strong class="blue">36,000+</strong> modules.</li>
+                  <li>Has over <strong class="blue">300,000</strong> developers.</li>
+                  <li>Powers sites like: WhiteHouse.gov, Ottawa.ca... and so many others.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
-		<section class="learnmore bg-light" id="learnmore">
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue mb0">Benefits</h2>
-					<h3 class="mb35 mt5">Just some of the reasons why this is a game changer.</h3>
-				</div>
-			    <ul id="myTab" class="nav nav-tabs">
-			      <li class="active"><a href="#what" data-toggle="tab">Secure & Open</a></li>
-			      <li class=""><a href="#use" data-toggle="tab">Extendable, Engagement & Feature ready</a></li>
-			      <li class=""><a href="#who" data-toggle="tab">Transportable & Tested</a></li>
-			    </ul>
-			    <div class="tab-content">
-			      <div class="tab-pane fade active in" id="what">
-			      	<div class="row">
-				        <div class="col-md-6 left">
-				        	<h3>Security</h3>
-				        	<h4 class="h4-2">Security enhanced and Shared Services Canada vetted.</h4>
-				        	<p>Modules and guidelines have been added to DrupalWxT to increase security, which has already been reviewed and approved for TRA (Threat Risk Assessment) by Shared Services Canada.</p>
-				        	<p>Reviewed and vetted by the founders of Drupal and Acquia</p>
-				        	<h3 class="mt35">Open</h3>
-				        	<h4 class="h4-2">Largest Open Source Community and contributors on the planet.</h4>
-				        	<p>With over a million people behind Drupal.org, critical mass adoption is an understatement. Over 2x the size of the Linux developer community, we are vibrant local and international community with a public road-map and a public issue tracker. Even DrupalWxT has its own Issue Queue (with over 1200 resolved issues, and no active pending) on Github.</p>
+        <section class="learnmore bg-light" id="learnmore">
+          <div class="container">
+            <div class="row text-center">
+              <h2 class="blue mb0">Benefits</h2>
+              <h3 class="mb35 mt5">Just some of the reasons why this is a game changer.</h3>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#what" data-toggle="tab">Secure & Open</a></li>
+              <li class=""><a href="#use" data-toggle="tab">Extendable, Engagement & Feature ready</a></li>
+              <li class=""><a href="#who" data-toggle="tab">Transportable & Tested</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade active in" id="what">
+                <div class="row">
+                  <div class="col-md-6 left">
+                    <h3>Security</h3>
+                    <h4 class="h4-2">Security enhanced and Shared Services Canada vetted.</h4>
+                    <p>Modules and guidelines have been added to DrupalWxT to increase security, which has already been reviewed and approved for TRA (Threat Risk Assessment) by Shared Services Canada.</p>
+                    <p>Reviewed and vetted by the founders of Drupal and Acquia</p>
+                    <h3 class="mt35">Open</h3>
+                    <h4 class="h4-2">Largest Open Source Community and contributors on the planet.</h4>
+                    <p>With over a million people behind Drupal.org, critical mass adoption is an understatement. Over 2x the size of the Linux developer community, we are vibrant local and international community with a public road-map and a public issue
+                      tracker. Even DrupalWxT has its own Issue Queue (with over 1200 resolved issues, and no active pending) on Github.</p>
 
-				        </div>
-				        <div class="col-md-5 pic right mt100">
-				        	<span class="ti-shield grey top"></span>
-				        	<span class="ti-world blue bottom"></span>
-				        </div>
-				      </div>
-			      </div>
-			      <div class="tab-pane fade" id="use">
-			        <div class="row">
-				         <div class="col-md-6 left ">
-				        	<h3>Extendable</h3>
-				        	<h4 class="h4-2">Extendable with anything</h4>
-				        	<p>Without "for profit" decision-making, Drupal is organically transparent and has vested interest to work with others, so it does. It supports Web Services integration and even CMIS (Content Management Interoperability Service) to integrate seamlessly with other Repositories.</p>
-				        	<h3 class="mt35">Engagement</h3>
-				        	<h4 class="h4-2">User Engagement Ready</h4>
-				        	<p>Leave static pages in the dust and be ready for the user engagement features that help reduce GoC call center loads. Out-of-the-box features include Chat, Commenting/Discussions, Content ratings, Blogs, Follow content, Social Sharing and much more.</p>
-				        	<h3 class="mt35">Feature ready</h3>
-				        	<h4 class="h4-2">Feature Server ready</h4>
-				        	<p>Drupal incorporates a "Features" distribution and App delivery service to help control versioned distributions and enhance sites (similar to your iPhone Apps). Add a DrupalWxT GoC approved Blog, and other controlled features easily.</p>
-				        </div>
-				        <div class="col-md-5 pic right mt100">
-				        	<span class="ti-comments blue bottom"></span>
-				        	<span class="ti-layers-alt grey top"></span>
+                  </div>
+                  <div class="col-md-5 pic right mt100">
+                    <span class="ti-shield grey top"></span>
+                    <span class="ti-world blue bottom"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="use">
+                <div class="row">
+                  <div class="col-md-6 left ">
+                    <h3>Extendable</h3>
+                    <h4 class="h4-2">Extendable with anything</h4>
+                    <p>Without "for profit" decision-making, Drupal is organically transparent and has vested interest to work with others, so it does. It supports Web Services integration and even CMIS (Content Management Interoperability Service) to integrate
+                      seamlessly with other Repositories.</p>
+                    <h3 class="mt35">Engagement</h3>
+                    <h4 class="h4-2">User Engagement Ready</h4>
+                    <p>Leave static pages in the dust and be ready for the user engagement features that help reduce GoC call center loads. Out-of-the-box features include Chat, Commenting/Discussions, Content ratings, Blogs, Follow content, Social Sharing
+                      and much more.</p>
+                    <h3 class="mt35">Feature ready</h3>
+                    <h4 class="h4-2">Feature Server ready</h4>
+                    <p>Drupal incorporates a "Features" distribution and App delivery service to help control versioned distributions and enhance sites (similar to your iPhone Apps). Add a DrupalWxT GoC approved Blog, and other controlled features easily.</p>
+                  </div>
+                  <div class="col-md-5 pic right mt100">
+                    <span class="ti-comments blue bottom"></span>
+                    <span class="ti-layers-alt grey top"></span>
 
-				        </div>
+                  </div>
 
-				      </div>
-			      </div>
-			      <div class="tab-pane fade" id="who">
-			       <div class="row">
-				         <div class="col-md-6 left ">
-				        	<h3>Transportable</h3>
-				        	<h4 class="h4-2">Transportable, Versatile & Innovation</h4>
-				        	<p>There is no licensing with Drupal, making it agile and easy to evolve and transform.  You always share the intellectual property, allowing you to harness and motivate developers to be more collaborative and innovative.  This allows even large public enterprises (yes, even Governments!) to be able to react quickly to changes and to embrace a more agile methodology.</p>
-				        	<h3 class="mt35">Testing</h3>
-				        	<h4 class="h4-2">Extensive GoC testing.</h4>
-				        	<p>There has been extensive GoC testing including automated continuous integration which includes Selenium Unity scripted cross-browser and multi-device testing.</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="who">
+                <div class="row">
+                  <div class="col-md-6 left ">
+                    <h3>Transportable</h3>
+                    <h4 class="h4-2">Transportable, Versatile & Innovation</h4>
+                    <p>There is no licensing with Drupal, making it agile and easy to evolve and transform.  You always share the intellectual property, allowing you to harness and motivate developers to be more collaborative and innovative.  This allows
+                      even large public enterprises (yes, even Governments!) to be able to react quickly to changes and to embrace a more agile methodology.</p>
+                    <h3 class="mt35">Testing</h3>
+                    <h4 class="h4-2">Extensive GoC testing.</h4>
+                    <p>There has been extensive GoC testing including automated continuous integration which includes Selenium Unity scripted cross-browser and multi-device testing.</p>
 
-				        </div>
-				        <div class="col-md-5 pic right mt100">
-				        	<span class="ti-package blue bottom"></span>
-				        	<span class="ti-check-box grey top"></span>
+                  </div>
+                  <div class="col-md-5 pic right mt100">
+                    <span class="ti-package blue bottom"></span>
+                    <span class="ti-check-box grey top"></span>
 
-				        </div>
+                  </div>
 
-				      </div>
-			      </div>
-			    </div>
-			</div>
-		</section>
-		<section class="video bg-blue">
-			<div class="container">
-				<div class="row">
-				<div class="col-md-12">
-					<h2>DrupalWxT Videos</h2>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-4">
-					<ul id="myTab2" class="nav nav-tabs nav-stacked">
-				      <li class="active"><a href="#video1" data-toggle="tab"><h3>Theming</h3><span>Intro to DrupalWxT Theming</span></a></li>
-				      <li ><a href="#deployment" data-toggle="tab"><h3>Deployment</h3><span>Coming soon...</span></a></li>
-				      <li ><a href="#migration" data-toggle="tab"><h3>Migration</h3><span>Coming soon...</span></a></li>
-				      <li ><a href="#workflow" data-toggle="tab"><h3>Workflow</h3><span>Coming soon...</span></a></li>
-				      <li ><a href="#document" data-toggle="tab"><h3>Document Management</h3><span>Coming soon...</span></a></li>
-				    </ul>
-				</div>
-				<div class="col-md-8">
-					<div class="tab-content">
-			      		<div class="tab-pane fade active in" id="video1">
-			      			<iframe width="420" height="500" title="Theming Video" src="//www.youtube.com/embed/I_FlPTBTTJc" allowfullscreen></iframe>
-			      		</div>
-			      		<div class="tab-pane fade in" id="deployment">
-			      			<p>Video Coming soon.</p>
-			      		</div>
-			      		<div class="tab-pane fade in" id="migration">
-			      			<p>Video Coming soon.</p>
-			      		</div>
-			      		<div class="tab-pane fade in" id="workflow">
-			      			<p>Video Coming soon.</p>
-			      		</div>
-			      		<div class="tab-pane fade in" id="document">
-			      			<p>Video Coming soon.</p>
-			      		</div>
-			      	</div>
-				</div>
-				</div>
-			</div>
-		</section>
-		<section class="news bg-white">
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="mb35">DrupalWxT Latest News</h2>
-				</div>
-				<div class="row text-center">
-          <div class="col-sm-6 col-md-3">
-						<div class="item">
-							<div class="header">
-								<div class="content">
-									<div class="day">March 3</div>
-									<div class="year">2017</div>
-								</div>
-							</div>
-							<div class="title"><h3>United Nations launches Open Data UNESCO site on DrupalWxT <a href="https://www.linkedin.com/pulse/united-nations-launches-open-data-unesco-site-robin-galipeau?articleId=6243146899243700224">more.</a> </h3></div>
-						</div>
-					</div>
-          <div class="col-sm-6 col-md-3">
-						<div class="item">
-							<div class="header">
-								<div class="content">
-									<div class="day">June 14</div>
-									<div class="year">2016</div>
-								</div>
-							</div>
-							<div class="title"><h3>Province of PEI launches new site on DrupalWxT <a href="https://www.princeedwardisland.ca">check it out.</a> </h3></div>
-						</div>
-					</div>
-          <div class="col-sm-6 col-md-3">
-						<div class="item">
-							<div class="header">
-								<div class="content">
-									<div class="day">May 31</div>
-									<div class="year">2016</div>
-								</div>
-							</div>
-							<div class="title"><h3>Drupal WxT 7.x-4.8 has been released. Check out the changes <a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-4.x/CHANGELOG.md">here.</a> </h3></div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="item">
-							<div class="header">
-								<div class="content">
-									<div class="day">Feb. 29</div>
-									<div class="year">2016</div>
-								</div>
-							</div>
-							<div class="title"><h3>Drupal WxT 7.x-4.6 has been released. Check out the changes <a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-4.x/CHANGELOG.md">here.</a> </h3></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="video bg-blue">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>DrupalWxT Videos</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <ul id="myTab2" class="nav nav-tabs nav-stacked">
+                  <li class="active"><a href="#video1" data-toggle="tab"><h3>Theming</h3><span>Intro to DrupalWxT Theming</span></a></li>
+                  <li><a href="#deployment" data-toggle="tab"><h3>Deployment</h3><span>Coming soon...</span></a></li>
+                  <li><a href="#migration" data-toggle="tab"><h3>Migration</h3><span>Coming soon...</span></a></li>
+                  <li><a href="#workflow" data-toggle="tab"><h3>Workflow</h3><span>Coming soon...</span></a></li>
+                  <li><a href="#document" data-toggle="tab"><h3>Document Management</h3><span>Coming soon...</span></a></li>
+                </ul>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content">
+                  <div class="tab-pane fade active in" id="video1">
+                    <iframe width="420" height="500" title="Theming Video" src="//www.youtube.com/embed/I_FlPTBTTJc" allowfullscreen></iframe>
+                  </div>
+                  <div class="tab-pane fade in" id="deployment">
+                    <p>Video Coming soon.</p>
+                  </div>
+                  <div class="tab-pane fade in" id="migration">
+                    <p>Video Coming soon.</p>
+                  </div>
+                  <div class="tab-pane fade in" id="workflow">
+                    <p>Video Coming soon.</p>
+                  </div>
+                  <div class="tab-pane fade in" id="document">
+                    <p>Video Coming soon.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="news bg-white">
+          <div class="container">
+            <div class="row text-center">
+              <h2 class="mb35">DrupalWxT Latest News</h2>
+            </div>
+            <div class="row text-center">
+              <div class="col-sm-6 col-md-3">
+                <div class="item">
+                  <div class="header">
+                    <div class="content">
+                      <div class="day">March 3</div>
+                      <div class="year">2017</div>
+                    </div>
+                  </div>
+                  <div class="title">
+                    <h3>United Nations launches Open Data UNESCO site on DrupalWxT <a href="https://www.linkedin.com/pulse/united-nations-launches-open-data-unesco-site-robin-galipeau?articleId=6243146899243700224">more.</a> </h3></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="item">
+                  <div class="header">
+                    <div class="content">
+                      <div class="day">June 14</div>
+                      <div class="year">2016</div>
+                    </div>
+                  </div>
+                  <div class="title">
+                    <h3>Province of PEI launches new site on DrupalWxT <a href="https://www.princeedwardisland.ca">check it out.</a> </h3></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="item">
+                  <div class="header">
+                    <div class="content">
+                      <div class="day">May 31</div>
+                      <div class="year">2016</div>
+                    </div>
+                  </div>
+                  <div class="title">
+                    <h3>Drupal WxT 7.x-4.8 has been released. Check out the changes <a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-4.x/CHANGELOG.md">here.</a> </h3></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="item">
+                  <div class="header">
+                    <div class="content">
+                      <div class="day">Feb. 29</div>
+                      <div class="year">2016</div>
+                    </div>
+                  </div>
+                  <div class="title">
+                    <h3>Drupal WxT 7.x-4.6 has been released. Check out the changes <a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-4.x/CHANGELOG.md">here.</a> </h3></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-		<section class="giveatry">
-			<div class="container">
-				<div class="row">
-					<h2 class="mt0 mb35">Ready to give DrupalWxT a try?</h2>
-					<div class="col-md-12">
-						<span class="buttons">
+        <section class="giveatry">
+          <div class="container">
+            <div class="row">
+              <h2 class="mt0 mb35">Ready to give DrupalWxT a try?</h2>
+              <div class="col-md-12">
+                <span class="buttons">
 							<a href="getstarted.html" class="btn btn-lg">Get started</a>
 						    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-lg">Try the demo</a>
 						    <a href="#" target="_blank" class="btn btn-lg" data-toggle="modal" data-target="#findoutmore">Find out more</a>
 
 						</span>
 
-					</div>
+              </div>
 
 
-				</div>
-			</div>
-		</section>
-	</div>
+            </div>
+          </div>
+        </section>
+      </div>
 
 
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-3 wxt">
-						<a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-3 wxt">
+              <a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
 
-				</div>
-				<div class="col-sm-12 col-md-5 community">
-					<h2>Community</h2>
-					<ul>
-						<li>
-							<a href="https://www.drupal.org/project/wetkit" target="_blank">
+            </div>
+            <div class="col-sm-12 col-md-5 community">
+              <h2>Community</h2>
+              <ul>
+                <li>
+                  <a href="https://www.drupal.org/project/wetkit" target="_blank">
 								<span class="ti-drupal"></span>
 								<span class="title">Drupal.org</span>
 							</a>
-						</li>
-						<li>
-							<a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
+                </li>
+                <li>
+                  <a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
 								<span class="ti-github"></span>
 								<span class="title">Github.com</span>
 							</a>
-						</li>
-						<li>
-							<a href="http://wiki.drupalwxt.org/" target="_blank">
+                </li>
+                <li>
+                  <a href="http://wiki.drupalwxt.org/" target="_blank">
 								<span class="ti-write"></span>
 								<span class="title">Documentation</span>
 							</a>
-						</li>
-						<li>
-							<a href="https://www.youtube.com/channel/UCZeL-jhb95vIy3eAH4A7ydg" target="_blank">
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCZeL-jhb95vIy3eAH4A7ydg" target="_blank">
 								<span class="ti-youtube"></span>
 								<span class="title">Youtube</span>
 							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-4 col-md-4 built">
-					<p>Created, maintained and hosted by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
-					<p>Drupal and the Drupal logo are registered trademark of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	</div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 built">
+              <p>Created, maintained and hosted by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
+              <p>Drupal and the Drupal logo are registered trademark of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-	<div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="findoutmore" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      	<div class="subscribe" id="newsletter-subscribe">
-						<p id="message"></p>
-				        <form class="form form-signup well" id="contactform" role="form" action="contact.php">
-				        	<h3 class="mt0">Find out more</h3>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <label class="input-group-addon" for="name"><span class="glyphicon glyphicon-user"></span> <span class="text">Name</span></label>
-		                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
-		                        </div>
-		                    </div>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <label class="input-group-addon" for="email"><span class="glyphicon glyphicon-envelope"></span> <span class="text">Email</span></label>
-		                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
-		                        </div>
-		                    </div>
-		                    <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
-	                	</form>
-					</div>
+    <div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="findoutmore" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="subscribe" id="newsletter-subscribe">
+              <p id="message"></p>
+              <form class="form form-signup well" id="contactform" role="form" action="contact.php">
+                <h3 class="mt0">Find out more</h3>
+                <div class="form-group">
+                  <div class="input-group">
+                    <label class="input-group-addon" for="name"><span class="glyphicon glyphicon-user"></span> <span class="text">Name</span></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <label class="input-group-addon" for="email"><span class="glyphicon glyphicon-envelope"></span> <span class="text">Email</span></label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
+                  </div>
+                </div>
+                <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<script src='assets/js/jquery-1.8.3.min.js'></script>
-<script src='assets/js/modernizr.js'></script>
-<script src='assets/js/bootstrap.min.js'></script>
-<script src='assets/js/jquery.jigowatt.js'></script>
-<script src='assets/js/app.js'></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script src='assets/js/jquery-1.8.3.min.js'></script>
+    <script src='assets/js/modernizr.js'></script>
+    <script src='assets/js/bootstrap.min.js'></script>
+    <script src='assets/js/jquery.jigowatt.js'></script>
+    <script src='assets/js/app.js'></script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-55854642-1', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-55854642-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 
-</script>
-</body>
 </html>
