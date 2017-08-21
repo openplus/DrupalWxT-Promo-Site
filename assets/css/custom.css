@@ -727,7 +727,9 @@ section#carousel.bg-bg {
     font-weight: 100;
     line-height: 1em;
     color: #f6f6f6;
-    display: block; }
+    display: block;
+    line-height: 1.2em;
+    margin: 20px 0; }
   .homepage section.intro .text {
     animation: slidefromtop 2s forwards; }
   .homepage section.intro .ipad {
