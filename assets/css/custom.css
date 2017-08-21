@@ -714,6 +714,13 @@ section#carousel.bg-bg {
     font-weight: 100;
     line-height: 1em;
     margin: 0; }
+  .homepage section.intro span.versions {
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 1em;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: #f6f6f6; }
   .homepage section.intro .text {
     animation: slidefromtop 2s forwards; }
   .homepage section.intro .ipad {

@@ -1011,6 +1011,15 @@ section#carousel.bg-bg {
 			margin: 0;
 		}
 
+		span.versions {
+			font-size: 1.5em;
+			font-weight: 100;
+			line-height: 1em;
+			margin-top: -15px;
+			margin-bottom: 30px;
+			color: $white;
+		}
+
 		.text {
 			animation: slidefromtop 2s forwards;
 		}
