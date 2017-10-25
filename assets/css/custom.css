@@ -1076,7 +1076,8 @@ footer {
           font-size: 14px; }
 
 #about,
-#usedby {
+#usedby,
+#videos {
   position: absolute;
   top: -60px;
   height: 1px;
