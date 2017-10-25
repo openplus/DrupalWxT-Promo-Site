@@ -1,483 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
+  <!-- Hammer reload -->
+  <script>
+    setInterval(function() {
+      try {
+        if (typeof ws != 'undefined' && ws.readyState == 1) {
+          return true;
+        }
+        ws = new WebSocket('ws://' + (location.host || 'localhost').split(':')[0] + ':35353')
+        ws.onopen = function() {
+          ws.onclose = function() {
+            document.location.reload()
+          }
+        }
+        ws.onmessage = function() {
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+              href = link.href.replace(/((&|\?)hammer=)[^&]+/, '');
+              link.href = href + (href.indexOf('?') >= 0 ? '&' : '?') + 'hammer=' + (new Date().valueOf());
+            }
+          }
+        }
+      } catch (e) {}
+    }, 1000)
+  </script>
+  <!-- /Hammer reload -->
 
   <link rel='stylesheet' href='assets/css/normalize.css'>
-<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
-<link rel='stylesheet' href='assets/css/animate.min.css'>
-<link rel='stylesheet' href='assets/icons/themify-icons.css'>
-<link rel='stylesheet' href='assets/css/custom.css?v=3'>
+  <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='assets/css/animate.min.css'>
+  <link rel='stylesheet' href='assets/icons/themify-icons.css'>
+  <link rel='stylesheet' href='assets/css/custom.css?v=3'>
   <link href="http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <!--[if lt IE 8]><!-->
- <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
+  <link rel='stylesheet' href='assets/icons/ie7/ie7.css'>
   <!--<![endif]-->
   <title>DrupalWxT | Features</title>
 </head>
+
 <body>
   <div class="loader"></div>
   <div class="page inside" id="top">
     <header class="navbar bs-docs-nav" id="top2" role="banner">
       <div class="container">
         <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="ti-menu"></span>
       </button>
-      <a href="index.html"><img src="assets/img/logo.svg" alt="DrupalWxT logo"></a>
-    </div>
-<nav class="collapse navbar-collapse bs-navbar-collapse">
-  <ul class="nav navbar-nav">
-    <li><a href="index.html#usedby" class="slidelink">Who uses it</a></li>
-  	<li><a href="index.html#about" class="slidelink">About</a></li>
-    <li><a href="getstarted.html">Get Started</a></li>
-    <li class='current'><a class='current' href="features.html">Features</a></li>
-    <!-- <li><a href="http://wiki.drupalwxt.org/" >Documentation</a></li> -->
-    <li><a href="https://www.drupal.org/project/wetkit">Download</a></li>
-    <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" ><span class="ti-github"></span></a></li> -->
-  </ul>
-</nav>
+          <a href="index.html"><img src="assets/img/logo.svg" alt="DrupalWxT logo"></a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html#usedby" class="slidelink">Who uses it</a></li>
+            <li><a href="index.html#about" class="slidelink">About</a></li>
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li class='current'><a class='current' href="features.html">Features</a></li>
+            <!-- <li><a href="http://wiki.drupalwxt.org/" >Documentation</a></li> -->
+            <li><a href="https://www.drupal.org/project/wetkit">Download</a></li>
+            <!-- <li><a href="https://github.com/wet-boew/wet-boew-drupal" ><span class="ti-github"></span></a></li> -->
+          </ul>
+        </nav>
       </div>
     </header>
-	<div class="features hassecondnav">
-		<section class="intro bg-img1 text-center">
-			<div class="container">
-				<h1>Some of our many turn-key features</h1>
-				<h2>DrupalWxT installs in about 10 minutes, for free, and gives you all of this...</h2>
-			</div>
-		</section>
-		<section class="secondnav bg-light bluenav">
-			<div class="container">
-				<nav>
-					<ul>
-						<li>
-							<a href="#accessable" class="slidelink">
+    <div class="features hassecondnav">
+      <section class="intro bg-img1 text-center">
+        <div class="container">
+          <h1>Some of our many turn-key features</h1>
+          <h2>DrupalWxT installs in about 10 minutes, for free, and gives you all of this...</h2>
+        </div>
+      </section>
+      <section class="secondnav bg-light bluenav">
+        <div class="container">
+          <nav>
+            <ul>
+              <li>
+                <a href="#accessable" class="slidelink">
 								<span class="icon"><span class="ti-wheelchair"></span></span>
 								<span class="text">Accessible</span>
 							</a>
-						</li>
-						<li>
-							<a href="#themes" class="slidelink">
+              </li>
+              <li>
+                <a href="#themes" class="slidelink">
 								<span class="icon"><span class="ti-layers"></span></span>
 								<span class="text">WxT Themes</span>
 							</a>
-						</li>
-						<li>
-							<a href="#multlingual" class="slidelink">
+              </li>
+              <li>
+                <a href="#multlingual" class="slidelink">
 								<span class="icon"><span class="ti-comment"></span></span>
 								<span class="text">Multilingual</span>
 							</a>
-						</li>
-						<li>
-							<a href="#migration" class="slidelink">
+              </li>
+              <li>
+                <a href="#migration" class="slidelink">
 								<span class="icon"><span class="ti-exchange-vertical"></span></span>
 								<span class="text">Migration</span>
 							</a>
-						</li>
-						<li>
-							<a href="#content" class="slidelink">
+              </li>
+              <li>
+                <a href="#content" class="slidelink">
 								<span class="icon"><span class="ti-clipboard"></span></span>
 								<span class="text">Content Staging</span>
 							</a>
-						</li>
-						<li>
-							<a href="#workflow" class="slidelink">
+              </li>
+              <li>
+                <a href="#workflow" class="slidelink">
 								<span class="icon"><span class="ti-reload"></span></span>
 								<span class="text">Workflow & Moderation</span>
 							</a>
-						</li>
-						<li>
-							<a href="#forms" class="slidelink">
+              </li>
+              <li>
+                <a href="#forms" class="slidelink">
 								<span class="icon"><span class="ti-layout-cta-left"></span></span>
 								<span class="text">Forms</span>
 							</a>
-						</li>
-						<li>
-							<a href="#layouts" class="slidelink">
+              </li>
+              <li>
+                <a href="#layouts" class="slidelink">
 								<span class="icon"><span class="ti-layout"></span></span>
 								<span class="text">Layouts & Editors</span>
 							</a>
-						</li>
-						<li>
-							<a href="#search" class="slidelink">
+              </li>
+              <li>
+                <a href="#search" class="slidelink">
 								<span class="icon"><span class="ti-search"></span></span>
 								<span class="text">Search</span>
 							</a>
-						</li>
-						<li>
-							<a href="#more" class="slidelink">
+              </li>
+              <li>
+                <a href="#more" class="slidelink">
 								<span class="icon"><span class="ti-plus"></span></span>
 								<span class="text">More...</span>
 							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</section>
-		<section class="bg-white">
-			<div id="accessable" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Accessible</h2>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div id="accessable" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Accessible</h2>
 
-				</div>
-				<div class="row">
-					<div class="col-md-7 left">
-						<h3 class="bluez">Accessible</h3>
-			        	<h4>Meets TBS accessibility standards</h4>
-			        	<p>Provides turnkey WCAG 2.0 Level AA compliance, including user content filters and restrictions to prevent accessibility breakage. ( Passes using TBS endorsed CSE validator).</p>
-					</div>
-					<div class="col-md-5 icon right">
-						<span class="ti-wheelchair blue"></span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-light">
-			<div id="themes" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">WxT Themes</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-5 icon left">
-						<span class="ti-layers"></span>
-					</div>
-					<div class="col-md-7 right">
-						<h3 class="bluez">Themes</h3>
-			        	<h4>Instant TBS WET-BOEW Themes</h4>
-			        	<p>Includes a GoC Public and Intranet WxT 3, 3.1 and the newer Bootstrap WxT 4 branch. As well as a plain (non-goc) WxT theme.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-white">
-			<div id="multlingual" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Multilingual</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-7 left">
-						<h3 class="bluez">Multilingual</h3>
-			        	<h4>100% Multilingual including administrative interface</h4>
-			        	<p>Has a French Canadian language pack, with many contributions from various government departments for common string elements, and has the ability to extend to over 200+ other languages...more than bilingual. </p>
-					</div>
-					<div class="col-md-5 icon right">
-						<span class="ti-comment blue"></span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-light">
-			<div id="migration" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Migration</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-5 icon left">
-						<span class="ti-exchange-vertical"></span>
-					</div>
-					<div class="col-md-7 right">
-						<h3 class="bluez">Migration</h3>
-			        	<h4>Robust scripted bulk-migration templates and cleansing</h4>
-			        	<p>With fully automated bulk harvesting of CLF2, WET3 templates, DrupalWxT can instantly pull content from static sites, TeamSite, OpenText, IBM/Domino, and countless others</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-white">
-			<div id="content" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Content Staging</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-7 left">
-						<h3 class="bluez">Content Staging</h3>
-			        	<h4>Full Content Staging and Deployment</h4>
-			        	<p>With no code, you can run a full "staging > deploy" to a live production environment VIA an administrative interface with a bulk scheduled rules engine or on-demand page by page.</p>
-					</div>
-					<div class="col-md-5 icon right">
-						<span class="ti-clipboard blue"></span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-light">
-			<div id="workflow" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Workflow & Moderation</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-5 icon left">
-						<span class="ti-reload"></span>
-					</div>
-					<div class="col-md-7 right">
-						<h3 class="bluez">Workflow & Moderation</h3>
-			        	<h4>Workflow, Moderation & Auditing built-in</h4>
-			        	<p>Includes a sophisticated workflow for both simple and complex processes. In-page audit tracking "who did what when" with versioning and ability to compare differences in revisions side by side, based on roles and permissions you have.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-white">
-			<div id="forms" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Forms</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-7 left">
-						<h3 class="bluez">Forms</h3>
-			        	<h4>Forms Builder Interface</h4>
-			        	<p>From simple user author-able forms for feedback, to comprehensive multifunction apps with integrated into legacy systems, DrupalWxT has a front-end to build it and manage it. (no code needed).</p>
-					</div>
-					<div class="col-md-5 icon right">
-						<span class="ti-layout-cta-left blue"></span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-light">
-			<div id="layouts" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Layouts & Editors</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-5 icon left">
-						<span class="ti-layout"></span>
-					</div>
-					<div class="col-md-7 right">
-						<h3 class="bluez">Layouts & Editors</h3>
-			        	<h4>Content Layouts & Rich Text Editors</h4>
-			        	<p>Offers content teams the option and ability to manage their layouts and page components with intuitive drag and drop panels UI. Includes an extensively featured rich text editor with user profile based restrictions, including media file handling and markup blacklists and whitelists... works with most rich text editors.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="bg-white">
-			<div id="search" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="blue">Search</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-7 left">
-						<h3 class="bluez">Search</h3>
-			        	<h4>Search and Structure</h4>
-			        	<p>Extends easily with SearchAPI and proven to work with Google Search and Solr for rich search application like facets and filters. Allows you to ingest external indexes from other systems and securely present metadata for a unified search results including full-text files.</p>
-					</div>
-					<div class="col-md-5 icon right">
-						<span class="ti-search blue"></span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="more bg-blue">
-			<div id="more" class="gotodiv"></div>
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="white mb35">There is more...</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-layout-width-default"></span></div>
-								<div class="content col-md-9">
-									<h3>Responsive</h3>
-									<p>WxT uses a mobile first approach based on the Omega theme, adapts to different screen sizes and device capabilities, has touchscreen support, is optimized for performance and is buliding support for device-based mobile applications.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-direction-alt"></span></div>
-								<div class="content col-md-9">
-									<h3>Cross-Browser Compatibility</h3>
-									<p>DrupalWxT has Cross-Browser Compatibility both in the front-end and the back-end, supporting Google Chrome, Mozilla Firefox, Safari, and IE8+.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-text"></span></div>
-								<div class="content col-md-9">
-									<h3>Typography</h3>
-									<p>DrupalWxT comes with plenty of default typography, giving you an awesome looking front and back end site. </p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-comments"></span></div>
-								<div class="content col-md-9">
-									<h3>Community</h3>
-									<p>Each OpenSource project has thousands of Community based addons available for free, and with Source Code open. You often even have options for common requirements, so don’t reinvent the wheel.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-shield"></span></div>
-								<div class="content col-md-9">
-									<h3>Secure</h3>
-									<p>Always a big one. There are 100’s of core developers from each projects that regularly monitor security risks.<br><br></p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="img col-md-3"><span class="ti-money"></span></div>
-								<div class="content col-md-9">
-									<h3>Cost control</h3>
-									<p>Stay out of the licensing gauntlet! Reduce integration, maintenance and operation cost... even upgrades.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="giveatry">
-			<div class="container">
-				<div class="row">
-					<h2 class="mt0 mb35">Ready to give DrupalWxT a try?</h2>
-					<div class="col-md-12">
-						<span class="buttons">
+          </div>
+          <div class="row">
+            <div class="col-md-7 left">
+              <h3 class="bluez">Accessible</h3>
+              <h4>Meets TBS accessibility standards</h4>
+              <p>Provides turnkey WCAG 2.0 Level AA compliance, including user content filters and restrictions to prevent accessibility breakage. ( Passes using TBS endorsed CSE validator).</p>
+            </div>
+            <div class="col-md-5 icon right">
+              <span class="ti-wheelchair blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-light">
+        <div id="themes" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">WxT Themes</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-5 icon left">
+              <span class="ti-layers"></span>
+            </div>
+            <div class="col-md-7 right">
+              <h3 class="bluez">Themes</h3>
+              <h4>Instant TBS WET-BOEW Themes</h4>
+              <p>Includes a GoC Public and Intranet WxT 3, 3.1 and the newer Bootstrap WxT 4 branch. As well as a plain (non-goc) WxT theme.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div id="multlingual" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Multilingual</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7 left">
+              <h3 class="bluez">Multilingual</h3>
+              <h4>100% Multilingual including administrative interface</h4>
+              <p>Has a French Canadian language pack, with many contributions from various government departments for common string elements, and has the ability to extend to over 200+ other languages...more than bilingual. </p>
+            </div>
+            <div class="col-md-5 icon right">
+              <span class="ti-comment blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-light">
+        <div id="migration" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Migration</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-5 icon left">
+              <span class="ti-exchange-vertical"></span>
+            </div>
+            <div class="col-md-7 right">
+              <h3 class="bluez">Migration</h3>
+              <h4>Robust scripted bulk-migration templates and cleansing</h4>
+              <p>With fully automated bulk harvesting of CLF2, WET3 templates, DrupalWxT can instantly pull content from static sites, TeamSite, OpenText, IBM/Domino, and countless others</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div id="content" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Content Staging</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7 left">
+              <h3 class="bluez">Content Staging</h3>
+              <h4>Full Content Staging and Deployment</h4>
+              <p>With no code, you can run a full "staging > deploy" to a live production environment VIA an administrative interface with a bulk scheduled rules engine or on-demand page by page.</p>
+            </div>
+            <div class="col-md-5 icon right">
+              <span class="ti-clipboard blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-light">
+        <div id="workflow" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Workflow & Moderation</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-5 icon left">
+              <span class="ti-reload"></span>
+            </div>
+            <div class="col-md-7 right">
+              <h3 class="bluez">Workflow & Moderation</h3>
+              <h4>Workflow, Moderation & Auditing built-in</h4>
+              <p>Includes a sophisticated workflow for both simple and complex processes. In-page audit tracking "who did what when" with versioning and ability to compare differences in revisions side by side, based on roles and permissions you have.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div id="forms" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Forms</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7 left">
+              <h3 class="bluez">Forms</h3>
+              <h4>Forms Builder Interface</h4>
+              <p>From simple user author-able forms for feedback, to comprehensive multifunction apps with integrated into legacy systems, DrupalWxT has a front-end to build it and manage it. (no code needed).</p>
+            </div>
+            <div class="col-md-5 icon right">
+              <span class="ti-layout-cta-left blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-light">
+        <div id="layouts" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Layouts & Editors</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-5 icon left">
+              <span class="ti-layout"></span>
+            </div>
+            <div class="col-md-7 right">
+              <h3 class="bluez">Layouts & Editors</h3>
+              <h4>Content Layouts & Rich Text Editors</h4>
+              <p>Offers content teams the option and ability to manage their layouts and page components with intuitive drag and drop panels UI. Includes an extensively featured rich text editor with user profile based restrictions, including media file
+                handling and markup blacklists and whitelists... works with most rich text editors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div id="search" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="blue">Search</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7 left">
+              <h3 class="bluez">Search</h3>
+              <h4>Search and Structure</h4>
+              <p>Extends easily with SearchAPI and proven to work with Google Search and Solr for rich search application like facets and filters. Allows you to ingest external indexes from other systems and securely present metadata for a unified search
+                results including full-text files.</p>
+            </div>
+            <div class="col-md-5 icon right">
+              <span class="ti-search blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="more bg-blue">
+        <div id="more" class="gotodiv"></div>
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="white mb35">There is more...</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-layout-width-default"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Responsive</h3>
+                    <p>WxT uses a mobile first approach based on the Omega theme, adapts to different screen sizes and device capabilities, has touchscreen support, is optimized for performance and is buliding support for device-based mobile applications.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-direction-alt"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Cross-Browser Compatibility</h3>
+                    <p>DrupalWxT has Cross-Browser Compatibility both in the front-end and the back-end, supporting Google Chrome, Mozilla Firefox, Safari, and IE8+.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-text"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Typography</h3>
+                    <p>DrupalWxT comes with plenty of default typography, giving you an awesome looking front and back end site. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-comments"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Community</h3>
+                    <p>Each OpenSource project has thousands of Community based addons available for free, and with Source Code open. You often even have options for common requirements, so don’t reinvent the wheel.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-shield"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Secure</h3>
+                    <p>Always a big one. There are 100’s of core developers from each projects that regularly monitor security risks.<br><br></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="img col-md-3"><span class="ti-money"></span></div>
+                  <div class="content col-md-9">
+                    <h3>Cost control</h3>
+                    <p>Stay out of the licensing gauntlet! Reduce integration, maintenance and operation cost... even upgrades.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="giveatry">
+        <div class="container">
+          <div class="row">
+            <h2 class="mt0 mb35">Ready to give DrupalWxT a try?</h2>
+            <div class="col-md-12">
+              <span class="buttons">
 							<a href="getstarted.html" class="btn btn-lg">Get started</a>
 						    <a href="http://demo.drupalwxt.org/" target="_blank" class="btn btn-lg">Try the demo</a>
 						    <a href="#" target="_blank" class="btn btn-lg" data-toggle="modal" data-target="#findoutmore">Find out more</a>
 
 						</span>
-					</div>
+            </div>
 
 
-				</div>
-			</div>
-		</section>
-	</div>
-	<a href="#top" class="gototop slidelink"><span class="ti-angle-up"></span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <a href="#top" class="gototop slidelink"><span class="ti-angle-up"></span></a>
 
 
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-3 wxt">
-						<a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 wxt">
+            <a href="/" class="logo"><img src="assets/img/logo-wxtfooter.png" alt="DrupalWxT Logo"></a>
 
-				</div>
-				<div class="col-sm-12 col-md-5 community">
-					<h2>Community</h2>
-					<ul>
-						<li>
-							<a href="https://www.drupal.org/project/wetkit" target="_blank">
+          </div>
+          <div class="col-sm-12 col-md-5 community">
+            <h2>Community</h2>
+            <ul>
+              <li>
+                <a href="https://twitter.com/drupalwxt" target="_blank">
+            <span class="ti-twitter"></span>
+            <span class="title">Twitter</span>
+          </a>
+              </li>
+              <li>
+                <a href="https://www.drupal.org/project/wetkit" target="_blank">
 								<span class="ti-drupal"></span>
 								<span class="title">Drupal.org</span>
 							</a>
-						</li>
-						<li>
-							<a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
+              </li>
+              <li>
+                <a href="https://github.com/wet-boew/wet-boew-drupal" target="_blank">
 								<span class="ti-github"></span>
 								<span class="title">Github.com</span>
 							</a>
-						</li>
-						<li>
-							<a href="http://wiki.drupalwxt.org/" target="_blank">
+              </li>
+              <li>
+                <a href="http://wiki.drupalwxt.org/" target="_blank">
 								<span class="ti-write"></span>
 								<span class="title">Documentation</span>
 							</a>
-						</li>
-						<li>
-							<a href="https://www.youtube.com/channel/UCZeL-jhb95vIy3eAH4A7ydg" target="_blank">
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCZeL-jhb95vIy3eAH4A7ydg" target="_blank">
 								<span class="ti-youtube"></span>
 								<span class="title">Youtube</span>
 							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-4 col-md-4 built">
-					<p>Created, maintained and hosted by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
-					<p>Drupal and the Drupal logo are registered trademark of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	</div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-4 built">
+            <p>Created, maintained and hosted by <a href="http://www.openplus.ca" target="_blank">Openplus.ca</a></p>
+            <p>Drupal and the Drupal logo are registered trademark of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-	<div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="findoutmore" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      	<div class="subscribe" id="newsletter-subscribe">
-						<p id="message"></p>
-				        <form class="form form-signup well" id="contactform" role="form" action="contact.php">
-				        	<h3 class="mt0">Find out more</h3>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <label class="input-group-addon" for="name"><span class="glyphicon glyphicon-user"></span> <span class="text">Name</span></label>
-		                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
-		                        </div>
-		                    </div>
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <label class="input-group-addon" for="email"><span class="glyphicon glyphicon-envelope"></span> <span class="text">Email</span></label>
-		                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
-		                        </div>
-		                    </div>
-		                    <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
-	                	</form>
-					</div>
+  <div class="modal fade" id="findoutmore" tabindex="-1" role="dialog" aria-labelledby="findoutmore" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="subscribe" id="newsletter-subscribe">
+            <p id="message"></p>
+            <form class="form form-signup well" id="contactform" role="form" action="contact.php">
+              <h3 class="mt0">Find out more</h3>
+              <div class="form-group">
+                <div class="input-group">
+                  <label class="input-group-addon" for="name"><span class="glyphicon glyphicon-user"></span> <span class="text">Name</span></label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <label class="input-group-addon" for="email"><span class="glyphicon glyphicon-envelope"></span> <span class="text">Email</span></label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" />
+                </div>
+              </div>
+              <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src='assets/js/jquery-1.8.3.min.js'></script>
-<script src='assets/js/modernizr.js'></script>
-<script src='assets/js/bootstrap.min.js'></script>
-<script src='assets/js/jquery.jigowatt.js'></script>
-<script src='assets/js/app.js'></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script src='assets/js/jquery-1.8.3.min.js'></script>
+  <script src='assets/js/modernizr.js'></script>
+  <script src='assets/js/bootstrap.min.js'></script>
+  <script src='assets/js/jquery.jigowatt.js'></script>
+  <script src='assets/js/app.js'></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-55854642-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    ga('create', 'UA-55854642-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
+
 </html>
