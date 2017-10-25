@@ -708,6 +708,17 @@ section#carousel.bg-bg {
   background: url("../img/homepage-bg.jpg") no-repeat center center;
   background-size: cover;
   text-shadow: 1px 1px 10px #1F1F1F; }
+  .homepage section.intro:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(#000 50%, #000 100%); }
+  .homepage section.intro .container {
+    position: relative;
+    z-index: 9; }
   .homepage section.intro h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 2.5em;
