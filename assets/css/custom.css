@@ -419,7 +419,7 @@ p.inverse-heading {
     color: #f6f6f6; }
 
 .bg-pattern {
-  background: url("../img/hypnotize.png") repeat; }
+  background: #fff, url("../img/hypnotize.png") repeat; }
 
 .page {
   overflow: hidden; }
