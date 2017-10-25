@@ -7,7 +7,7 @@
 		"uuidString": "2481A704-A486-4286-9564-DFFEF29849B2"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25900",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -234,6 +234,7 @@
 		},
 	"\/assets\/icons\/ie7\/ie7.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/icons\/ie7\/min\/ie7-min.js",
@@ -243,6 +244,7 @@
 		},
 	"\/assets\/icons\/ie7\/min\/ie7.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/icons\/ie7\/min\/min\/ie7.min-min.js",
@@ -4278,6 +4280,7 @@
 		},
 	"\/assets\/js\/app.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/app-min.js",
@@ -4287,6 +4290,7 @@
 		},
 	"\/assets\/js\/bootstrap.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/bootstrap.min-min.js",
@@ -4296,6 +4300,7 @@
 		},
 	"\/assets\/js\/jquery-1.8.3.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/jquery-1.8.3.min-min.js",
@@ -4305,6 +4310,7 @@
 		},
 	"\/assets\/js\/jquery.jigowatt.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/jquery.jigowatt-min.js",
@@ -4314,6 +4320,7 @@
 		},
 	"\/assets\/js\/jquery.viewport.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/jquery.viewport-min.js",
@@ -4323,6 +4330,7 @@
 		},
 	"\/assets\/js\/min\/app.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/min\/app.min-min.js",
@@ -4332,6 +4340,7 @@
 		},
 	"\/assets\/js\/min\/jquery.jigowatt.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/min\/jquery.jigowatt.min-min.js",
@@ -4341,6 +4350,7 @@
 		},
 	"\/assets\/js\/min\/jquery.viewport.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/min\/jquery.viewport.min-min.js",
@@ -4350,6 +4360,7 @@
 		},
 	"\/assets\/js\/min\/modernizr.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/min\/modernizr.min-min.js",
@@ -4359,6 +4370,7 @@
 		},
 	"\/assets\/js\/modernizr.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/modernizr-min.js",
@@ -5327,6 +5339,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -5334,6 +5350,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -5431,6 +5451,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -5450,6 +5474,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -5578,6 +5606,10 @@
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -6123,6 +6155,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -6191,6 +6227,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -6230,6 +6270,10 @@
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -6859,9 +6903,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
