@@ -1006,21 +1006,6 @@ section#carousel.bg-bg {
 		background-size: cover;
 		text-shadow: 1px 1px 10px #1F1F1F;
 
-		&:after {
-			content: '';
-			height: 100%;
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: 0;
-			background: linear-gradient(#000 50%, #000 100%);
-		}
-
-		.container {
-			position: relative;
-			z-index: 9;
-		}
-
 		h2 {
 			@include headers(2.5em,100,1em);
 			margin: 0;
