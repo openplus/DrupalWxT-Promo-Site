@@ -1023,6 +1023,11 @@ section#carousel.bg-bg {
 			margin-bottom: 60px;
 			color: $white;
 			display: block;
+
+			a {
+				color: $white;
+				text-decoration: underline;
+			}
 		}
 
 		span.description {

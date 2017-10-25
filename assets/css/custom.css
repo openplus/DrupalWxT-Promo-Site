@@ -725,6 +725,9 @@ section#carousel.bg-bg {
     margin-bottom: 60px;
     color: #f6f6f6;
     display: block; }
+    .homepage section.intro span.versions a {
+      color: #f6f6f6;
+      text-decoration: underline; }
   .homepage section.intro span.description {
     font-size: 1.5em;
     font-weight: 100;
