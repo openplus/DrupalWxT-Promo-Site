@@ -3901,6 +3901,27 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/assets\/img\/homepage-bg.jpg": {
+		"ft": 16384,
+		"iS": 577803,
+		"oA": 0,
+		"oAP": "\/assets\/img\/homepage-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/hypnotize.png": {
+		"ft": 32768,
+		"iS": 62237,
+		"oA": 0,
+		"oAP": "\/assets\/img\/hypnotize.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/logo-acquia.png": {
 		"ft": 32768,
 		"iS": 4101,

@@ -418,6 +418,9 @@ p.inverse-heading {
   .bg-blue .nav-tabs li a {
     color: #f6f6f6; }
 
+.bg-pattern {
+  background: url("../img/hypnotize.png") repeat; }
+
 .page {
   overflow: hidden; }
 
