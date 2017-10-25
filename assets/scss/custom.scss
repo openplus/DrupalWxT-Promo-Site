@@ -638,31 +638,31 @@ section.padding {
 			background: transparent;
 
 			a {
-				background: darken($blue, 10);
+				background: #eee;
 				border-radius: 0;
 				border: none;
 				padding: 10px;
-				color: $white;
+				color: #333;
 
 				&:hover {
 					background: darken($blue, 15);
 					border: none;
 					border-radius: 0;
-					color: $white;
+					color: #333;
 				}
 			}
 
 			&.active {
 				a {
-					background: darken($blue, 20);
+					background: #ccc;
 					border: none;
-					color: $white;
+					color: #333;
 					border-radius: 0;
 
 					&:hover {
-						background: darken($blue, 20);
+						background: #ccc;
 						border: none;
-						color: $white;
+						color: #333;
 					}
 				}
 			}

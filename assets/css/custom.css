@@ -493,25 +493,25 @@ section.padding {
       width: 100%;
       background: transparent; }
       .nav-tabs.nav-stacked li a {
-        background: #3071a9;
+        background: #eee;
         border-radius: 0;
         border: none;
         padding: 10px;
-        color: #f6f6f6; }
+        color: #333; }
         .nav-tabs.nav-stacked li a:hover {
           background: #2a6496;
           border: none;
           border-radius: 0;
-          color: #f6f6f6; }
+          color: #333; }
       .nav-tabs.nav-stacked li.active a {
-        background: #245682;
+        background: #ccc;
         border: none;
-        color: #f6f6f6;
+        color: #333;
         border-radius: 0; }
         .nav-tabs.nav-stacked li.active a:hover {
-          background: #245682;
+          background: #ccc;
           border: none;
-          color: #f6f6f6; }
+          color: #333; }
       .nav-tabs.nav-stacked li h3 {
         margin: 3px 0; }
 
