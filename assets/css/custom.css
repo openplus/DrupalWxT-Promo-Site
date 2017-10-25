@@ -499,7 +499,7 @@ section.padding {
         padding: 10px;
         color: #333; }
         .nav-tabs.nav-stacked li a:hover {
-          background: #2a6496;
+          background: #ccc;
           border: none;
           border-radius: 0;
           color: #333; }
